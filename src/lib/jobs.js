@@ -30,13 +30,6 @@ export function centuryLabel(century) {
   return `${(century - 1) * 100}s`;
 }
 
-/** "1600s to 1900s", or a single label when start and end match. */
-export function eraLabel(job) {
-  const start = centuryLabel(job.startCentury);
-  const end = centuryLabel(job.endCentury);
-  return start === end ? start : `${start} to ${end}`;
-}
-
 export function formatNumber(n) {
   return Math.round(n).toLocaleString('en-US');
 }

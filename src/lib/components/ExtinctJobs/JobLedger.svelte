@@ -1,8 +1,9 @@
 <!--
 @component
-JobLedger.svelte — The list of extinct jobs as a ruled ledger table: job name,
-the centuries it was practiced, why it ended, and a census trend when the job
-appears in U.S. census records.
+JobLedger.svelte — The list of extinct jobs as ruled ledger rows: job name,
+when it ended (century; the source has no exact years), why it ended, and a census trend when the job
+appears in U.S. census records. The whole row is clickable; on hover or focus
+it is tinted and the ledger's red margin rule thickens.
 
 Props:
 - jobs: job summaries [{ id, name, summary, startCentury, endCentury, reasonTypes, series }]
@@ -10,79 +11,102 @@ Props:
 <script>
   import { base } from '$app/paths';
   import Sparkline from '$lib/components/ExtinctJobs/Sparkline.svelte';
-  import { eraLabel } from '$lib/jobs.js';
+  import { centuryLabel } from '$lib/jobs.js';
 
   let { jobs = [] } = $props();
 </script>
 
-<table class="ledger">
-  <thead>
-    <tr>
-      <th scope="col">Job</th>
-      <th scope="col" class="era">Years practiced</th>
-      <th scope="col" class="reason">Why it ended</th>
-      <th scope="col" class="trend">U.S. census, 1850–1940</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="ledger">
+  <div class="columns" aria-hidden="true">
+    <span>Job</span>
+    <span>Ended</span>
+    <span class="reason">Why it ended</span>
+    <span>U.S. census, 1850–1940</span>
+  </div>
+
+  <ol>
     {#each jobs as job (job.id)}
-      <tr>
-        <th scope="row">
+      <li>
+        <div class="job">
+          <!-- The link's ::after stretches over the whole row, so the row is clickable
+               while the link's accessible name stays just the job name. -->
           <a href="{base}/jobs/{job.id}">{job.name}</a>
           <span class="summary">{job.summary}</span>
-        </th>
-        <td class="era">{eraLabel(job)}</td>
-        <td class="reason">{job.reasonTypes.join(', ')}</td>
-        <td class="trend">
+        </div>
+        <span class="era"
+          ><span class="sr-only">Ended: </span>{centuryLabel(
+            job.endCentury
+          )}</span
+        >
+        <span class="reason"
+          ><span class="sr-only">Why it ended: </span>{job.reasonTypes.join(
+            ', '
+          )}</span
+        >
+        <span class="trend">
           {#if job.series.length}
             <Sparkline series={job.series} />
           {:else}
             <span class="none">Not in census records</span>
           {/if}
-        </td>
-      </tr>
+        </span>
+      </li>
     {/each}
-  </tbody>
-</table>
+  </ol>
+</div>
 
 <style lang="scss">
   @use '$lib/styles' as *;
 
-  .ledger {
-    width: 100%;
-    border-collapse: collapse;
-    // The ledger's red margin rule runs down the left edge.
-    border-left: 2px solid var(--color-margin);
+  .columns,
+  li {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 44%) minmax(0, 1.1fr) minmax(0, 1fr)
+      10.5rem;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm)
+      var(--spacing-md);
   }
 
-  thead th {
+  .columns {
     position: sticky;
     top: 0;
     z-index: 1;
+    padding-top: var(--spacing-xs);
+    padding-bottom: var(--spacing-xs);
     background: var(--color-paper);
     font-family: var(--font-sans);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
     color: var(--color-medium-gray);
-    text-align: left;
-    padding: var(--spacing-xs) var(--spacing-sm);
     border-bottom: var(--border-width-divider) solid var(--color-rule);
+    border-left: 2px solid var(--color-margin);
   }
 
-  tbody th,
-  td {
-    text-align: left;
-    vertical-align: top;
-    padding: var(--spacing-sm);
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    position: relative;
     border-bottom: var(--border-width-thin) solid var(--color-border);
+    // The ledger's red margin rule runs down the left edge.
+    box-shadow: inset 2px 0 0 var(--color-margin);
+    transition:
+      background-color 0.15s ease,
+      box-shadow 0.15s ease;
   }
 
-  tbody th {
-    font-weight: var(--font-weight-normal);
-    width: 46%;
+  li:hover,
+  li:focus-within {
+    background: var(--color-light-gray);
+    box-shadow: inset 6px 0 0 var(--color-margin);
   }
 
-  tbody th a {
+  a {
     display: inline-block;
     font-family: var(--font-display);
     font-size: var(--font-size-4xl);
@@ -90,12 +114,30 @@ Props:
     line-height: var(--leading-tight);
     color: var(--color-dark);
     text-decoration: none;
+
+    // Stretch the link over the whole row.
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
   }
 
-  tbody th a:hover {
+  li:hover a,
+  li:focus-within a {
     color: var(--color-accent);
     text-decoration: underline;
     text-decoration-thickness: 2px;
+    text-underline-offset: 0.12em;
+  }
+
+  li:focus-within {
+    outline: 3px solid var(--color-accent);
+    outline-offset: -3px;
   }
 
   .summary {
@@ -107,48 +149,61 @@ Props:
     max-width: 52ch;
   }
 
-  td {
+  li .era,
+  li .reason,
+  li .trend {
     font-family: var(--font-sans);
     font-size: var(--font-size-sm);
     color: var(--color-text);
+    padding-top: 0.5rem;
   }
 
-  td.trend {
-    padding-top: calc(var(--spacing-sm) + 0.4rem);
+  li .trend {
+    padding-top: 0.9rem;
   }
 
   .none {
     color: var(--color-medium-gray);
   }
 
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    li {
+      transition: none;
+    }
+  }
+
   @include mobile {
-    thead {
+    .columns {
       display: none;
     }
 
-    tr {
-      display: grid;
+    li {
       grid-template-columns: 1fr auto;
-      border-bottom: var(--border-width-thin) solid var(--color-border);
+      row-gap: var(--spacing-xxs);
     }
 
-    tbody th {
+    .job {
       grid-column: 1 / -1;
-      width: auto;
-      border: 0;
-      padding-bottom: var(--spacing-xxs);
     }
 
-    td {
-      border: 0;
-      padding-top: 0;
-    }
-
-    td.reason {
+    .reason {
       display: none;
     }
 
-    td.trend {
+    li .era,
+    li .trend {
       padding-top: 0;
     }
   }

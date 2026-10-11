@@ -7,7 +7,7 @@ import SpellingList from '$lib/components/ExtinctJobs/SpellingList.svelte';
 import JobLedger from '$lib/components/ExtinctJobs/JobLedger.svelte';
 import Masthead from '$lib/components/ExtinctJobs/Masthead.svelte';
 import Colophon from '$lib/components/ExtinctJobs/Colophon.svelte';
-import { centuryLabel, eraLabel, formatShare, peak } from '$lib/jobs.js';
+import { centuryLabel, formatShare, peak } from '$lib/jobs.js';
 
 const series = [
   { year: 1850, people: 400, records: 4, reliable: false },
@@ -35,13 +35,6 @@ describe('job helpers', () => {
     expect(centuryLabel(-7)).toBe('7th century BCE');
     expect(centuryLabel(-70)).toBe('7,000 BCE');
     expect(centuryLabel(-99)).toBe('prehistory');
-  });
-
-  it('labels an era', () => {
-    expect(eraLabel({ startCentury: 18, endCentury: 20 })).toBe(
-      '1700s to 1900s'
-    );
-    expect(eraLabel({ startCentury: 20, endCentury: 20 })).toBe('1900s');
   });
 
   it('formats shares', () => {
@@ -168,6 +161,12 @@ describe('JobLedger', () => {
         .getByRole('link', { name: 'Telegraph operator' })
         .getAttribute('href')
     ).toBe('/jobs/telegraph-operator');
+  });
+
+  it('shows the century each job ended', () => {
+    render(JobLedger, { props: { jobs } });
+    expect(screen.getAllByText('1900s').length).toBe(1);
+    expect(screen.getByText('1800s')).toBeTruthy();
   });
 
   it('notes jobs without census records', () => {
