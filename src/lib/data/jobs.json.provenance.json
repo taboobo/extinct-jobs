@@ -1,0 +1,62 @@
+{
+  "output": "data/processed/site/jobs.json",
+  "sha256": "8c90b896b202627134e95c7b637c96e5104abdf520b11cd5fd718cb634918b0f",
+  "rows": 102,
+  "built_at": "2026-10-11T23:45:35+00:00",
+  "script": {
+    "path": "scripts/export_site_data.py",
+    "sha256": "cd7da8b7014bc068d2abe3d597f6af4f709d27437f6d93297d0e960548ae2cfc",
+    "git": {
+      "commit": "b1369d19901eb76426b1df7030baa7a82b9a34dc",
+      "file_committed": true,
+      "file_modified_since_commit": true
+    }
+  },
+  "inputs": [
+    {
+      "path": "data/processed/wikipedia_obsolete_occupations.csv",
+      "sha256": "496a030edef54903ecc499b85d7a587265d442aedfc783685c3d897611436f11",
+      "source": null
+    },
+    {
+      "path": "data/processed/title_counts_1850_1940.csv",
+      "sha256": "6bc28298603d37ac82bc97ef9aec611e6a2db7695acd1a32dd7d27b84f596351",
+      "source": null
+    },
+    {
+      "path": "data/processed/title_spellings.csv",
+      "sha256": "4b3ece563bc2c7eb370ab14cb5547d99ad363df4e970d6b632d4fc40ed961c0d",
+      "source": null
+    },
+    {
+      "path": "data/processed/transitions_1910_1920.csv",
+      "sha256": "6ac21fcbdfb7621e16e7fb92551488d8c84b30d500ba3ac307705f1b590135d7",
+      "source": null
+    },
+    {
+      "path": "data/manual/wikipedia_to_occ1950.csv",
+      "sha256": "4900e497596e213f30b917d55286c7bba7a7daf0ea6d528051584bdc686676b5",
+      "source": null
+    },
+    {
+      "path": "data/raw/commons/images.json",
+      "sha256": "10dd137117f433aab4c092a08e9665c92660e331e0b2f0c948f86e878add4f3f",
+      "source": {
+        "name": "Wikimedia Commons image metadata for the obsolete-occupations list",
+        "url": "https://commons.wikimedia.org/w/api.php",
+        "license": "Per image; see LicenseShortName and Artist for each file",
+        "notes": "Images are linked (hotlinked from upload.wikimedia.org), not copied.",
+        "retrieved_at": "2026-10-11T23:28:26+00:00"
+      }
+    }
+  ],
+  "steps": [
+    "One record per Wikipedia obsolete occupation, with description and reason text (Wikipedia, CC BY-SA 4.0) and an image hotlinked from Wikimedia Commons with its credit.",
+    "census.series: estimated people per census year from title counts; 'reliable' when based on at least 10 sample records. Jobs with fewer than 10 records across all years get no series (likely false matches).",
+    "census.spellings: most common written forms (already thresholded upstream).",
+    "transitions: 1910->1920 destinations for the job's OCC1950 category, only when the match is exact, or broader with a specific (non-n.e.c.) category at medium/high confidence, at least 100 linked people, and at least 10 sample records with the job's own title in 1910. Top 8 destinations plus 'Everything else' (which includes suppressed small cells).",
+    "Non-occupational OCC1950 codes relabelled in plain language (e.g. 999 -> 'No occupation listed')."
+  ],
+  "overrides_applied": [],
+  "warnings": []
+}

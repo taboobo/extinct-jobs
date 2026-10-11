@@ -1,122 +1,236 @@
 <!--
 @component
-This is your page!
+Home page: the ledger of extinct jobs, with search and filters.
 -->
 <script>
-  // Import all the news furniture components
-  import ArticleHeader from '$lib/components/Article/ArticleHeader.svelte';
-  import ArticleBody from '$lib/components/Article/ArticleBody.svelte';
-  import Blockquote from '$lib/components/Article/Blockquote.svelte';
-  import Image from '$lib/components/Media/Image.svelte';
-  import RelatedLinks from '$lib/components/Article/RelatedLinks.svelte';
+  import SearchInput from '$lib/components/Forms/SearchInput.svelte';
+  import JobLedger from '$lib/components/ExtinctJobs/JobLedger.svelte';
 
-  // Article metadata
-  let headline = 'Become a force for good. Join our next class.';
-  let byline = 'NYCity News Service';
-  let pubDate = '2026-01-31';
+  let { data } = $props();
 
-  // Related stories
-  const relatedStories = [
-    {
-      headline:
-        "How America's top news organizations escape rigid publishing systems to design beautiful data-driven stories on deadline.",
-      href: 'https://palewi.re/docs/coding-the-news/',
-    },
-    {
-      headline:
-        'How to install, configure and use Visual Studio Code, GitHub and Copilot',
-      href: 'https://palewi.re/docs/coding-the-news/scripts/week-1/',
-    },
-    {
-      headline: 'How to publish a website with Node.JS and GitHub Actions',
-      href: 'https://palewi.re/docs/coding-the-news/scripts/week-2/',
-    },
-  ];
+  let search = $state('');
+  let reason = $state('');
+  let censusOnly = $state(false);
+  let sort = $state('name');
+
+  const reasons = $derived(
+    [...new Set(data.jobs.flatMap((j) => j.reasonTypes))].sort()
+  );
+
+  const shown = $derived.by(() => {
+    const q = search.trim().toLowerCase();
+    const list = data.jobs.filter(
+      (j) =>
+        (!q ||
+          j.name.toLowerCase().includes(q) ||
+          j.summary.toLowerCase().includes(q)) &&
+        (!reason || j.reasonTypes.includes(reason)) &&
+        (!censusOnly || j.series.length > 0)
+    );
+    if (sort === 'ended') {
+      return list.toSorted(
+        (a, b) => b.endCentury - a.endCentury || a.name.localeCompare(b.name)
+      );
+    }
+    return list.toSorted((a, b) => a.name.localeCompare(b.name));
+  });
+
+  function clearFilters() {
+    search = '';
+    reason = '';
+    censusOnly = false;
+  }
 </script>
 
-<!-- This sets the page title in the browser tab -->
 <svelte:head>
-  <title>{headline} | NYCity News Service</title>
+  <title>Extinct Jobs</title>
   <meta
     name="description"
-    content="At the Craig Newmark Graduate School of Journalism at the City University of New York, change is in our DNA. That comes of being born in 2006, as the digital revolution was transforming our profession in ways none of us could have imagined."
+    content="Jobs that disappeared, from alchemists to switchboard operators, and what U.S. census records show about the people who did them."
   />
 </svelte:head>
 
-<!-- Your page content goes here -->
-<div class="container">
-  <!-- Article Header: Headline, byline, and publication date -->
-  <ArticleHeader {headline} {byline} {pubDate} />
-
-  <!-- Lead Image: Animated gif of students at the journalism school -->
-  <Image
-    src="/example-photo.gif"
-    alt="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
-    caption="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
-    credit="Craig Newmark Graduate School of Journalism"
-  />
-
-  <!-- Article Body: The main story text with proper typography -->
-  <ArticleBody>
-    <p class="dropcap">
-      At the Craig Newmark Graduate School of Journalism at the City University
-      of New York, change is in our DNA. That comes of being born in 2006, as
-      the digital revolution was transforming our profession in ways none of us
-      could have imagined.
+<div class="page">
+  <header class="intro">
+    <h1>Extinct Jobs</h1>
+    <p class="lede">
+      {data.jobs.length} jobs that disappeared, from alchemists to switchboard operators.
+      For the ones that show up in U.S. census records, see how many people did them
+      and what those people did next.
     </p>
+  </header>
 
-    <p>
-      We fashioned a school to teach the latest storytelling, entrepreneurial,
-      and technological skills alongside reporting, writing, and ethics. Beyond
-      that, we’ve crafted a culture that spurns complacency, that isn’t afraid
-      to pivot before the ground under us shifts.
-    </p>
+  <section class="controls" aria-label="Filter the list">
+    <div class="search">
+      <SearchInput
+        bind:value={search}
+        label="Search jobs"
+        placeholder="Try “lamp” or “maid”"
+      />
+    </div>
 
-    <p>
-      Our mission is to serve the public interest – by training new journalists
-      from varied economic, racial, and cultural backgrounds who will bring
-      much-needed diversity to newsrooms, by helping mid-career journalists
-      retool their skills, and by partnering with other media organizations to
-      find new paths to excellence.
-    </p>
+    <fieldset class="reasons">
+      <legend>Why it ended</legend>
+      <button
+        type="button"
+        aria-pressed={reason === ''}
+        onclick={() => (reason = '')}>Any reason</button
+      >
+      {#each reasons as r (r)}
+        <button
+          type="button"
+          aria-pressed={reason === r}
+          onclick={() => (reason = r)}>{r}</button
+        >
+      {/each}
+    </fieldset>
 
-    <Blockquote attribution="Craig Newmark Graduate School of Journalism">
-      <p>We invite you to be part of our world.</p>
-    </Blockquote>
+    <div class="row">
+      <label class="check">
+        <input type="checkbox" bind:checked={censusOnly} />
+        Only jobs found in U.S. census records
+      </label>
+      <label class="sort">
+        Sort by
+        <select bind:value={sort}>
+          <option value="name">Name</option>
+          <option value="ended">Most recently ended</option>
+        </select>
+      </label>
+    </div>
+  </section>
 
-    <p>
-      Our low tuition rates, along with the added backing of private donors,
-      allow candidates for our master’s degrees in journalism and engagement
-      journalism to receive a world-class education at an affordable price. We
-      also offer a unique bilingual master’s in journalism for students fluent
-      in English and Spanish.
-    </p>
+  <p class="count" aria-live="polite">
+    Showing {shown.length} of {data.jobs.length} jobs
+  </p>
 
-    <p>
-      Our three media centers provide research, training, thought leadership,
-      industry meet-ups, and financial support for quality journalistic work.
-    </p>
-
-    <p>
-      We also offer a robust professional education program through regular
-      evening and weekend workshops. And we support in-depth reporting projects
-      of professional journalists through fellowship grants.
-    </p>
-
-    <p>
-      Classes are led by accomplished full-time faculty and adjuncts, who tap
-      their networks to help students and graduates find internships, freelance
-      opportunities and — the ultimate prize — jobs.
-    </p>
-
-    <p>
-      At a time when our profession is reeling from financial pressures and lack
-      of trust, the Newmark Graduate School of Journalism is committed to
-      producing the next generation of skilled, ethically minded, and diverse
-      journalists.
-    </p>
-  </ArticleBody>
-
-  <!-- Related Stories: Links to other articles -->
-  <RelatedLinks title="Related Stories" links={relatedStories} />
+  {#if shown.length}
+    <JobLedger jobs={shown} />
+  {:else}
+    <div class="empty">
+      <p>No jobs match these filters.</p>
+      <button type="button" onclick={clearFilters}>Clear filters</button>
+    </div>
+  {/if}
 </div>
+
+<style lang="scss">
+  @use '$lib/styles' as *;
+
+  .page {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+  }
+
+  .intro {
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-extrabold);
+    font-size: clamp(4.5rem, 14vw, 11rem);
+    line-height: 0.85;
+    letter-spacing: var(--letter-spacing-tight);
+    color: var(--color-dark);
+    margin: 0;
+  }
+
+  .lede {
+    max-width: 46ch;
+    margin: var(--spacing-md) 0 0;
+    font-size: var(--font-size-xl);
+    line-height: var(--leading-snug);
+    color: var(--color-text);
+  }
+
+  .controls {
+    display: grid;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) 0;
+    border-top: var(--border-width-divider) solid var(--color-dark);
+    font-family: var(--font-sans);
+  }
+
+  .search {
+    max-width: 28rem;
+
+    :global(.search-label) {
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: var(--font-weight-medium);
+    }
+  }
+
+  .reasons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  legend {
+    width: 100%;
+    margin-bottom: var(--spacing-xxs);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-dark);
+  }
+
+  button {
+    font: inherit;
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xxs) var(--spacing-xs);
+    color: var(--color-text);
+    background: transparent;
+    border: var(--border-width-thin) solid var(--color-rule);
+    cursor: pointer;
+  }
+
+  button:hover {
+    border-color: var(--color-accent);
+  }
+
+  button[aria-pressed='true'] {
+    color: var(--color-white);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm) var(--spacing-lg);
+    align-items: center;
+    font-size: var(--font-size-sm);
+  }
+
+  .check {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+  }
+
+  .sort select {
+    font: inherit;
+    margin-left: var(--spacing-xxs);
+    padding: var(--spacing-xxs);
+    background: var(--color-white);
+    border: var(--border-width-thin) solid var(--color-rule);
+  }
+
+  .count {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    color: var(--color-medium-gray);
+    margin: var(--spacing-xs) 0;
+  }
+
+  .empty {
+    padding: var(--spacing-xl) 0;
+    font-family: var(--font-sans);
+  }
+</style>

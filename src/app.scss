@@ -1,35 +1,40 @@
-/* Global styles for NYCity News Service style site */
+/* Global styles for Extinct Jobs — a census-ledger look: ruled paper, ink, red margin rule */
 /* These apply to every page */
 
 /* ---------- SCSS Imports ---------- */
 @use '$lib/styles' as *;
 
 /* ---------- Google Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Droid+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=Public+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap');
 
 /* ===========================================
    CSS Custom Properties
    =========================================== */
 :root {
-  /* NYCity News Service Colors */
-  --color-accent: #0033a1; /* CUNY Blue (PMS 286) */
-  --color-dark: #1a1a1a;
-  --color-text: #333333;
+  /* Ledger colors */
+  --color-accent: #2f4b7c; /* Ledger ink blue — links, highlights, chart bars */
+  --color-dark: #1c2433; /* Ink — headings */
+  --color-text: #2b3240; /* Body text */
   --color-white: #ffffff;
-  --color-light-gray: #f5f5f5;
-  --color-medium-gray: #666666;
-  --color-border: #e0e0e0;
-  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-light-gray: #e9eee6; /* Faint ledger tint — table stripes, wells */
+  --color-medium-gray: #5e6672; /* Pencil — secondary text */
+  --color-border: #c9d6cc; /* Ledger ruling — dividers, table lines */
+  --color-shadow: rgba(28, 36, 51, 0.08);
+  --color-paper: #f4f7f1; /* Page background */
+  --color-rule: #b7cbbe; /* Stronger ledger ruling — table rules, chart gridlines */
+  --color-margin: #b23a32; /* Ledger red margin rule — marks when a job ended */
+  --color-faint-bar: #b9c4d6; /* Estimates based on few records */
 
-  /* CUNY Blue Gradient Colors */
-  --color-cuny-blue-dark: #002266;
-  --color-cuny-blue-light: #0066cc;
+  /* Ink gradient (kept for template components such as the dropcap) */
+  --color-cuny-blue-dark: #1c2433;
+  --color-cuny-blue-light: #4f6fa8;
 
   /* Typography */
-  --font-serif: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
+  --font-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', Times, serif;
   --font-sans:
-    'Droid Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   /* Root Font Sizes */
   --font-size-root: 16px;
@@ -151,11 +156,22 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: var(--font-size-base);
   line-height: var(--leading-normal);
   color: var(--color-text);
-  background-color: var(--color-white);
+  background-color: var(--color-paper);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 /* ===========================================
    Typography
@@ -196,8 +212,14 @@ a {
   transition: var(--transition-color);
 }
 
+a {
+  text-decoration-color: var(--color-rule);
+  text-underline-offset: 0.18em;
+}
+
 a:hover {
   color: var(--color-accent);
+  text-decoration-color: currentColor;
 }
 
 img {

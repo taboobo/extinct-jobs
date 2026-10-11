@@ -1,10 +1,22 @@
-// Page settings
-// These values are passed to the layout to control what appears on the page.
+// Loads the job list for the home page.
+// jobs.json is exported by the extinct-jobs-data pipeline (see its provenance file).
+import data from '$lib/data/jobs.json';
+
 export function load() {
   return {
-    // Set to false to hide the NYCity News Service header
-    showHeader: true,
-    // Set to false to hide the site footer
-    showFooter: true,
+    // Only the fields the list needs, so the home page stays light.
+    jobs: data.jobs.map((job) => ({
+      id: job.id,
+      name: job.name,
+      summary: job.summary,
+      startCentury: job.startCentury,
+      endCentury: job.endCentury,
+      reasonTypes: job.reasonTypes,
+      series: job.census.series.map(({ year, people, reliable }) => ({
+        year,
+        people,
+        reliable,
+      })),
+    })),
   };
 }
