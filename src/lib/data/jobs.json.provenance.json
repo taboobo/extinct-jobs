@@ -1,13 +1,13 @@
 {
   "output": "data/processed/site/jobs.json",
-  "sha256": "8c90b896b202627134e95c7b637c96e5104abdf520b11cd5fd718cb634918b0f",
+  "sha256": "4403f5efe19ccb244d6d70b6bf17633239658928f8da25b38485c4a783c5c230",
   "rows": 102,
-  "built_at": "2026-10-11T23:45:35+00:00",
+  "built_at": "2026-10-12T00:03:12+00:00",
   "script": {
     "path": "scripts/export_site_data.py",
-    "sha256": "cd7da8b7014bc068d2abe3d597f6af4f709d27437f6d93297d0e960548ae2cfc",
+    "sha256": "e969d808c48515d55c2b3080452813a5c93b8d9db109f080e61c3afc397e46d8",
     "git": {
-      "commit": "b1369d19901eb76426b1df7030baa7a82b9a34dc",
+      "commit": "a2e67dccee85e51ff1dc76e0648ffb4689790bc7",
       "file_committed": true,
       "file_modified_since_commit": true
     }
@@ -20,7 +20,12 @@
     },
     {
       "path": "data/processed/title_counts_1850_1940.csv",
-      "sha256": "6bc28298603d37ac82bc97ef9aec611e6a2db7695acd1a32dd7d27b84f596351",
+      "sha256": "4f2129855d6f3b70fa9b7cfbeff2c30c3f440e952f6436474154ed2bb1a98620",
+      "source": null
+    },
+    {
+      "path": "data/processed/category_counts_1850_1940.csv",
+      "sha256": "761bd64636512f74e767f8b3c388d0884413c769bdeb367316ea72c04ab5cab7",
       "source": null
     },
     {
@@ -46,13 +51,14 @@
         "url": "https://commons.wikimedia.org/w/api.php",
         "license": "Per image; see LicenseShortName and Artist for each file",
         "notes": "Images are linked (hotlinked from upload.wikimedia.org), not copied.",
-        "retrieved_at": "2026-10-11T23:28:26+00:00"
+        "retrieved_at": "2026-10-11T23:54:21+00:00"
       }
     }
   ],
   "steps": [
     "One record per Wikipedia obsolete occupation, with description and reason text (Wikipedia, CC BY-SA 4.0) and an image hotlinked from Wikimedia Commons with its credit.",
-    "census.series: estimated people per census year from title counts; 'reliable' when based on at least 10 sample records. Jobs with fewer than 10 records across all years get no series (likely false matches).",
+    "census.series: for jobs whose OCC1950 match is exact, IPUMS's weighted category total (seriesSource 'category'); otherwise the title-search estimate, a minimum (seriesSource 'title').",
+    "census.series: estimated people per census year; 'reliable' when based on at least 10 sample records. Jobs with fewer than 10 records across all years get no series (likely false matches).",
     "census.spellings: most common written forms (already thresholded upstream).",
     "transitions: 1910->1920 destinations for the job's OCC1950 category, only when the match is exact, or broader with a specific (non-n.e.c.) category at medium/high confidence, at least 100 linked people, and at least 10 sample records with the job's own title in 1910. Top 8 destinations plus 'Everything else' (which includes suppressed small cells).",
     "Non-occupational OCC1950 codes relabelled in plain language (e.g. 999 -> 'No occupation listed')."

@@ -83,14 +83,23 @@ each census, how census takers wrote it, and where its workers went next.
       {#if census.series.length}
         {#if top}
           <p class="peak">
+            {#if census.seriesSource === 'title'}At least{/if}
             <span class="peak-number">{formatNumber(top.people)}</span>
             people at the peak, in {top.year}
           </p>
         {/if}
-        <CensusChart series={census.series} name={job.name.toLowerCase()} />
+        <CensusChart
+          series={census.series}
+          name={job.name.toLowerCase()}
+          source={census.seriesSource}
+        />
         <p class="note">
-          Counts include everyone who wrote a matching title, so a few may be
-          false matches. <a href="{base}/about">How these numbers were made</a>
+          {#if census.seriesSource === 'category'}
+            Based on the census category for {census.category.toLowerCase()}.
+          {:else}
+            A few matches may be other jobs with similar names.
+          {/if}
+          <a href="{base}/about">How these numbers were made</a>
         </p>
       {:else}
         <p class="note">{noCensusReason}</p>

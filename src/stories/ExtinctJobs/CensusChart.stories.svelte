@@ -23,6 +23,12 @@
         control: 'text',
         description: 'Job name used in the accessible description',
       },
+      source: {
+        control: 'select',
+        options: ['category', 'title'],
+        description:
+          "'category': census-coded total; 'title': title-search minimum",
+      },
     },
   });
 </script>
@@ -33,6 +39,7 @@
   args={{
     series: job('telegraph-operator').census.series,
     name: 'telegraph operators',
+    source: 'category',
   }}
 />
 

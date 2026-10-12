@@ -7,11 +7,13 @@ are drawn faint. 1890 is marked as missing: those records burned in 1921.
 Props:
 - series: [{ year, people, records, reliable }] from jobs.json
 - name: the job name, used in the accessible description
+- source: 'category' (everyone the census coded to this job) or 'title' (people whose
+  written job title matched; a minimum count)
 -->
 <script>
   import { CENSUS_YEARS, formatNumber } from '$lib/jobs.js';
 
-  let { series = [], name = 'this job' } = $props();
+  let { series = [], name = 'this job', source = 'title' } = $props();
 
   // Drawn at the figure's real width so text stays a readable size on phones.
   let width = $state(640);
@@ -117,8 +119,12 @@ Props:
   </table>
 
   <figcaption>
-    Estimated workers who wrote this job on the census, from samples that kept
-    people’s own words for their job.
+    {#if source === 'category'}
+      Estimated number of people the census counted in this job.
+    {:else}
+      Estimated number of people who wrote this job title on the census. This is
+      a minimum: unusual spellings are missed.
+    {/if}
     {#if hasFaint}
       Pale bars are based on fewer than 10 sample records and are rough.
     {/if}

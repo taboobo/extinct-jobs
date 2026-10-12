@@ -25,6 +25,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -54,6 +55,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -83,6 +85,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -112,6 +115,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -141,6 +145,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -225,6 +230,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": []
       },
       "transitions": null
@@ -254,6 +260,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -283,6 +290,7 @@
         "category": "Private household workers (n.e.c.)",
         "confidence": "medium",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -312,6 +320,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -396,6 +405,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "SLATE PICKER",
@@ -591,6 +601,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "BRUSH MAKER",
@@ -694,6 +705,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "BUCKLE MAKER",
@@ -730,6 +742,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -814,6 +827,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "STATE TROOPER",
@@ -862,6 +876,7 @@
         "category": "Hucksters and peddlers",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -946,6 +961,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "CHIMNEY SWEEP",
@@ -1037,6 +1053,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "WAGON MAKER",
@@ -1170,6 +1187,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "COACHMAN",
@@ -1291,6 +1309,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "COLPORTEUR",
@@ -1382,6 +1401,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "COMPUTER",
@@ -1473,6 +1493,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "COOPER",
@@ -1606,6 +1627,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "CORK CUTTER",
@@ -1642,6 +1664,7 @@
         "category": "Laborers (n.e.c.)",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -1726,6 +1749,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "DOFFER",
@@ -1804,6 +1828,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -1833,6 +1858,7 @@
         "category": "Members of the armed services",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -1862,6 +1888,7 @@
         "category": "Managers, officials, and proprietors (n.e.c.)",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -1892,60 +1919,43 @@
         "confidence": "high",
         "series": [
           {
-            "year": 1850,
-            "people": 0,
-            "records": 0,
-            "reliable": false
-          },
-          {
-            "year": 1860,
-            "people": 0,
-            "records": 0,
-            "reliable": false
-          },
-          {
-            "year": 1870,
-            "people": 311,
-            "records": 3,
-            "reliable": false
-          },
-          {
             "year": 1880,
-            "people": 1592,
-            "records": 172,
+            "people": 252,
+            "records": 28,
             "reliable": true
           },
           {
             "year": 1900,
-            "people": 14541,
-            "records": 742,
+            "people": 10076,
+            "records": 514,
             "reliable": true
           },
           {
             "year": 1910,
-            "people": 21959,
-            "records": 222,
+            "people": 22768,
+            "records": 230,
             "reliable": true
           },
           {
             "year": 1920,
-            "people": 37474,
-            "records": 370,
+            "people": 37272,
+            "records": 368,
             "reliable": true
           },
           {
             "year": 1930,
-            "people": 67602,
-            "records": 3342,
+            "people": 69538,
+            "records": 3437,
             "reliable": true
           },
           {
             "year": 1940,
-            "people": 72567,
-            "records": 738,
+            "people": 86233,
+            "records": 877,
             "reliable": true
           }
         ],
+        "seriesSource": "category",
         "spellings": [
           {
             "writtenAs": "ELEVATOR OPERATOR",
@@ -2141,6 +2151,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "TEACHER ELOCUTION",
@@ -2189,6 +2200,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -2250,20 +2262,20 @@
           },
           {
             "year": 1910,
-            "people": 47743,
-            "records": 477,
+            "people": 48143,
+            "records": 481,
             "reliable": true
           },
           {
             "year": 1920,
-            "people": 44746,
-            "records": 445,
+            "people": 44848,
+            "records": 446,
             "reliable": true
           },
           {
             "year": 1930,
-            "people": 28596,
-            "records": 1413,
+            "people": 28697,
+            "records": 1418,
             "reliable": true
           },
           {
@@ -2273,6 +2285,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "EXPRESSMAN",
@@ -2413,6 +2426,7 @@
         "category": "Members of the armed services",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -2497,6 +2511,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "FOOTMAN",
@@ -2588,6 +2603,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "FULLER",
@@ -2624,6 +2640,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -2653,6 +2670,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -2682,6 +2700,7 @@
         "category": "Laborers (n.e.c.)",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -2766,6 +2785,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "HALL BOY",
@@ -2857,6 +2877,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "ICE CUTTER",
@@ -2925,8 +2946,8 @@
           },
           {
             "year": 1910,
-            "people": 23254,
-            "records": 234,
+            "people": 23354,
+            "records": 235,
             "reliable": true
           },
           {
@@ -2937,17 +2958,18 @@
           },
           {
             "year": 1930,
-            "people": 51671,
-            "records": 2561,
+            "people": 51833,
+            "records": 2569,
             "reliable": true
           },
           {
             "year": 1940,
-            "people": 41085,
-            "records": 424,
+            "people": 41185,
+            "records": 425,
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "ICE DEALER",
@@ -3088,6 +3110,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -3172,6 +3195,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "IVORY TURNER",
@@ -3281,6 +3305,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "KEY PUNCH OPERATOR",
@@ -3372,6 +3397,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "KITCHEN MAID",
@@ -3414,6 +3440,7 @@
         "category": "Service workers, except private household (n.e.c.)",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -3498,6 +3525,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "COMPANION",
@@ -3601,6 +3629,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "LAMP LIGHTER",
@@ -3704,6 +3733,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "METER READER",
@@ -3782,6 +3812,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -3866,6 +3897,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "LEGGER",
@@ -3957,6 +3989,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "LIME BURNER",
@@ -3999,6 +4032,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -4028,6 +4062,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -4112,6 +4147,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "WORKS IN MATCH FACTORY",
@@ -4221,6 +4257,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "WORKS IN MATCH FACTORY",
@@ -4287,6 +4324,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -4371,6 +4409,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "SCAVENGER",
@@ -4468,6 +4507,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "MUTE",
@@ -4565,6 +4605,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "NEEDLE MAKER",
@@ -4601,6 +4642,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -4630,6 +4672,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -4659,6 +4702,7 @@
         "category": "Therapists and healers (n.e.c.)",
         "confidence": "medium",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -4688,6 +4732,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -4772,6 +4817,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "PIN SETTER",
@@ -4887,6 +4933,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "PIN MAKER",
@@ -4923,6 +4970,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -4952,6 +5000,7 @@
         "category": "Teamsters",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -5036,6 +5085,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "POUND MASTER",
@@ -5078,6 +5128,7 @@
         "category": "Members of the armed services",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -5107,6 +5158,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -5191,6 +5243,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "PRINTERS DEVIL",
@@ -5227,6 +5280,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -5256,6 +5310,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -5285,6 +5340,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -5314,6 +5370,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -5398,6 +5455,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "TURPENTINE LABORER",
@@ -5476,6 +5534,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -5505,6 +5564,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -5534,6 +5594,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -5618,6 +5679,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "SAWYER",
@@ -5813,6 +5875,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "COPYIST",
@@ -5904,6 +5967,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "COPYIST",
@@ -5946,6 +6010,7 @@
         "category": "Private household workers (n.e.c.)",
         "confidence": "medium",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -5975,6 +6040,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -6004,6 +6070,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -6033,6 +6100,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -6117,6 +6185,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "SODA DISPENSER",
@@ -6257,6 +6326,7 @@
         "category": "Private household workers (n.e.c.)",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -6341,6 +6411,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "STOCKING WEAVER",
@@ -6419,6 +6490,7 @@
         "category": "Managers, officials, and proprietors (n.e.c.)",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -6449,60 +6521,43 @@
         "confidence": "high",
         "series": [
           {
-            "year": 1850,
-            "people": 0,
-            "records": 0,
-            "reliable": false
-          },
-          {
-            "year": 1860,
-            "people": 0,
-            "records": 0,
-            "reliable": false
-          },
-          {
-            "year": 1870,
-            "people": 0,
-            "records": 0,
-            "reliable": false
-          },
-          {
             "year": 1880,
-            "people": 280,
-            "records": 32,
+            "people": 610,
+            "records": 67,
             "reliable": true
           },
           {
             "year": 1900,
-            "people": 13691,
-            "records": 696,
+            "people": 19241,
+            "records": 978,
             "reliable": true
           },
           {
             "year": 1910,
-            "people": 82014,
-            "records": 821,
+            "people": 100980,
+            "records": 1010,
             "reliable": true
           },
           {
             "year": 1920,
-            "people": 169152,
-            "records": 1676,
+            "people": 190198,
+            "records": 1885,
             "reliable": true
           },
           {
             "year": 1930,
-            "people": 208398,
-            "records": 10321,
+            "people": 243173,
+            "records": 12044,
             "reliable": true
           },
           {
             "year": 1940,
-            "people": 149924,
-            "records": 1520,
+            "people": 202243,
+            "records": 2051,
             "reliable": true
           }
         ],
+        "seriesSource": "category",
         "spellings": [
           {
             "writtenAs": "OPERATOR (industry: TELEPHONE)",
@@ -6698,6 +6753,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "SHIP CHANDLER",
@@ -6754,59 +6810,60 @@
         "series": [
           {
             "year": 1850,
-            "people": 383,
-            "records": 4,
+            "people": 470,
+            "records": 5,
             "reliable": false
           },
           {
             "year": 1860,
-            "people": 1101,
-            "records": 11,
+            "people": 1388,
+            "records": 14,
             "reliable": true
           },
           {
             "year": 1870,
-            "people": 6560,
-            "records": 65,
+            "people": 7189,
+            "records": 71,
             "reliable": true
           },
           {
             "year": 1880,
-            "people": 15180,
-            "records": 1626,
+            "people": 19976,
+            "records": 2135,
             "reliable": true
           },
           {
             "year": 1900,
-            "people": 48475,
-            "records": 2467,
+            "people": 55621,
+            "records": 2830,
             "reliable": true
           },
           {
             "year": 1910,
-            "people": 46524,
-            "records": 466,
+            "people": 68083,
+            "records": 682,
             "reliable": true
           },
           {
             "year": 1920,
-            "people": 67596,
-            "records": 666,
+            "people": 78956,
+            "records": 779,
             "reliable": true
           },
           {
             "year": 1930,
-            "people": 61842,
-            "records": 3063,
+            "people": 68024,
+            "records": 3370,
             "reliable": true
           },
           {
             "year": 1940,
-            "people": 37868,
-            "records": 384,
+            "people": 54818,
+            "records": 555,
             "reliable": true
           }
         ],
+        "seriesSource": "category",
         "spellings": [
           {
             "writtenAs": "TELEGRAPH OPERATOR",
@@ -6947,6 +7004,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -6976,6 +7034,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -7005,6 +7064,7 @@
         "category": "",
         "confidence": "high",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -7034,6 +7094,7 @@
         "category": "",
         "confidence": "medium",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -7118,6 +7179,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "WATER BOY",
@@ -7215,6 +7277,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "WHEELWRIGHT",
@@ -7336,6 +7399,7 @@
             "reliable": true
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "WIRE DRAWER",
@@ -7378,6 +7442,7 @@
         "category": "Dyers",
         "confidence": "low",
         "series": [],
+        "seriesSource": null,
         "spellings": []
       },
       "transitions": null
@@ -7462,6 +7527,7 @@
             "reliable": false
           }
         ],
+        "seriesSource": "title",
         "spellings": [
           {
             "writtenAs": "WOOL COMBER",

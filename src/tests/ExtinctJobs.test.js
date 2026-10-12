@@ -70,6 +70,24 @@ describe('CensusChart', () => {
     expect(screen.getByText('records lost')).toBeTruthy();
   });
 
+  it('calls title-search counts a minimum', () => {
+    const { container } = render(CensusChart, {
+      props: { series, source: 'title' },
+    });
+    expect(container.querySelector('figcaption').textContent).toMatch(
+      /minimum/
+    );
+  });
+
+  it('describes category counts without the minimum caveat', () => {
+    const { container } = render(CensusChart, {
+      props: { series, source: 'category' },
+    });
+    expect(container.querySelector('figcaption').textContent).not.toMatch(
+      /minimum/
+    );
+  });
+
   it('includes an accessible table of values', () => {
     render(CensusChart, { props: { series, name: 'telegraph operators' } });
     expect(screen.getByText('67,000')).toBeTruthy();
