@@ -14,14 +14,22 @@ import Sidenote from '$lib/components/ExtinctJobs/Sidenote.svelte';
 import MarginNotes from '$lib/components/ExtinctJobs/MarginNotes.svelte';
 import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
 import DecadePicker from '$lib/components/ExtinctJobs/DecadePicker.svelte';
-import { centuryLabel, formatShare, peak, relatedJobs } from '$lib/jobs.js';
+import {
+  centuryLabel,
+  formatOneIn,
+  formatPercent,
+  formatShare,
+  peak,
+  peakBy,
+  relatedJobs,
+} from '$lib/jobs.js';
 
 const text = (html) => createRawSnippet(() => ({ render: () => html }));
 
 const series = [
-  { year: 1850, people: 400, records: 4, reliable: false },
-  { year: 1900, people: 35000, records: 900, reliable: true },
-  { year: 1920, people: 67000, records: 1400, reliable: true },
+  { year: 1850, people: 400, share: 0.0001, records: 4, reliable: false },
+  { year: 1900, people: 35000, share: 0.0012, records: 900, reliable: true },
+  { year: 1920, people: 67000, share: 0.0016, records: 1400, reliable: true },
 ];
 
 const transitions = {
@@ -170,7 +178,7 @@ describe('CensusChart', () => {
     const { container } = render(CensusChart, { props: { series } });
     await fireEvent.focus(container.querySelectorAll('rect.hit')[1]);
     expect(container.querySelector('.tip').textContent).toMatch(
-      /1900\s*35,000 people\s*900 sample records/
+      /1900\s*35,000 people\s*1 in 833 workers\s*900 sample records/
     );
   });
 });
@@ -399,5 +407,37 @@ describe('DecadePicker', () => {
       props: { flows: [flows[0]] },
     });
     expect(container.querySelector('.decades')).toBeNull();
+  });
+});
+
+describe('share of workers', () => {
+  it('formats shares as "1 in N" and percentages', () => {
+    expect(formatOneIn(1 / 91)).toBe('1 in 91 workers');
+    expect(formatPercent(0.026)).toBe('2.6%');
+    expect(formatPercent(0.0004)).toBe('0.04%');
+  });
+
+  it('finds the peak by share', () => {
+    const s = [
+      { year: 1900, people: 100, share: 0.02 },
+      { year: 1920, people: 150, share: 0.01 },
+    ];
+    expect(peakBy(s, 'people').year).toBe(1920);
+    expect(peakBy(s, 'share').year).toBe(1900);
+  });
+
+  it('switches the chart to shares', async () => {
+    const shareSeries = [
+      { year: 1900, people: 100, share: 0.02, records: 50, reliable: true },
+      { year: 1920, people: 150, share: 0.01, records: 60, reliable: true },
+    ];
+    const { container } = render(CensusChart, {
+      props: { series: shareSeries },
+    });
+    expect(container.querySelector('.peak-label').textContent).toBe('150');
+    await fireEvent.click(
+      screen.getByRole('button', { name: 'Share of all workers' })
+    );
+    expect(container.querySelector('.peak-label').textContent).toBe('1 in 50');
   });
 });

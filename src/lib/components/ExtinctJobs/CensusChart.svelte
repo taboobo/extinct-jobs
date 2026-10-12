@@ -4,29 +4,50 @@ CensusChart.svelte — Bar chart of the estimated number of Americans who wrote 
 job title on the census, 1850–1940. The peak year is highlighted and labelled;
 bars based on fewer than 10 sample records are striped ("rough"), with a legend.
 1890 is marked as missing: those records burned in 1921. Hovering, tapping or
-tabbing to a year shows its number of people and sample records.
+tabbing to a year shows its number of people, its share of all workers and its
+sample records. A toggle switches the bars between number of people and share of
+all workers (a job can grow in numbers while shrinking as a share).
 
 Props:
-- series: [{ year, people, records, reliable }] from jobs.json
+- series: [{ year, people, share, records, reliable }] from jobs.json
 - name: the job name, used in the accessible description
 - source: 'category' (everyone the census coded to this job) or 'title' (people whose
   written job title matched; a minimum count)
 -->
 <script>
-  import { CENSUS_YEARS, formatNumber, peak } from '$lib/jobs.js';
+  import {
+    CENSUS_YEARS,
+    formatNumber,
+    formatOneIn,
+    formatPercent,
+    peakBy,
+  } from '$lib/jobs.js';
 
   let { series = [], name = 'this job', source = 'title' } = $props();
+
+  // 'people' or 'share' (of all workers that census year).
+  let measure = $state('people');
+  const hasShares = $derived(series.some((s) => s.share != null));
+  // Percent labels ("0.20%") need a wider left margin than counts ("250k").
+  const PAD = $derived({
+    top: 30,
+    right: 8,
+    bottom: 28,
+    left: measure === 'share' ? 60 : 44,
+  });
+  const value = (point) =>
+    measure === 'share' ? (point.share ?? 0) : point.people;
 
   // Drawn at the figure's real width so text stays a readable size on phones.
   let width = $state(640);
   const W = $derived(Math.max(280, width));
   const H = $derived(W < 480 ? 220 : 260);
-  const PAD = { top: 30, right: 8, bottom: 28, left: 44 };
+
   const plotW = $derived(W - PAD.left - PAD.right);
   const plotH = $derived(H - PAD.top - PAD.bottom);
 
   const byYear = $derived(new Map(series.map((s) => [s.year, s])));
-  const top = $derived(peak(series));
+  const top = $derived(peakBy(series, measure));
   const hasRough = $derived(series.some((s) => s.people > 0 && !s.reliable));
   const hatchId = `hatch-${Math.random().toString(36).slice(2, 9)}`;
 
@@ -36,7 +57,9 @@ Props:
   const activeX = $derived(
     active ? PAD.left + CENSUS_YEARS.indexOf(active) * slot + slot / 2 : 0
   );
-  const max = $derived(Math.max(1, ...series.map((s) => s.people)));
+  const max = $derived(
+    Math.max(measure === 'share' ? 1e-9 : 1, ...series.map(value))
+  );
 
   // A "nice" top for the y axis and three gridlines.
   const yMax = $derived.by(() => {
@@ -52,12 +75,33 @@ Props:
   const y = (v) => PAD.top + plotH - (v / yMax) * plotH;
 
   function short(n) {
+    if (measure === 'share') return n === 0 ? '0' : formatPercent(n);
     if (n >= 1000) return `${Math.round(n / 1000)}k`;
     return String(n);
+  }
+
+  function peakText(point) {
+    return measure === 'share'
+      ? formatOneIn(point.share).replace(' workers', '')
+      : formatNumber(point.people);
   }
 </script>
 
 <div class="census-chart">
+  {#if hasShares}
+    <div class="measure" role="group" aria-label="Show bars as">
+      <button
+        type="button"
+        aria-pressed={measure === 'people'}
+        onclick={() => (measure = 'people')}>Number of people</button
+      >
+      <button
+        type="button"
+        aria-pressed={measure === 'share'}
+        onclick={() => (measure = 'share')}>Share of all workers</button
+      >
+    </div>
+  {/if}
   <figure bind:clientWidth={width}>
     <svg
       viewBox="0 0 {W} {H}"
@@ -67,8 +111,11 @@ Props:
       aria-labelledby="census-chart-desc"
     >
       <desc id="census-chart-desc">
-        Estimated number of people working as {name} in each U.S. census from 1850
-        to 1940. A table with the same numbers follows.
+        Estimated {measure === 'share'
+          ? 'share of all workers'
+          : 'number of people'}
+        working as {name} in each U.S. census from 1850 to 1940. A table with the
+        same numbers follows.
       </desc>
 
       <defs>
@@ -113,13 +160,14 @@ Props:
             class:rough={!point.reliable}
             style:fill={!point.reliable ? `url(#${hatchId})` : undefined}
             x={cx - barW / 2}
-            y={y(point.people)}
+            y={y(value(point))}
             width={barW}
-            height={PAD.top + plotH - y(point.people)}
+            height={PAD.top + plotH - y(value(point))}
           >
             <title>
-              {year}: about {formatNumber(point.people)} people ({point.records}
-              sample records)
+              {year}: about {formatNumber(point.people)} people{point.share
+                ? `, ${formatOneIn(point.share)}`
+                : ''} ({point.records} sample records)
             </title>
           </rect>
           <rect
@@ -133,9 +181,11 @@ Props:
             role="img"
             aria-label="{year}: about {formatNumber(
               point.people
-            )} people, {formatNumber(
-              point.records
-            )} sample records{point.reliable ? '' : ', a rough estimate'}"
+            )} people{point.share
+              ? `, ${formatOneIn(point.share)}`
+              : ''}, {formatNumber(point.records)} sample records{point.reliable
+              ? ''
+              : ', a rough estimate'}"
             onpointerenter={() => (active = year)}
             onpointerdown={() => (active = year)}
             onpointerleave={() => (active = null)}
@@ -146,8 +196,8 @@ Props:
             <text
               class="peak-label"
               x={cx}
-              y={y(point.people) - 8}
-              text-anchor="middle">{formatNumber(point.people)}</text
+              y={y(value(point)) - 8}
+              text-anchor="middle">{peakText(point)}</text
             >
           {/if}
         {/if}
@@ -163,11 +213,13 @@ Props:
       <div
         class="tip"
         style:left="{(activeX / W) * 100}%"
-        style:top="{y(activePoint.people)}px"
+        style:top="{y(value(activePoint))}px"
         aria-hidden="true"
       >
         <strong>{active}</strong>
         <span>{formatNumber(activePoint.people)} people</span>
+        {#if activePoint.share}<span>{formatOneIn(activePoint.share)}</span
+          >{/if}
         <span class="tip-meta"
           >{formatNumber(activePoint.records)} sample records{activePoint.reliable
             ? ''
@@ -210,6 +262,7 @@ Props:
         <tr>
           <th scope="col">Year</th>
           <th scope="col">People</th>
+          <th scope="col">Share of workers</th>
           <th scope="col">Sample records</th>
         </tr>
       </thead>
@@ -219,9 +272,10 @@ Props:
           <tr>
             <th scope="row">{year}</th>
             {#if year === 1890}
-              <td colspan="2">Records lost</td>
+              <td colspan="3">Records lost</td>
             {:else}
               <td>{formatNumber(point?.people ?? 0)}</td>
+              <td>{point?.share ? formatPercent(point.share) : '–'}</td>
               <td>{formatNumber(point?.records ?? 0)}</td>
             {/if}
           </tr>
@@ -232,6 +286,29 @@ Props:
 </div>
 
 <style lang="scss">
+  .measure {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xxs);
+    margin-bottom: var(--spacing-xs);
+
+    button {
+      font-family: var(--font-sans);
+      font-size: var(--font-size-sm);
+      padding: var(--spacing-xxs) var(--spacing-xs);
+      color: var(--color-text);
+      background: transparent;
+      border: var(--border-width-thin) solid var(--color-rule);
+      cursor: pointer;
+    }
+
+    button[aria-pressed='true'] {
+      color: var(--color-white);
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+    }
+  }
+
   figure {
     position: relative;
     margin: 0;

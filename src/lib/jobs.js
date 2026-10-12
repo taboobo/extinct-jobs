@@ -89,3 +89,27 @@ export function jobSummary(job) {
     })),
   };
 }
+
+/** The point with the highest value of `key` ('people' or 'share'), or null. */
+export function peakBy(series = [], key = 'people') {
+  return series.reduce(
+    (best, point) =>
+      point[key] != null && (!best || point[key] > best[key]) ? point : best,
+    null
+  );
+}
+
+/** A share of all workers as "1 in 91 workers". */
+export function formatOneIn(share) {
+  if (!share) return 'no workers';
+  return `1 in ${formatNumber(1 / share)} workers`;
+}
+
+/** A share of all workers as a percentage with sensible precision ("2.6%", "0.04%"). */
+export function formatPercent(share) {
+  const pct = share * 100;
+  if (pct === 0) return '0%';
+  const digits =
+    pct >= 10 ? 0 : pct >= 1 ? 1 : Math.min(3, -Math.floor(Math.log10(pct)));
+  return `${pct.toFixed(digits)}%`;
+}

@@ -11,12 +11,19 @@ each census, where its workers went next and came from, and jobs that ended the 
   import Sidenote from '$lib/components/ExtinctJobs/Sidenote.svelte';
   import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
   import DecadePicker from '$lib/components/ExtinctJobs/DecadePicker.svelte';
-  import { centuryLabel, formatNumber, peak } from '$lib/jobs.js';
+  import {
+    centuryLabel,
+    formatNumber,
+    formatOneIn,
+    peak,
+    peakBy,
+  } from '$lib/jobs.js';
 
   let { data } = $props();
   const job = $derived(data.job);
   const census = $derived(job.census);
   const top = $derived(peak(census.series));
+  const topShare = $derived(peakBy(census.series, 'share'));
   // Which pair of censuses the flows show; starts at the decade the job shrank most.
   let picked = $state(null);
   $effect(() => {
@@ -108,6 +115,18 @@ each census, where its workers went next and came from, and jobs that ended the 
               <span class="rough-note">(a rough estimate from few records)</span
               >{/if}
           </p>
+          {#if topShare && topShare.year !== top.year}
+            <p class="share-peak">
+              As a share of all workers it peaked earlier, in {topShare.year},
+              at {formatOneIn(topShare.share)}. By {top.year} it was {formatOneIn(
+                top.share
+              )}.
+            </p>
+          {:else if topShare}
+            <p class="share-peak">
+              That year it was {formatOneIn(topShare.share)}.
+            </p>
+          {/if}
         {/if}
         <MarginNotes>
           <CensusChart
@@ -354,6 +373,12 @@ each census, where its workers went next and came from, and jobs that ended the 
     font-family: var(--font-sans);
     color: var(--color-text);
     margin-bottom: var(--spacing-sm);
+  }
+
+  .share-peak {
+    margin-top: calc(-1 * var(--spacing-xs));
+    font-family: var(--font-sans);
+    color: var(--color-text);
   }
 
   .rough-note {

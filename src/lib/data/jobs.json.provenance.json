@@ -1,13 +1,13 @@
 {
   "output": "data/processed/site/jobs.json",
-  "sha256": "60b639447fe2ca152819ee84d4ba98b52aa5893ca7e6c0f60f50511ee6558dd5",
+  "sha256": "f3384062596d9af56fd97f52972ee8aead421904fd932460ded6d5468d39e074",
   "rows": 115,
-  "built_at": "2026-10-12T00:35:47+00:00",
+  "built_at": "2026-10-12T00:37:29+00:00",
   "script": {
     "path": "scripts/export_site_data.py",
-    "sha256": "7e2421138fcc52df91b8be5d4277cc66b28d8c005ca7b0cf6e1937cd37ac1118",
+    "sha256": "6ebb0e021ee97d98ff402415349d6ca8d82bd2e8a7053c116c5e49f20e9567ba",
     "git": {
-      "commit": "e3ecbaaf7d455970e7eb6be1ee242d28c633eadc",
+      "commit": "544382d6e32811fef6e7677fbb598f79690eac53",
       "file_committed": true,
       "file_modified_since_commit": true
     }
@@ -97,6 +97,7 @@
     "defaultFlow: index of the pair where the job's estimated workforce fell the most.",
     "categories: OCC1950 codes referenced by flows, with weighted category totals by year (category_counts) and the Wikipedia job they exactly match, for hover cards.",
     "Non-occupational OCC1950 codes relabelled in plain language (e.g. 999 -> 'No occupation listed').",
+    "series[].share: people / estimated workers that year, where workers = the sum of category_counts persons_est over all occupational OCC1950 codes (top-level 'workers').",
     "Census jobs (origin 'census') from data/manual/census_jobs.csv: description from the manual table or the first three sentences of the Wikipedia article intro; reason from the manual table (draft flag from its status); image from the article; series and flows from the job's OCC1950 category; endCentury = century of the first census after the peak where the category's share of workers fell below 10% of its peak share (IPUMS public sample counts, 1850-2024). Where the manual table gives earlier_code/earlier_until, that code is used for census years up to earlier_until (series and flows); 'note' explains such quirks on the page."
   ],
   "overrides_applied": [],
