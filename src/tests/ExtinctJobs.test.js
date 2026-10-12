@@ -13,6 +13,7 @@ import CategoryCard from '$lib/components/ExtinctJobs/CategoryCard.svelte';
 import Sidenote from '$lib/components/ExtinctJobs/Sidenote.svelte';
 import MarginNotes from '$lib/components/ExtinctJobs/MarginNotes.svelte';
 import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
+import DecadePicker from '$lib/components/ExtinctJobs/DecadePicker.svelte';
 import { centuryLabel, formatShare, peak, relatedJobs } from '$lib/jobs.js';
 
 const text = (html) => createRawSnippet(() => ({ render: () => html }));
@@ -372,5 +373,31 @@ describe('Colophon', () => {
     expect(
       screen.getByRole('link', { name: 'List of obsolete occupations' })
     ).toBeTruthy();
+  });
+});
+
+describe('DecadePicker', () => {
+  const flows = [
+    { from: 1900, to: 1910 },
+    { from: 1910, to: 1920 },
+  ];
+
+  it('marks the selected pair and switches on click', async () => {
+    render(DecadePicker, { props: { flows, selected: 1 } });
+    const first = screen.getByRole('button', { name: '1900 to 1910' });
+    expect(
+      screen
+        .getByRole('button', { name: '1910 to 1920' })
+        .getAttribute('aria-pressed')
+    ).toBe('true');
+    await fireEvent.click(first);
+    expect(first.getAttribute('aria-pressed')).toBe('true');
+  });
+
+  it('renders nothing for a single pair', () => {
+    const { container } = render(DecadePicker, {
+      props: { flows: [flows[0]] },
+    });
+    expect(container.querySelector('.decades')).toBeNull();
   });
 });

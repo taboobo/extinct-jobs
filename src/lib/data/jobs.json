@@ -27,8 +27,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "alewife",
@@ -57,8 +57,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "alnager",
@@ -87,8 +87,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "armourer-chain-mail",
@@ -117,8 +117,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "armourer-plate-armour",
@@ -147,8 +147,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "ash-burner",
@@ -232,8 +232,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "baby-farmer",
@@ -262,8 +262,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "between-maid",
@@ -292,8 +292,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "body-snatcher",
@@ -322,8 +322,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "breaker-boy",
@@ -407,152 +407,159 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "broader",
-        "code": 650,
-        "category": "Mine operatives and laborers",
-        "linkedPeople": 264437,
-        "destinations": [
-          {
+      "flows": [
+        {
+          "from": 1910,
+          "to": 1920,
+          "transitions": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "broader",
             "code": 650,
-            "label": "Mine operatives and laborers",
-            "share": 0.5288,
-            "same": true,
-            "other": false
+            "category": "Mine operatives and laborers",
+            "linkedPeople": 264437,
+            "destinations": [
+              {
+                "code": 650,
+                "label": "Mine operatives and laborers",
+                "share": 0.5288,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.0873,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.0678,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.039,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0286,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0277,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 523,
+                "label": "Foremen (n.e.c.)",
+                "share": 0.0214,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.018,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1813,
+                "same": false,
+                "other": true
+              }
+            ]
           },
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.0873,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 100,
-            "label": "Farmers (owners and tenants)",
-            "share": 0.0678,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 999,
-            "label": "No occupation listed",
-            "share": 0.039,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0286,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0277,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 523,
-            "label": "Foremen (n.e.c.)",
-            "share": 0.0214,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.018,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.1813,
-            "same": false,
-            "other": true
-          }
-        ]
-      },
-      "arrivals": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "broader",
-        "code": 650,
-        "category": "Mine operatives and laborers",
-        "linkedPeople": 257764,
-        "origins": [
-          {
+          "arrivals": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "broader",
             "code": 650,
-            "label": "Mine operatives and laborers",
-            "share": 0.5425,
-            "same": true,
-            "other": false
-          },
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.1003,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 820,
-            "label": "Farm laborers, wage workers",
-            "share": 0.0763,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 100,
-            "label": "Farmers (owners and tenants)",
-            "share": 0.0751,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0293,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0188,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0176,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 683,
-            "label": "Truck and tractor drivers",
-            "share": 0.0133,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.1269,
-            "same": false,
-            "other": true
+            "category": "Mine operatives and laborers",
+            "linkedPeople": 257764,
+            "origins": [
+              {
+                "code": 650,
+                "label": "Mine operatives and laborers",
+                "share": 0.5425,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1003,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 820,
+                "label": "Farm laborers, wage workers",
+                "share": 0.0763,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.0751,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0293,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0188,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0176,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 683,
+                "label": "Truck and tractor drivers",
+                "share": 0.0133,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1269,
+                "same": false,
+                "other": true
+              }
+            ]
           }
-        ]
-      }
+        }
+      ],
+      "defaultFlow": 0
     },
     {
       "id": "brush-maker",
@@ -636,8 +643,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "buckle-maker",
@@ -721,8 +728,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "burlak",
@@ -751,8 +758,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "cavalryman",
@@ -836,8 +843,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "cat-s-meat-man",
@@ -866,8 +873,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "climbing-boy",
@@ -951,8 +958,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "coach-maker",
@@ -1036,8 +1043,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "coachman",
@@ -1121,8 +1128,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "colporter",
@@ -1206,8 +1213,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "computer",
@@ -1291,8 +1298,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "cooper",
@@ -1376,8 +1383,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "cork-cutter",
@@ -1461,8 +1468,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "crossing-sweeper",
@@ -1491,8 +1498,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "doffer",
@@ -1576,8 +1583,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "dog-whipper",
@@ -1606,8 +1613,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "drummer-military",
@@ -1636,8 +1643,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "drysalter",
@@ -1666,8 +1673,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "elevator-operator",
@@ -1733,152 +1740,159 @@
         ],
         "seriesSource": "category"
       },
-      "transitions": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "exact",
-        "code": 761,
-        "category": "Elevator operators",
-        "linkedPeople": 8785,
-        "destinations": [
-          {
+      "flows": [
+        {
+          "from": 1910,
+          "to": 1920,
+          "transitions": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "exact",
             "code": 761,
-            "label": "Elevator operators",
-            "share": 0.1277,
-            "same": true,
-            "other": false
+            "category": "Elevator operators",
+            "linkedPeople": 8785,
+            "destinations": [
+              {
+                "code": 761,
+                "label": "Elevator operators",
+                "share": 0.1277,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1011,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0812,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 390,
+                "label": "Clerical and kindred workers (n.e.c.)",
+                "share": 0.0484,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0478,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.0421,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0376,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 544,
+                "label": "Machinists",
+                "share": 0.032,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.4822,
+                "same": false,
+                "other": true
+              }
+            ]
           },
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.1011,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0812,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 390,
-            "label": "Clerical and kindred workers (n.e.c.)",
-            "share": 0.0484,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0478,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 999,
-            "label": "No occupation listed",
-            "share": 0.0421,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0376,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 544,
-            "label": "Machinists",
-            "share": 0.032,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.4822,
-            "same": false,
-            "other": true
-          }
-        ]
-      },
-      "arrivals": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "exact",
-        "code": 761,
-        "category": "Elevator operators",
-        "linkedPeople": 9426,
-        "origins": [
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.148,
-            "same": false,
-            "other": false
-          },
-          {
+          "arrivals": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "exact",
             "code": 761,
-            "label": "Elevator operators",
-            "share": 0.119,
-            "same": true,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.092,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0472,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0466,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 100,
-            "label": "Farmers (owners and tenants)",
-            "share": 0.0456,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 490,
-            "label": "Salesmen and sales clerks (n.e.c.)",
-            "share": 0.0321,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 820,
-            "label": "Farm laborers, wage workers",
-            "share": 0.029,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.4405,
-            "same": false,
-            "other": true
+            "category": "Elevator operators",
+            "linkedPeople": 9426,
+            "origins": [
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.148,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 761,
+                "label": "Elevator operators",
+                "share": 0.119,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.092,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0472,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0466,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.0456,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.0321,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 820,
+                "label": "Farm laborers, wage workers",
+                "share": 0.029,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.4405,
+                "same": false,
+                "other": true
+              }
+            ]
           }
-        ]
-      }
+        }
+      ],
+      "defaultFlow": 0
     },
     {
       "id": "elocutionist",
@@ -1962,8 +1976,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "escheator",
@@ -1992,8 +2006,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "expressman",
@@ -2077,152 +2091,159 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "broader",
-        "code": 683,
-        "category": "Truck and tractor drivers",
-        "linkedPeople": 66952,
-        "destinations": [
-          {
+      "flows": [
+        {
+          "from": 1910,
+          "to": 1920,
+          "transitions": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "broader",
             "code": 683,
-            "label": "Truck and tractor drivers",
-            "share": 0.1307,
-            "same": true,
-            "other": false
+            "category": "Truck and tractor drivers",
+            "linkedPeople": 66952,
+            "destinations": [
+              {
+                "code": 683,
+                "label": "Truck and tractor drivers",
+                "share": 0.1307,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1272,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 960,
+                "label": "Teamsters",
+                "share": 0.0584,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0568,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0563,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 650,
+                "label": "Mine operatives and laborers",
+                "share": 0.0511,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.0421,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0406,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.4369,
+                "same": false,
+                "other": true
+              }
+            ]
           },
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.1272,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 960,
-            "label": "Teamsters",
-            "share": 0.0584,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0568,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0563,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 650,
-            "label": "Mine operatives and laborers",
-            "share": 0.0511,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 100,
-            "label": "Farmers (owners and tenants)",
-            "share": 0.0421,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0406,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.4369,
-            "same": false,
-            "other": true
-          }
-        ]
-      },
-      "arrivals": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "broader",
-        "code": 683,
-        "category": "Truck and tractor drivers",
-        "linkedPeople": 97374,
-        "origins": [
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.1411,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 960,
-            "label": "Teamsters",
-            "share": 0.1122,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 820,
-            "label": "Farm laborers, wage workers",
-            "share": 0.0919,
-            "same": false,
-            "other": false
-          },
-          {
+          "arrivals": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "broader",
             "code": 683,
-            "label": "Truck and tractor drivers",
-            "share": 0.0899,
-            "same": true,
-            "other": false
-          },
-          {
-            "code": 100,
-            "label": "Farmers (owners and tenants)",
-            "share": 0.0753,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0629,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 632,
-            "label": "Deliverymen and routemen",
-            "share": 0.0448,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0398,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.3422,
-            "same": false,
-            "other": true
+            "category": "Truck and tractor drivers",
+            "linkedPeople": 97374,
+            "origins": [
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1411,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 960,
+                "label": "Teamsters",
+                "share": 0.1122,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 820,
+                "label": "Farm laborers, wage workers",
+                "share": 0.0919,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 683,
+                "label": "Truck and tractor drivers",
+                "share": 0.0899,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.0753,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0629,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 632,
+                "label": "Deliverymen and routemen",
+                "share": 0.0448,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0398,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.3422,
+                "same": false,
+                "other": true
+              }
+            ]
           }
-        ]
-      }
+        }
+      ],
+      "defaultFlow": 0
     },
     {
       "id": "fifer",
@@ -2251,8 +2272,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "footman",
@@ -2336,8 +2357,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "fuller",
@@ -2421,8 +2442,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "garden-hermit",
@@ -2451,8 +2472,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "gladiator",
@@ -2481,8 +2502,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "gong-farmer",
@@ -2511,8 +2532,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "hall-boy",
@@ -2596,8 +2617,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "ice-cutter",
@@ -2681,8 +2702,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "iceman",
@@ -2766,152 +2787,159 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "broader",
-        "code": 632,
-        "category": "Deliverymen and routemen",
-        "linkedPeople": 62646,
-        "destinations": [
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.1115,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 490,
-            "label": "Salesmen and sales clerks (n.e.c.)",
-            "share": 0.0743,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0709,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 683,
-            "label": "Truck and tractor drivers",
-            "share": 0.0697,
-            "same": false,
-            "other": false
-          },
-          {
+      "flows": [
+        {
+          "from": 1910,
+          "to": 1920,
+          "transitions": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "broader",
             "code": 632,
-            "label": "Deliverymen and routemen",
-            "share": 0.0602,
-            "same": true,
-            "other": false
+            "category": "Deliverymen and routemen",
+            "linkedPeople": 62646,
+            "destinations": [
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1115,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.0743,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0709,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 683,
+                "label": "Truck and tractor drivers",
+                "share": 0.0697,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 632,
+                "label": "Deliverymen and routemen",
+                "share": 0.0602,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0573,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.0477,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0392,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.4692,
+                "same": false,
+                "other": true
+              }
+            ]
           },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0573,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 100,
-            "label": "Farmers (owners and tenants)",
-            "share": 0.0477,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0392,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.4692,
-            "same": false,
-            "other": true
-          }
-        ]
-      },
-      "arrivals": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "broader",
-        "code": 632,
-        "category": "Deliverymen and routemen",
-        "linkedPeople": 28148,
-        "origins": [
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.1374,
-            "same": false,
-            "other": false
-          },
-          {
+          "arrivals": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "broader",
             "code": 632,
-            "label": "Deliverymen and routemen",
-            "share": 0.134,
-            "same": true,
-            "other": false
-          },
-          {
-            "code": 960,
-            "label": "Teamsters",
-            "share": 0.0827,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 820,
-            "label": "Farm laborers, wage workers",
-            "share": 0.0729,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 490,
-            "label": "Salesmen and sales clerks (n.e.c.)",
-            "share": 0.066,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0639,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 100,
-            "label": "Farmers (owners and tenants)",
-            "share": 0.0611,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0527,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.3293,
-            "same": false,
-            "other": true
+            "category": "Deliverymen and routemen",
+            "linkedPeople": 28148,
+            "origins": [
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1374,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 632,
+                "label": "Deliverymen and routemen",
+                "share": 0.134,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 960,
+                "label": "Teamsters",
+                "share": 0.0827,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 820,
+                "label": "Farm laborers, wage workers",
+                "share": 0.0729,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.066,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0639,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.0611,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0527,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.3293,
+                "same": false,
+                "other": true
+              }
+            ]
           }
-        ]
-      }
+        }
+      ],
+      "defaultFlow": 0
     },
     {
       "id": "illuminator-of-manuscripts",
@@ -2940,8 +2968,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "ivory-carver",
@@ -3025,8 +3053,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "keypunch-operator",
@@ -3110,8 +3138,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "kitchen-maid",
@@ -3195,8 +3223,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "knocker-up",
@@ -3225,8 +3253,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "lady-s-companion",
@@ -3310,8 +3338,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "lamplighter",
@@ -3395,8 +3423,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "lector",
@@ -3480,8 +3508,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "leech-collector",
@@ -3510,8 +3538,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "legger",
@@ -3595,8 +3623,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "limeburner",
@@ -3680,8 +3708,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "link-boy",
@@ -3710,8 +3738,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "man-at-arms",
@@ -3740,8 +3768,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "matchgirl",
@@ -3825,8 +3853,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "match-maker",
@@ -3910,8 +3938,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "mudlark",
@@ -3940,8 +3968,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "mule-scavenger",
@@ -4025,8 +4053,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "mute",
@@ -4110,8 +4138,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "needle-maker",
@@ -4195,8 +4223,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "ninja",
@@ -4225,8 +4253,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "oakum-picker",
@@ -4255,8 +4283,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "phrenologist",
@@ -4285,8 +4313,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "physiognomist",
@@ -4315,8 +4343,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "pin-boy",
@@ -4400,80 +4428,87 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "broader",
-        "code": 732,
-        "category": "Attendants, recreation and amusement",
-        "linkedPeople": 1021,
-        "origins": [
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.1978,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.1166,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 820,
-            "label": "Farm laborers, wage workers",
-            "share": 0.1058,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 100,
-            "label": "Farmers (owners and tenants)",
-            "share": 0.096,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0872,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 490,
-            "label": "Salesmen and sales clerks (n.e.c.)",
-            "share": 0.0735,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0568,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 390,
-            "label": "Clerical and kindred workers (n.e.c.)",
-            "share": 0.0343,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.2321,
-            "same": false,
-            "other": true
+      "flows": [
+        {
+          "from": 1910,
+          "to": 1920,
+          "transitions": null,
+          "arrivals": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "broader",
+            "code": 732,
+            "category": "Attendants, recreation and amusement",
+            "linkedPeople": 1021,
+            "origins": [
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1978,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.1166,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 820,
+                "label": "Farm laborers, wage workers",
+                "share": 0.1058,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.096,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0872,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.0735,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0568,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 390,
+                "label": "Clerical and kindred workers (n.e.c.)",
+                "share": 0.0343,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.2321,
+                "same": false,
+                "other": true
+              }
+            ]
           }
-        ]
-      }
+        }
+      ],
+      "defaultFlow": 0
     },
     {
       "id": "pin-maker",
@@ -4557,8 +4592,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "plague-doctor",
@@ -4587,8 +4622,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "postilion",
@@ -4617,8 +4652,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "poundmaster",
@@ -4702,8 +4737,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "powder-monkey",
@@ -4732,8 +4767,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "priest-hunter",
@@ -4762,8 +4797,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "printer-s-devil",
@@ -4847,8 +4882,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "privateer",
@@ -4877,8 +4912,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "punkah-wallah",
@@ -4907,8 +4942,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "reeve",
@@ -4937,8 +4972,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "resident-minister",
@@ -4967,8 +5002,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "resin-worker",
@@ -5052,8 +5087,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "riding-officer",
@@ -5082,8 +5117,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "saltpetre-worker",
@@ -5112,8 +5147,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "samurai",
@@ -5142,8 +5177,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "sawyer",
@@ -5227,152 +5262,159 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "broader",
-        "code": 674,
-        "category": "Sawyers",
-        "linkedPeople": 20311,
-        "destinations": [
-          {
-            "code": 100,
-            "label": "Farmers (owners and tenants)",
-            "share": 0.1618,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.1326,
-            "same": false,
-            "other": false
-          },
-          {
+      "flows": [
+        {
+          "from": 1910,
+          "to": 1920,
+          "transitions": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "broader",
             "code": 674,
-            "label": "Sawyers",
-            "share": 0.1208,
-            "same": true,
-            "other": false
+            "category": "Sawyers",
+            "linkedPeople": 20311,
+            "destinations": [
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.1618,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1326,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 674,
+                "label": "Sawyers",
+                "share": 0.1208,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0974,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0507,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0376,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0367,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 55,
+                "label": "Lawyers and judges",
+                "share": 0.0356,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.3269,
+                "same": false,
+                "other": true
+              }
+            ]
           },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0974,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0507,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0376,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 510,
-            "label": "Carpenters",
-            "share": 0.0367,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 55,
-            "label": "Lawyers and judges",
-            "share": 0.0356,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.3269,
-            "same": false,
-            "other": true
-          }
-        ]
-      },
-      "arrivals": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "broader",
-        "code": 674,
-        "category": "Sawyers",
-        "linkedPeople": 12832,
-        "origins": [
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.1972,
-            "same": false,
-            "other": false
-          },
-          {
+          "arrivals": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "broader",
             "code": 674,
-            "label": "Sawyers",
-            "share": 0.1912,
-            "same": true,
-            "other": false
-          },
-          {
-            "code": 100,
-            "label": "Farmers (owners and tenants)",
-            "share": 0.1283,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0988,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 820,
-            "label": "Farm laborers, wage workers",
-            "share": 0.0916,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0377,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 55,
-            "label": "Lawyers and judges",
-            "share": 0.0376,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0351,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.1825,
-            "same": false,
-            "other": true
+            "category": "Sawyers",
+            "linkedPeople": 12832,
+            "origins": [
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1972,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 674,
+                "label": "Sawyers",
+                "share": 0.1912,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.1283,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0988,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 820,
+                "label": "Farm laborers, wage workers",
+                "share": 0.0916,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0377,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 55,
+                "label": "Lawyers and judges",
+                "share": 0.0376,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0351,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1825,
+                "same": false,
+                "other": true
+              }
+            ]
           }
-        ]
-      }
+        }
+      ],
+      "defaultFlow": 0
     },
     {
       "id": "scribe",
@@ -5456,8 +5498,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "scrivener",
@@ -5541,8 +5583,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "scullery-maid",
@@ -5571,8 +5613,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "sedan-chair-bearer",
@@ -5601,8 +5643,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "seneschal",
@@ -5631,8 +5673,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "slave-catcher",
@@ -5661,8 +5703,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "soda-jerk",
@@ -5746,152 +5788,159 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "broader",
-        "code": 760,
-        "category": "Counter and fountain workers",
-        "linkedPeople": 651,
-        "destinations": [
-          {
-            "code": 490,
-            "label": "Salesmen and sales clerks (n.e.c.)",
-            "share": 0.1828,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.1382,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 999,
-            "label": "No occupation listed",
-            "share": 0.0691,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0522,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 390,
-            "label": "Clerical and kindred workers (n.e.c.)",
-            "share": 0.0445,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.0445,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.043,
-            "same": false,
-            "other": false
-          },
-          {
+      "flows": [
+        {
+          "from": 1910,
+          "to": 1920,
+          "transitions": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "broader",
             "code": 760,
-            "label": "Counter and fountain workers",
-            "share": 0.0323,
-            "same": true,
-            "other": false
+            "category": "Counter and fountain workers",
+            "linkedPeople": 651,
+            "destinations": [
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.1828,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.1382,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.0691,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0522,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 390,
+                "label": "Clerical and kindred workers (n.e.c.)",
+                "share": 0.0445,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.0445,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.043,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 760,
+                "label": "Counter and fountain workers",
+                "share": 0.0323,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.3932,
+                "same": false,
+                "other": true
+              }
+            ]
           },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.3932,
-            "same": false,
-            "other": true
+          "arrivals": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "broader",
+            "code": 760,
+            "category": "Counter and fountain workers",
+            "linkedPeople": 702,
+            "origins": [
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.1595,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.1439,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 750,
+                "label": "Bartenders",
+                "share": 0.1382,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1154,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0997,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0641,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 820,
+                "label": "Farm laborers, wage workers",
+                "share": 0.0613,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 784,
+                "label": "Waiters and waitresses",
+                "share": 0.0484,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1695,
+                "same": false,
+                "other": true
+              }
+            ]
           }
-        ]
-      },
-      "arrivals": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "broader",
-        "code": 760,
-        "category": "Counter and fountain workers",
-        "linkedPeople": 702,
-        "origins": [
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.1595,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 490,
-            "label": "Salesmen and sales clerks (n.e.c.)",
-            "share": 0.1439,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 750,
-            "label": "Bartenders",
-            "share": 0.1382,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.1154,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0997,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0641,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 820,
-            "label": "Farm laborers, wage workers",
-            "share": 0.0613,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 784,
-            "label": "Waiters and waitresses",
-            "share": 0.0484,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.1695,
-            "same": false,
-            "other": true
-          }
-        ]
-      }
+        }
+      ],
+      "defaultFlow": 0
     },
     {
       "id": "still-room-maid",
@@ -5920,8 +5969,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "stocking-weaver",
@@ -6005,8 +6054,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "sutler",
@@ -6035,8 +6084,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "switchboard-operator",
@@ -6102,152 +6151,159 @@
         ],
         "seriesSource": "category"
       },
-      "transitions": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "exact",
-        "code": 370,
-        "category": "Telephone operators",
-        "linkedPeople": 33517,
-        "destinations": [
-          {
-            "code": 999,
-            "label": "No occupation listed",
-            "share": 0.2576,
-            "same": false,
-            "other": false
-          },
-          {
+      "flows": [
+        {
+          "from": 1910,
+          "to": 1920,
+          "transitions": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "exact",
             "code": 370,
-            "label": "Telephone operators",
-            "share": 0.2305,
-            "same": true,
-            "other": false
+            "category": "Telephone operators",
+            "linkedPeople": 33517,
+            "destinations": [
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.2576,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 370,
+                "label": "Telephone operators",
+                "share": 0.2305,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 390,
+                "label": "Clerical and kindred workers (n.e.c.)",
+                "share": 0.0704,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 365,
+                "label": "Telegraph operators",
+                "share": 0.0497,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 310,
+                "label": "Bookkeepers",
+                "share": 0.037,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0362,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.0354,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 350,
+                "label": "Stenographers, typists, and secretaries",
+                "share": 0.0341,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.2491,
+                "same": false,
+                "other": true
+              }
+            ]
           },
-          {
-            "code": 390,
-            "label": "Clerical and kindred workers (n.e.c.)",
-            "share": 0.0704,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 365,
-            "label": "Telegraph operators",
-            "share": 0.0497,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 310,
-            "label": "Bookkeepers",
-            "share": 0.037,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0362,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 490,
-            "label": "Salesmen and sales clerks (n.e.c.)",
-            "share": 0.0354,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 350,
-            "label": "Stenographers, typists, and secretaries",
-            "share": 0.0341,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.2491,
-            "same": false,
-            "other": true
-          }
-        ]
-      },
-      "arrivals": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "exact",
-        "code": 370,
-        "category": "Telephone operators",
-        "linkedPeople": 21682,
-        "origins": [
-          {
+          "arrivals": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "exact",
             "code": 370,
-            "label": "Telephone operators",
-            "share": 0.3564,
-            "same": true,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0955,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 365,
-            "label": "Telegraph operators",
-            "share": 0.0678,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 490,
-            "label": "Salesmen and sales clerks (n.e.c.)",
-            "share": 0.056,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0514,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 390,
-            "label": "Clerical and kindred workers (n.e.c.)",
-            "share": 0.041,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 720,
-            "label": "Private household workers (n.e.c.)",
-            "share": 0.0276,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.0275,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.2768,
-            "same": false,
-            "other": true
+            "category": "Telephone operators",
+            "linkedPeople": 21682,
+            "origins": [
+              {
+                "code": 370,
+                "label": "Telephone operators",
+                "share": 0.3564,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0955,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 365,
+                "label": "Telegraph operators",
+                "share": 0.0678,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.056,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0514,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 390,
+                "label": "Clerical and kindred workers (n.e.c.)",
+                "share": 0.041,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 720,
+                "label": "Private household workers (n.e.c.)",
+                "share": 0.0276,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.0275,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.2768,
+                "same": false,
+                "other": true
+              }
+            ]
           }
-        ]
-      }
+        }
+      ],
+      "defaultFlow": 0
     },
     {
       "id": "tallow-chandler",
@@ -6331,8 +6387,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "telegraph-operator",
@@ -6416,152 +6472,159 @@
         ],
         "seriesSource": "category"
       },
-      "transitions": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "exact",
-        "code": 365,
-        "category": "Telegraph operators",
-        "linkedPeople": 24882,
-        "destinations": [
-          {
+      "flows": [
+        {
+          "from": 1910,
+          "to": 1920,
+          "transitions": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "exact",
             "code": 365,
-            "label": "Telegraph operators",
-            "share": 0.3414,
-            "same": true,
-            "other": false
+            "category": "Telegraph operators",
+            "linkedPeople": 24882,
+            "destinations": [
+              {
+                "code": 365,
+                "label": "Telegraph operators",
+                "share": 0.3414,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0854,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 380,
+                "label": "Ticket, station, and express agents",
+                "share": 0.0807,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 370,
+                "label": "Telephone operators",
+                "share": 0.0591,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0464,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0459,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 390,
+                "label": "Clerical and kindred workers (n.e.c.)",
+                "share": 0.0416,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.0408,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.2588,
+                "same": false,
+                "other": true
+              }
+            ]
           },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0854,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 380,
-            "label": "Ticket, station, and express agents",
-            "share": 0.0807,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 370,
-            "label": "Telephone operators",
-            "share": 0.0591,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0464,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0459,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 390,
-            "label": "Clerical and kindred workers (n.e.c.)",
-            "share": 0.0416,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 999,
-            "label": "No occupation listed",
-            "share": 0.0408,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.2588,
-            "same": false,
-            "other": true
-          }
-        ]
-      },
-      "arrivals": {
-        "from": 1910,
-        "to": 1920,
-        "basis": "exact",
-        "code": 365,
-        "category": "Telegraph operators",
-        "linkedPeople": 18761,
-        "origins": [
-          {
+          "arrivals": {
+            "from": 1910,
+            "to": 1920,
+            "basis": "exact",
             "code": 365,
-            "label": "Telegraph operators",
-            "share": 0.4527,
-            "same": true,
-            "other": false
-          },
-          {
-            "code": 370,
-            "label": "Telephone operators",
-            "share": 0.0889,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 380,
-            "label": "Ticket, station, and express agents",
-            "share": 0.0642,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 690,
-            "label": "Operative and kindred workers (n.e.c.)",
-            "share": 0.0622,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 820,
-            "label": "Farm laborers, wage workers",
-            "share": 0.0432,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 979,
-            "label": "Occupation not classified",
-            "share": 0.0389,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 970,
-            "label": "Laborers (n.e.c.)",
-            "share": 0.0373,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": 290,
-            "label": "Managers, officials, and proprietors (n.e.c.)",
-            "share": 0.0317,
-            "same": false,
-            "other": false
-          },
-          {
-            "code": null,
-            "label": "Everything else",
-            "share": 0.181,
-            "same": false,
-            "other": true
+            "category": "Telegraph operators",
+            "linkedPeople": 18761,
+            "origins": [
+              {
+                "code": 365,
+                "label": "Telegraph operators",
+                "share": 0.4527,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 370,
+                "label": "Telephone operators",
+                "share": 0.0889,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 380,
+                "label": "Ticket, station, and express agents",
+                "share": 0.0642,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0622,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 820,
+                "label": "Farm laborers, wage workers",
+                "share": 0.0432,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 979,
+                "label": "Occupation not classified",
+                "share": 0.0389,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.0373,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0317,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.181,
+                "same": false,
+                "other": true
+              }
+            ]
           }
-        ]
-      }
+        }
+      ],
+      "defaultFlow": 0
     },
     {
       "id": "thief-taker",
@@ -6590,8 +6653,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "tondenhei",
@@ -6620,8 +6683,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "tosher",
@@ -6650,8 +6713,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "town-crier",
@@ -6680,8 +6743,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "water-carrier",
@@ -6765,8 +6828,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "wheelwright",
@@ -6850,8 +6913,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "wire-drawer",
@@ -6935,8 +6998,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "woad-dyer",
@@ -6965,8 +7028,8 @@
         "series": [],
         "seriesSource": null
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     },
     {
       "id": "wool-comber",
@@ -7050,8 +7113,8 @@
         ],
         "seriesSource": "title"
       },
-      "transitions": null,
-      "arrivals": null
+      "flows": [],
+      "defaultFlow": null
     }
   ],
   "categories": {

@@ -10,12 +10,22 @@ each census, where its workers went next and came from, and jobs that ended the 
   import MarginNotes from '$lib/components/ExtinctJobs/MarginNotes.svelte';
   import Sidenote from '$lib/components/ExtinctJobs/Sidenote.svelte';
   import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
+  import DecadePicker from '$lib/components/ExtinctJobs/DecadePicker.svelte';
   import { centuryLabel, formatNumber, peak } from '$lib/jobs.js';
 
   let { data } = $props();
   const job = $derived(data.job);
   const census = $derived(job.census);
   const top = $derived(peak(census.series));
+  // Which pair of censuses the flows show; starts at the decade the job shrank most.
+  let picked = $state(null);
+  $effect(() => {
+    job.id;
+    picked = null;
+  });
+  const flowIndex = $derived(picked ?? job.defaultFlow ?? 0);
+  const flow = $derived(job.flows[flowIndex]);
+
   const hasFaint = $derived(
     census.series.some((s) => s.people > 0 && !s.reliable)
   );
@@ -130,10 +140,17 @@ each census, where its workers went next and came from, and jobs that ended the 
     {#if census.series.length}
       <section class="wide">
         <h2>Where they went next</h2>
-        {#if job.transitions}
+        {#if job.flows.length}
+          <DecadePicker
+            flows={job.flows}
+            bind:selected={() => flowIndex, (i) => (picked = i)}
+            label="Census years to compare"
+          />
+        {/if}
+        {#if flow?.transitions}
           <MarginNotes>
             <TransitionBars
-              flow={job.transitions}
+              flow={flow.transitions}
               direction="to"
               categories={data.categories}
             />
@@ -149,6 +166,11 @@ each census, where its workers went next and came from, and jobs that ended the 
               </Sidenote>
             {/snippet}
           </MarginNotes>
+        {:else if flow}
+          <p class="note">
+            Too few people in this job were recorded in {flow.from} to follow them
+            to {flow.to}.
+          </p>
         {:else}
           <p class="note">
             There aren’t enough matched census records yet to follow people in
@@ -158,18 +180,18 @@ each census, where its workers went next and came from, and jobs that ended the 
       </section>
     {/if}
 
-    {#if job.arrivals}
+    {#if flow?.arrivals}
       <section class="wide">
         <h2>Where workers came from</h2>
         <MarginNotes>
           <TransitionBars
-            flow={job.arrivals}
+            flow={flow.arrivals}
             direction="from"
             categories={data.categories}
           />
           {#snippet notes()}
             <Sidenote>
-              Only people who had a job in 1910 and were 15 to 64 then are
+              Only people who had a job in {flow.from} and were 15 to 64 then are
               counted.
             </Sidenote>
           {/snippet}

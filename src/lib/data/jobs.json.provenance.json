@@ -1,13 +1,13 @@
 {
   "output": "data/processed/site/jobs.json",
-  "sha256": "13072cd671d7f34899688c6c71bddbdf57660e87597f83d1b1908387014f1dbc",
+  "sha256": "ab8172b554944b4c08912090e9fa090eadb9468e4442202d44c4b37682f23b50",
   "rows": 102,
-  "built_at": "2026-10-12T00:20:35+00:00",
+  "built_at": "2026-10-12T00:29:16+00:00",
   "script": {
     "path": "scripts/export_site_data.py",
-    "sha256": "85428a6ac9ef06313d0c7925efbd2dd239f1088c94d4982001c5507e8ce60c85",
+    "sha256": "ad1cbd698686f7c1351146d5e82a8f13421c4c38a13d7d141affd470af7b64c7",
     "git": {
-      "commit": "d59bce8bf9ed19188e66964a9005d84220abd8aa",
+      "commit": "af21b23918bbd80ca03a83a8785064ac264260c5",
       "file_committed": true,
       "file_modified_since_commit": true
     }
@@ -54,8 +54,9 @@
     "One record per Wikipedia obsolete occupation, with description and reason text (Wikipedia, CC BY-SA 4.0) and an image hotlinked from Wikimedia Commons with its credit.",
     "census.series: for jobs whose OCC1950 match is exact, IPUMS's weighted category total (seriesSource 'category'); otherwise the title-search estimate, a minimum (seriesSource 'title').",
     "census.series: estimated people per census year; 'reliable' when based on at least 10 sample records. Jobs with fewer than 10 records across all years get no series (likely false matches).",
-    "transitions: 1910->1920 destinations for the job's OCC1950 category, only when the match is exact, or broader with a specific (non-n.e.c.) category at medium/high confidence, at least 100 linked people, and at least 10 sample records with the job's own title in 1910. Top 8 destinations plus 'Everything else' (which includes suppressed small cells).",
-    "arrivals: the reverse of transitions: 1910 jobs of people in the job's category in 1920 (origins limited to working-age people with an occupation in 1910), with the same eligibility rules but requiring the job's title in the 1920 sample.",
+    "flows[].transitions: for each census pair A->B, where people in the job's OCC1950 category in A were in B; only when the match is exact, or broader with a specific (non-n.e.c.) category at medium/high confidence, at least 100 linked people, and at least 10 sample records with the job's own title in A. Top 8 destinations plus 'Everything else' (which includes suppressed small cells).",
+    "flows[].arrivals: the reverse: A jobs of people in the job's category in B (origins limited to working-age people with an occupation in A), requiring the job's title in B's sample.",
+    "defaultFlow: index of the pair where the job's estimated workforce fell the most.",
     "categories: OCC1950 codes referenced by flows, with weighted category totals by year (category_counts) and the Wikipedia job they exactly match, for hover cards.",
     "Non-occupational OCC1950 codes relabelled in plain language (e.g. 999 -> 'No occupation listed')."
   ],

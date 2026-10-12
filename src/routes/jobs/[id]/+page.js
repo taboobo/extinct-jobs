@@ -12,15 +12,16 @@ export function load({ params }) {
   const job = data.jobs.find((j) => j.id === params.id);
   if (!job) error(404, 'Job not found');
   const summaries = data.jobs.map(jobSummary);
+  // Only the census categories this job's flows mention, for hover cards.
+  const codes = job.flows.flatMap((f) => [
+    ...(f.transitions?.destinations ?? []),
+    ...(f.arrivals?.origins ?? []),
+  ]);
   return {
     job,
     related: relatedJobs(jobSummary(job), summaries),
-    // Only the census categories this job's flows mention, for hover cards.
     categories: Object.fromEntries(
-      [
-        ...(job.transitions?.destinations ?? []),
-        ...(job.arrivals?.origins ?? []),
-      ]
+      codes
         .filter((d) => d.code != null)
         .map((d) => [d.code, data.categories[d.code]])
     ),
