@@ -478,7 +478,8 @@ describe('BritishCensus', () => {
 
 describe('BookMentions', () => {
   const books = {
-    query: 'lamplighter, lamplighters',
+    spellings: ['lamplighter', 'lamp lighter', 'lamp-lighter'],
+    withPlurals: true,
     peakYear: 1900,
     note: null,
     points: [
@@ -498,6 +499,13 @@ describe('BookMentions', () => {
     expect(
       screen.getByRole('link', { name: 'Google Books Ngram' })
     ).toBeTruthy();
+  });
+
+  it('lists every spelling it counted', () => {
+    const { container } = render(BookMentions, { props: { books } });
+    expect(container.querySelector('figcaption').textContent).toMatch(
+      /“lamplighter”, “lamp lighter” and “lamp-lighter”, with their plurals/
+    );
   });
 
   it('shows a value on focus', async () => {

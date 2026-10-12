@@ -27,7 +27,7 @@
     argTypes: {
       books: {
         control: 'object',
-        description: '{ query, points, peakYear, note }',
+        description: '{ spellings, withPlurals, points, peakYear, note }',
       },
       name: {
         control: 'text',
@@ -41,7 +41,8 @@
   name="Rise and fall"
   args={{
     books: {
-      query: 'lamplighter, lamplighters',
+      spellings: ['lamplighter', 'lamp lighter', 'lamp-lighter'],
+      withPlurals: true,
       points,
       peakYear: 1895,
       note: null,

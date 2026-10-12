@@ -5,7 +5,9 @@ BookMentions.svelte — How often a job's name appeared in English-language book
 with the peak marked. Hovering, tapping or tabbing to a point shows its value.
 
 Props:
-- books: { query, points: [{ year, perMillion }], peakYear, note } from jobs.json
+- books: { spellings, withPlurals, points: [{ year, perMillion }], peakYear, note }
+  from jobs.json; spellings are every form searched (summed), plurals counted when
+  withPlurals is true
 - name: the job name, used in the accessible description
 -->
 <script>
@@ -34,6 +36,22 @@ Props:
 
   let active = $state(null);
   const activePoint = $derived(active == null ? null : points[active]);
+
+  // “a”, “b” and “c”
+  const spellingList = $derived.by(() => {
+    const q = books.spellings.map((s) => `“${s}”`);
+    return q.length < 2
+      ? q.join('')
+      : `${q.slice(0, -1).join(', ')} and ${q.at(-1)}`;
+  });
+
+  const pluralNote = $derived(
+    !books.withPlurals
+      ? ''
+      : books.spellings.length > 1
+        ? ', with their plurals'
+        : ', with its plural'
+  );
 
   function fmt(v) {
     return v >= 1 ? v.toFixed(1) : v >= 0.01 ? v.toFixed(2) : v.toFixed(3);
@@ -111,10 +129,11 @@ Props:
     </p>
   {/if}
   <figcaption>
-    How often “{books.query}” appeared in English-language books (5-year
-    averages, per million words), from
-    <a href="https://books.google.com/ngrams">Google Books Ngram</a>. It tracks
-    how much people wrote about the job, not how many did it.
+    How often the job was named in English-language books (5-year averages, per
+    million words), from
+    <a href="https://books.google.com/ngrams">Google Books Ngram</a>. Counts
+    {spellingList}{pluralNote}. It tracks how much people wrote about the job,
+    not how many did it.
     {#if books.note}{books.note}{/if}
   </figcaption>
 </figure>
