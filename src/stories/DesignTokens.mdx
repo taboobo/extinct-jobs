@@ -52,10 +52,10 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
         <code>--color-accent</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        <code>#0033A1</code>
+        <code>#2F4B7C</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        CUNY Blue (PMS 286) — primary brand color, links on hover, highlights
+        Ledger ink blue — links on hover, highlights, chart bars
       </td>
     </tr>
     <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
@@ -74,10 +74,10 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
         <code>--color-dark</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        <code>#1a1a1a</code>
+        <code>#1c2433</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        Headings, primary text, and links on light backgrounds
+        Ink — headings and strongest text
       </td>
     </tr>
     <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
@@ -96,9 +96,9 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
         <code>--color-text</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        <code>#333333</code>
+        <code>#2b3240</code>
       </td>
-      <td style={{ padding: '0.75rem 1rem' }}>Default body text</td>
+      <td style={{ padding: '0.75rem 1rem' }}>Body text</td>
     </tr>
     <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
       <td style={{ padding: '0.75rem 1rem' }}>
@@ -138,10 +138,10 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
         <code>--color-light-gray</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        <code>#f5f5f5</code>
+        <code>#e9eee6</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        Subtle section backgrounds, card backgrounds
+        Faint ledger tint — table stripes, wells
       </td>
     </tr>
     <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
@@ -160,10 +160,10 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
         <code>--color-medium-gray</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        <code>#666666</code>
+        <code>#5e6672</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        Secondary text, captions, metadata
+        Pencil — secondary text, captions
       </td>
     </tr>
     <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
@@ -182,9 +182,11 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
         <code>--color-border</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        <code>#e0e0e0</code>
+        <code>#c9d6cc</code>
       </td>
-      <td style={{ padding: '0.75rem 1rem' }}>Dividers, borders, rule lines</td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        Ledger ruling — dividers, borders, rule lines
+      </td>
     </tr>
     <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
       <td style={{ padding: '0.75rem 1rem' }}>
@@ -202,14 +204,147 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
         <code>--color-shadow</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        <code>rgba(0,0,0,0.1)</code>
+        <code>rgba(28,36,51,0.08)</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>Box shadows</td>
+    </tr>
+    <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <div
+          style={{
+            width: '40px',
+            height: '40px',
+            background: 'var(--color-paper)',
+            borderRadius: 'var(--border-radius-sm)',
+            border: '1px solid var(--color-border)',
+          }}
+        ></div>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>--color-paper</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>#f4f7f1</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        Page background (ledger paper)
+      </td>
+    </tr>
+    <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <div
+          style={{
+            width: '40px',
+            height: '40px',
+            background: 'var(--color-rule)',
+            borderRadius: 'var(--border-radius-sm)',
+            border: '1px solid var(--color-border)',
+          }}
+        ></div>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>--color-rule</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>#b7cbbe</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        Stronger ledger ruling — table rules, chart gridlines
+      </td>
+    </tr>
+    <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <div
+          style={{
+            width: '40px',
+            height: '40px',
+            background: 'var(--color-margin)',
+            borderRadius: 'var(--border-radius-sm)',
+            border: '1px solid var(--color-border)',
+          }}
+        ></div>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>--color-margin</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>#b23a32</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        Ledger red margin rule — marks when a job ended
+      </td>
+    </tr>
+    <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <div
+          style={{
+            width: '40px',
+            height: '40px',
+            background: 'var(--color-faint-bar)',
+            borderRadius: 'var(--border-radius-sm)',
+            border: '1px solid var(--color-border)',
+          }}
+        ></div>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>--color-faint-bar</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>#b9c4d6</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        Light bars: flows between jobs
+      </td>
+    </tr>
+    <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <div
+          style={{
+            width: '40px',
+            height: '40px',
+            background: 'var(--color-bar)',
+            borderRadius: 'var(--border-radius-sm)',
+            border: '1px solid var(--color-border)',
+          }}
+        ></div>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>--color-bar</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>#8494b3</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        Chart bars; the peak uses --color-accent, rough estimates are striped
+      </td>
+    </tr>
+    <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <div
+          style={{
+            width: '40px',
+            height: '40px',
+            background: 'var(--color-job)',
+            borderRadius: 'var(--border-radius-sm)',
+            border: '1px solid var(--color-border)',
+          }}
+        ></div>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>--color-job</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <code>#c2187a</code>
+      </td>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        The page's own job in flow charts: its blocks, labels and the ribbons of
+        people who stayed in it
+      </td>
     </tr>
   </tbody>
 </table>
 
-### CUNY Blue Gradient Colors
+### Ink Gradient Colors
 
 <table
   style={{
@@ -248,10 +383,10 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
         <code>--color-cuny-blue-dark</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        <code>#002266</code>
+        <code>#1c2433</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        Dark end of the CUNY Blue gradient
+        Dark end of the ink gradient (template dropcap)
       </td>
     </tr>
     <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
@@ -270,10 +405,10 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
         <code>--color-cuny-blue-light</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        <code>#0066CC</code>
+        <code>#4f6fa8</code>
       </td>
       <td style={{ padding: '0.75rem 1rem' }}>
-        Light end of the CUNY Blue gradient
+        Light end of the ink gradient (template dropcap)
       </td>
     </tr>
   </tbody>
@@ -285,10 +420,11 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
 
 ### Font Families
 
-| Token          | Value                                                                                                 | Usage                |
-| -------------- | ----------------------------------------------------------------------------------------------------- | -------------------- |
-| `--font-serif` | `'PT Serif', Georgia, 'Times New Roman', Times, serif`                                                | Headings (`h1`–`h6`) |
-| `--font-sans`  | `'Droid Sans', system-ui, sans-serif, ...` _(abbreviated; see `src/app.scss` for full fallback list)_ | Body text, UI labels |
+| Token            | Value                                                                                                  | Usage                                    |
+| ---------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| `--font-display` | `'Big Shoulders Display', 'Arial Narrow', sans-serif`                                                  | Job names, page titles, big numbers      |
+| `--font-serif`   | `'Source Serif 4', Georgia, 'Times New Roman', Times, serif`                                           | Body text and headings (`h1`–`h6`)       |
+| `--font-sans`    | `'Public Sans', system-ui, sans-serif, ...` _(abbreviated; see `src/app.scss` for full fallback list)_ | UI labels, filters, chart axes, captions |
 
 ### Root Font Sizes
 

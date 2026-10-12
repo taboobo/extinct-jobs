@@ -1,42 +1,40 @@
 <!--
 @component
 This is the LAYOUT file.
-It wraps every page on your site.
-Use it for headers, footers, and navigation that appear on all pages.
+It wraps every page on your site with the Extinct Jobs masthead and colophon.
 -->
 <script>
   // Import global styles
   import '../app.scss';
 
-  // Import site-wide components
-  import SiteHeader from '$lib/components/Layout/SiteHeader.svelte';
-  import SiteFooter from '$lib/components/Layout/SiteFooter.svelte';
-
-  // Access page-level settings (from +page.js)
+  import Masthead from '$lib/components/ExtinctJobs/Masthead.svelte';
+  import Colophon from '$lib/components/ExtinctJobs/Colophon.svelte';
   import { page } from '$app/state';
+  import { base } from '$app/paths';
 
   // In Svelte 5, we use $props() to receive the page content
   let { children } = $props();
+
+  const current = $derived(
+    page.url.pathname === `${base}/`
+      ? 'home'
+      : page.url.pathname.startsWith(`${base}/about`)
+        ? 'about'
+        : ''
+  );
 </script>
 
-{#if page.data.showHeader !== false}
-  <SiteHeader />
-{/if}
+<Masthead {current} />
 
 <main>
   <!-- This renders the current page's content -->
   {@render children()}
 </main>
 
-{#if page.data.showFooter !== false}
-  <SiteFooter />
-{/if}
+<Colophon />
 
 <style>
-  /* Styles here only apply to this layout */
   main {
-    min-height: calc(
-      100vh - var(--site-chrome-height)
-    ); /* Ensure footer stays at bottom */
+    min-height: calc(100vh - var(--site-chrome-height));
   }
 </style>
