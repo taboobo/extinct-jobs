@@ -326,6 +326,10 @@ Props:
     fill: var(--color-bar);
     outline: none;
 
+    &.same {
+      fill: var(--color-job);
+    }
+
     &.other {
       fill: var(--color-rule);
     }
@@ -342,8 +346,8 @@ Props:
     transition: opacity 120ms;
 
     &.same {
-      fill: var(--color-bar);
-      opacity: 0.45;
+      fill: var(--color-job);
+      opacity: 0.35;
     }
 
     &.other {
@@ -366,6 +370,10 @@ Props:
     line-height: 1.2;
     color: var(--color-dark);
     pointer-events: none;
+
+    &.same {
+      color: var(--color-job);
+    }
 
     &.other {
       color: var(--color-medium-gray);

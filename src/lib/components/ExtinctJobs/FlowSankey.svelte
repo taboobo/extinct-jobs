@@ -194,6 +194,7 @@ Props:
             />
             <rect
               class="node"
+              class:same={row.d.same}
               class:other={row.d.other}
               x={panel.leftNode}
               {y}
@@ -223,6 +224,7 @@ Props:
             />
             <rect
               class="node"
+              class:same={row.d.same}
               class:other={row.d.other}
               x={panel.rightNode}
               {y}
@@ -365,11 +367,15 @@ Props:
   }
 
   .middle {
-    fill: var(--color-bar);
+    fill: var(--color-job);
   }
 
   .node {
     fill: var(--color-bar);
+
+    &.same {
+      fill: var(--color-job);
+    }
 
     &.other {
       fill: var(--color-rule);
@@ -382,8 +388,8 @@ Props:
     transition: opacity 120ms;
 
     &.same {
-      fill: var(--color-bar);
-      opacity: 0.45;
+      fill: var(--color-job);
+      opacity: 0.35;
     }
 
     &.other {
@@ -411,6 +417,10 @@ Props:
 
     &.left {
       text-align: right;
+    }
+
+    &.same {
+      color: var(--color-job);
     }
 
     &.other {
