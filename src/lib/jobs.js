@@ -113,3 +113,34 @@ export function formatPercent(share) {
     pct >= 10 ? 0 : pct >= 1 ? 1 : Math.min(3, -Math.floor(Math.log10(pct)));
   return `${pct.toFixed(digits)}%`;
 }
+
+/**
+ * The census years a job's flows can be centred on, oldest first. For each year:
+ * `before` is what that census's workers had been doing one census earlier
+ * (arrivals of the pair ending that year), `after` is what they were doing one
+ * census later (transitions of the pair starting that year); `prev` and `next`
+ * are the neighbouring census years even when a side has too few people.
+ */
+export function flowYears(flows = []) {
+  const years = new Map();
+  const at = (year) => {
+    if (!years.has(year))
+      years.set(year, {
+        year,
+        prev: null,
+        next: null,
+        before: null,
+        after: null,
+      });
+    return years.get(year);
+  };
+  for (const f of flows) {
+    at(f.from).next = f.to;
+    at(f.from).after = f.transitions ?? null;
+    at(f.to).prev = f.from;
+    at(f.to).before = f.arrivals ?? null;
+  }
+  return [...years.values()]
+    .filter((y) => y.before || y.after)
+    .sort((a, b) => a.year - b.year);
+}

@@ -6,7 +6,7 @@ each census, where its workers went next and came from, and jobs that ended the 
 <script>
   import { base } from '$app/paths';
   import CensusChart from '$lib/components/ExtinctJobs/CensusChart.svelte';
-  import TransitionBars from '$lib/components/ExtinctJobs/TransitionBars.svelte';
+  import FlowSankey from '$lib/components/ExtinctJobs/FlowSankey.svelte';
   import MarginNotes from '$lib/components/ExtinctJobs/MarginNotes.svelte';
   import Sidenote from '$lib/components/ExtinctJobs/Sidenote.svelte';
   import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
@@ -15,6 +15,7 @@ each census, where its workers went next and came from, and jobs that ended the 
   import BookMentions from '$lib/components/ExtinctJobs/BookMentions.svelte';
   import {
     centuryLabel,
+    flowYears,
     formatNumber,
     formatOneIn,
     peak,
@@ -26,14 +27,23 @@ each census, where its workers went next and came from, and jobs that ended the 
   const census = $derived(job.census);
   const top = $derived(peak(census.series));
   const topShare = $derived(peakBy(census.series, 'share'));
-  // Which pair of censuses the flows show; starts at the decade the job shrank most.
+  // Which census year sits in the middle of the flow chart; starts at the
+  // year before the decade the job shrank most.
+  const years = $derived(flowYears(job.flows));
   let picked = $state(null);
   $effect(() => {
     job.id;
     picked = null;
   });
-  const flowIndex = $derived(picked ?? job.defaultFlow ?? 0);
-  const flow = $derived(job.flows[flowIndex]);
+  const startYear = $derived(job.flows[job.defaultFlow ?? 0]?.from);
+  const yearIndex = $derived(
+    picked ??
+      Math.max(
+        0,
+        years.findIndex((y) => y.year === startYear)
+      )
+  );
+  const flowYear = $derived(years[yearIndex]);
 
   const hasFaint = $derived(
     census.series.some((s) => s.people > 0 && !s.reliable)
@@ -185,26 +195,27 @@ each census, where its workers went next and came from, and jobs that ended the 
 
     {#if census.series.length}
       <section class="wide">
-        <h2>Where they went next</h2>
-        {#if job.flows.length}
+        <h2>Where workers came from and went next</h2>
+        {#if flowYear}
           <DecadePicker
-            flows={job.flows}
-            bind:selected={() => flowIndex, (i) => (picked = i)}
-            label="Census years to compare"
+            options={years.map((y) => String(y.year))}
+            bind:selected={() => yearIndex, (i) => (picked = i)}
+            label="Census year in the middle"
           />
-        {/if}
-        {#if flow?.transitions}
           <MarginNotes>
-            <TransitionBars
-              flow={flow.transitions}
-              direction="to"
+            <FlowSankey
+              year={flowYear.year}
+              prev={flowYear.prev}
+              next={flowYear.next}
+              before={flowYear.before}
+              after={flowYear.after}
               categories={data.categories}
             />
             {#snippet notes()}
               <Sidenote>
-                Based on people IPUMS matched between the two censuses. Women
-                who changed their surname at marriage are often missed, so treat
-                these shares as approximate.
+                Based on people IPUMS matched between two censuses, aged 15 to
+                64 and with a job. Women who changed their surname at marriage
+                are often missed, so treat these shares as approximate.
               </Sidenote>
               <Sidenote>
                 Hover or tap a job to see how big it was. “Everything else”
@@ -212,36 +223,12 @@ each census, where its workers went next and came from, and jobs that ended the 
               </Sidenote>
             {/snippet}
           </MarginNotes>
-        {:else if flow}
-          <p class="note">
-            Too few people in this job were recorded in {flow.from} to follow them
-            to {flow.to}.
-          </p>
         {:else}
           <p class="note">
             There aren’t enough matched census records yet to follow people in
             this job from one census to the next.
           </p>
         {/if}
-      </section>
-    {/if}
-
-    {#if flow?.arrivals}
-      <section class="wide">
-        <h2>Where workers came from</h2>
-        <MarginNotes>
-          <TransitionBars
-            flow={flow.arrivals}
-            direction="from"
-            categories={data.categories}
-          />
-          {#snippet notes()}
-            <Sidenote>
-              Only people who had a job in {flow.from} and were 15 to 64 then are
-              counted.
-            </Sidenote>
-          {/snippet}
-        </MarginNotes>
       </section>
     {/if}
 

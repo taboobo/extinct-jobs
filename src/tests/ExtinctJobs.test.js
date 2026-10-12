@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/svelte';
 import { createRawSnippet } from 'svelte';
 import Sparkline from '$lib/components/ExtinctJobs/Sparkline.svelte';
 import CensusChart from '$lib/components/ExtinctJobs/CensusChart.svelte';
-import TransitionBars from '$lib/components/ExtinctJobs/TransitionBars.svelte';
+import FlowSankey from '$lib/components/ExtinctJobs/FlowSankey.svelte';
 import JobList from '$lib/components/ExtinctJobs/JobList.svelte';
 import Masthead from '$lib/components/ExtinctJobs/Masthead.svelte';
 import Colophon from '$lib/components/ExtinctJobs/Colophon.svelte';
@@ -18,6 +18,7 @@ import BritishCensus from '$lib/components/ExtinctJobs/BritishCensus.svelte';
 import BookMentions from '$lib/components/ExtinctJobs/BookMentions.svelte';
 import {
   centuryLabel,
+  flowYears,
   formatOneIn,
   formatPercent,
   formatShare,
@@ -185,53 +186,85 @@ describe('CensusChart', () => {
   });
 });
 
-describe('TransitionBars', () => {
-  it('lists destinations with shares', () => {
-    render(TransitionBars, { props: { flow: transitions, categories } });
-    expect(screen.getByText('Telephone operators')).toBeTruthy();
-    expect(screen.getByText('34%')).toBeTruthy();
+describe('FlowSankey', () => {
+  const arrivals = {
+    ...transitions,
+    from: 1900,
+    to: 1910,
+    linkedPeople: 12000,
+    origins: transitions.destinations,
+  };
+  const props = {
+    year: 1910,
+    prev: 1900,
+    next: 1920,
+    before: arrivals,
+    after: transitions,
+    categories,
+  };
+
+  it('shows both sides, with shares, around the middle year', () => {
+    render(FlowSankey, { props });
+    expect(
+      screen.getByRole('list', { name: 'What they were doing in 1900' })
+    ).toBeTruthy();
+    expect(
+      screen.getByRole('list', { name: 'What they were doing in 1920' })
+    ).toBeTruthy();
+    expect(screen.getAllByText('34%').length).toBe(2);
+    expect(
+      screen.getByText(/The middle is telegraph operators in 1910/)
+    ).toBeTruthy();
+    expect(screen.getByText(/different groups of matched people/)).toBeTruthy();
   });
 
   it('marks staying in the same job and the remainder', () => {
-    const { container } = render(TransitionBars, {
-      props: { flow: transitions, categories },
-    });
-    expect(screen.getByText('(same job)')).toBeTruthy();
-    expect(container.querySelectorAll('li.other').length).toBe(1);
+    const { container } = render(FlowSankey, { props });
+    expect(screen.getByText('(stayed)')).toBeTruthy();
+    expect(screen.getByText('(already in this job)')).toBeTruthy();
+    expect(container.querySelectorAll('li.other').length).toBe(2);
+    expect(container.querySelectorAll('path.ribbon').length).toBe(6);
+  });
+
+  it('turns known categories into preview links', () => {
+    render(FlowSankey, { props });
+    const links = screen.getAllByRole('link', { name: 'Telephone operators' });
+    expect(links[0].getAttribute('href')).toBe('/jobs/switchboard-operator');
   });
 
   it('explains a broader census category', () => {
-    render(TransitionBars, {
+    render(FlowSankey, {
       props: {
-        flow: {
-          ...transitions,
-          basis: 'broader',
-          category: 'Deliverymen',
-        },
+        ...props,
+        before: null,
+        after: { ...transitions, basis: 'broader', category: 'Deliverymen' },
       },
     });
     expect(screen.getByText(/which includes this job/)).toBeTruthy();
   });
+
+  it('says why a side is missing', () => {
+    render(FlowSankey, { props: { ...props, before: null, prev: null } });
+    expect(screen.getByText('No earlier census to compare with.')).toBeTruthy();
+  });
 });
 
-describe('TransitionBars previews', () => {
-  it('turns known categories into preview links', () => {
-    render(TransitionBars, { props: { flow: transitions, categories } });
-    expect(
-      screen
-        .getByRole('link', { name: 'Telephone operators' })
-        .getAttribute('href')
-    ).toBe('/jobs/switchboard-operator');
-  });
-
-  it('shows arrivals in the other direction', () => {
-    render(TransitionBars, {
-      props: {
-        flow: { ...transitions, origins: transitions.destinations },
-        direction: 'from',
-      },
+describe('flowYears', () => {
+  it('centres each census year between the one before and after', () => {
+    const years = flowYears([
+      { from: 1900, to: 1910, transitions: 't1', arrivals: 'a1' },
+      { from: 1910, to: 1920, transitions: null, arrivals: 'a2' },
+    ]);
+    expect(years.map((y) => y.year)).toEqual([1900, 1910, 1920]);
+    expect(years[1]).toEqual({
+      year: 1910,
+      prev: 1900,
+      next: 1920,
+      before: 'a1',
+      after: null,
     });
-    expect(screen.getByText(/had been doing then/)).toBeTruthy();
+    expect(years[0].before).toBeNull();
+    expect(years[2].after).toBeNull();
   });
 });
 
@@ -390,26 +423,21 @@ describe('Colophon', () => {
 });
 
 describe('DecadePicker', () => {
-  const flows = [
-    { from: 1900, to: 1910 },
-    { from: 1910, to: 1920 },
-  ];
+  const options = ['1900', '1910'];
 
-  it('marks the selected pair and switches on click', async () => {
-    render(DecadePicker, { props: { flows, selected: 1 } });
-    const first = screen.getByRole('button', { name: '1900 to 1910' });
+  it('marks the selected year and switches on click', async () => {
+    render(DecadePicker, { props: { options, selected: 1 } });
+    const first = screen.getByRole('button', { name: '1900' });
     expect(
-      screen
-        .getByRole('button', { name: '1910 to 1920' })
-        .getAttribute('aria-pressed')
+      screen.getByRole('button', { name: '1910' }).getAttribute('aria-pressed')
     ).toBe('true');
     await fireEvent.click(first);
     expect(first.getAttribute('aria-pressed')).toBe('true');
   });
 
-  it('renders nothing for a single pair', () => {
+  it('renders nothing for a single year', () => {
     const { container } = render(DecadePicker, {
-      props: { flows: [flows[0]] },
+      props: { options: ['1900'] },
     });
     expect(container.querySelector('.decades')).toBeNull();
   });

@@ -1,28 +1,28 @@
 <!--
 @component
-DecadePicker.svelte — Buttons for choosing which pair of censuses to show
-(e.g. "1910 to 1920"). Hidden when there is only one choice.
+DecadePicker.svelte — Buttons for choosing a census year (e.g. "1910").
+Hidden when there is only one choice.
 
 Props:
-- flows: [{ from, to }] in display order
-- selected: index of the chosen pair (bindable)
+- options: button labels in display order, e.g. ['1900', '1910', '1920']
+- selected: index of the chosen option (bindable)
 - label: accessible name for the group
 -->
 <script>
   let {
-    flows = [],
+    options = [],
     selected = $bindable(0),
     label = 'Census years',
   } = $props();
 </script>
 
-{#if flows.length > 1}
+{#if options.length > 1}
   <div class="decades" role="group" aria-label={label}>
-    {#each flows as flow, i (flow.from)}
+    {#each options as option, i (option)}
       <button
         type="button"
         aria-pressed={selected === i}
-        onclick={() => (selected = i)}>{flow.from} to {flow.to}</button
+        onclick={() => (selected = i)}>{option}</button
       >
     {/each}
   </div>

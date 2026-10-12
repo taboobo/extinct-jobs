@@ -2,7 +2,7 @@
   DecadePicker.stories.svelte
 
   Stories for the DecadePicker component.
-  Buttons for choosing which pair of censuses to show; hidden with a single choice.
+  Buttons for choosing a census year; hidden with a single choice.
 -->
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
@@ -13,26 +13,24 @@
     component: DecadePicker,
     tags: ['autodocs'],
     argTypes: {
-      flows: { control: 'object', description: '[{ from, to }]' },
-      selected: { control: 'number', description: 'Index of the chosen pair' },
+      options: {
+        control: 'object',
+        description: "Button labels, e.g. ['1900', '1910']",
+      },
+      selected: { control: 'number', description: 'Index of the chosen year' },
       label: { control: 'text', description: 'Accessible name for the group' },
     },
   });
 </script>
 
-<!-- Several census pairs -->
+<!-- Several census years -->
 <Story
-  name="Several pairs"
+  name="Several years"
   args={{
-    flows: [
-      { from: 1880, to: 1900 },
-      { from: 1900, to: 1910 },
-      { from: 1910, to: 1920 },
-      { from: 1920, to: 1930 },
-    ],
+    options: ['1880', '1900', '1910', '1920'],
     selected: 2,
   }}
 />
 
-<!-- A single pair renders nothing -->
-<Story name="Single pair" args={{ flows: [{ from: 1910, to: 1920 }] }} />
+<!-- A single year renders nothing -->
+<Story name="Single year" args={{ options: ['1910'] }} />
