@@ -4,6 +4,7 @@ import { createRawSnippet } from 'svelte';
 import Sparkline from '$lib/components/ExtinctJobs/Sparkline.svelte';
 import CensusChart from '$lib/components/ExtinctJobs/CensusChart.svelte';
 import FlowSankey from '$lib/components/ExtinctJobs/FlowSankey.svelte';
+import CareerPaths from '$lib/components/ExtinctJobs/CareerPaths.svelte';
 import JobList from '$lib/components/ExtinctJobs/JobList.svelte';
 import Masthead from '$lib/components/ExtinctJobs/Masthead.svelte';
 import Colophon from '$lib/components/ExtinctJobs/Colophon.svelte';
@@ -246,6 +247,88 @@ describe('FlowSankey', () => {
   it('says why a side is missing', () => {
     render(FlowSankey, { props: { ...props, before: null, prev: null } });
     expect(screen.getByText('No earlier census to compare with.')).toBeTruthy();
+  });
+});
+
+describe('CareerPaths', () => {
+  const node = (code, label, people, extra = {}) => ({
+    code,
+    label,
+    short: label,
+    people,
+    same: false,
+    other: false,
+    ...extra,
+  });
+  const cohort = {
+    start: 1880,
+    years: [1880, 1900, 1910],
+    category: 'Teamsters',
+    started: 5000,
+    people: 1000,
+    stages: [
+      [
+        node(683, 'Teamsters', 600, { same: true }),
+        node(100, 'Farmers', 300),
+        node(null, 'Everything else', 100, { other: true }),
+      ],
+      [
+        node(960, 'Teamsters', 400, { same: true }),
+        node(683, 'Truck and tractor drivers', 200),
+        node(null, 'Everything else', 400, { other: true }),
+      ],
+    ],
+    links: [
+      [
+        { from: 683, to: 683, people: 600 },
+        { from: 683, to: 100, people: 300 },
+        { from: 683, to: null, people: 100 },
+      ],
+      [
+        { from: 683, to: 960, people: 350 },
+        { from: 683, to: 683, people: 200 },
+        { from: 683, to: null, people: 50 },
+        { from: 100, to: null, people: 300 },
+        { from: null, to: 960, people: 50 },
+        { from: null, to: null, people: 50 },
+      ],
+    ],
+  };
+
+  it('draws one column per census and a ribbon per link', () => {
+    const { container } = render(CareerPaths, { props: { cohort } });
+    expect(
+      [...container.querySelectorAll('.year')].map((e) => e.textContent)
+    ).toEqual(['1880', '1900', '1910']);
+    expect(container.querySelectorAll('rect.node').length).toBe(7);
+    expect(container.querySelectorAll('path.ribbon').length).toBe(9);
+  });
+
+  it('describes a block on focus', async () => {
+    const { container } = render(CareerPaths, { props: { cohort } });
+    const truck = [...container.querySelectorAll('rect.node')].find((r) =>
+      r.getAttribute('aria-label').includes('truck')
+    );
+    await fireEvent.focus(truck);
+    expect(container.querySelector('.readout').textContent).toBe(
+      'In 1910, 200 of them (20%) were truck and tractor drivers.'
+    );
+  });
+
+  it('describes a ribbon between two censuses', () => {
+    render(CareerPaths, { props: { cohort } });
+    expect(
+      screen.getByRole('img', {
+        name: '200 people went from teamsters in 1900 to truck and tractor drivers in 1910.',
+      })
+    ).toBeTruthy();
+  });
+
+  it('says who is followed', () => {
+    render(CareerPaths, { props: { cohort } });
+    expect(
+      screen.getByText(/Of the 5,000\s+teamsters aged 15 to 64 in 1880/)
+    ).toBeTruthy();
   });
 });
 

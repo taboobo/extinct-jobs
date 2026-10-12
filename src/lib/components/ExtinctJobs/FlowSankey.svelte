@@ -178,6 +178,7 @@ Props:
             {@const y = g.leftOffset + row.top + (row.slot - row.thick) / 2}
             <path
               class="ribbon"
+              role="presentation"
               class:same={row.d.same}
               class:other={row.d.other}
               class:active={hovered === row.key}
@@ -206,6 +207,7 @@ Props:
             {@const y = g.rightOffset + row.top + (row.slot - row.thick) / 2}
             <path
               class="ribbon"
+              role="presentation"
               class:same={row.d.same}
               class:other={row.d.other}
               class:active={hovered === row.key}

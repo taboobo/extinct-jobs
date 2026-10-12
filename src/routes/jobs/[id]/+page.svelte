@@ -7,6 +7,7 @@ each census, where its workers went next and came from, and jobs that ended the 
   import { base } from '$app/paths';
   import CensusChart from '$lib/components/ExtinctJobs/CensusChart.svelte';
   import FlowSankey from '$lib/components/ExtinctJobs/FlowSankey.svelte';
+  import CareerPaths from '$lib/components/ExtinctJobs/CareerPaths.svelte';
   import MarginNotes from '$lib/components/ExtinctJobs/MarginNotes.svelte';
   import Sidenote from '$lib/components/ExtinctJobs/Sidenote.svelte';
   import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
@@ -44,6 +45,30 @@ each census, where its workers went next and came from, and jobs that ended the 
       )
   );
   const flowYear = $derived(years[yearIndex]);
+
+  // The same people followed through several censuses, when there are enough.
+  const VIEWS = ['Over the decades', 'One census before and after'];
+  let view = $state(0);
+  let pickedCohort = $state(null);
+  $effect(() => {
+    job.id;
+    view = 0;
+    pickedCohort = null;
+  });
+  const cohorts = $derived(job.cohorts ?? []);
+  // Start with the biggest group followed across at least four censuses.
+  const bestCohort = $derived.by(() => {
+    const long = cohorts.filter((c) => c.years.length >= 4);
+    const pool = long.length ? long : cohorts;
+    const best = pool.reduce(
+      (a, c) => (!a || c.people > a.people ? c : a),
+      null
+    );
+    return Math.max(0, cohorts.indexOf(best));
+  });
+  const cohortIndex = $derived(pickedCohort ?? bestCohort);
+  const cohort = $derived(cohorts[cohortIndex]);
+  const showPaths = $derived(cohorts.length > 0 && view === 0);
 
   const hasFaint = $derived(
     census.series.some((s) => s.people > 0 && !s.reliable)
@@ -196,7 +221,34 @@ each census, where its workers went next and came from, and jobs that ended the 
     {#if census.series.length}
       <section class="wide">
         <h2>Where workers came from and went next</h2>
-        {#if flowYear}
+        {#if cohorts.length}
+          <DecadePicker
+            options={VIEWS}
+            bind:selected={view}
+            label="How to show where workers went"
+          />
+        {/if}
+        {#if showPaths}
+          <DecadePicker
+            options={cohorts.map((c) => `From ${c.start}`)}
+            bind:selected={() => cohortIndex, (i) => (pickedCohort = i)}
+            label="Census to start following people from"
+          />
+          <MarginNotes>
+            <CareerPaths {cohort} />
+            {#snippet notes()}
+              <Sidenote>
+                Based on people IPUMS matched from census to census. Women who
+                changed their surname at marriage are often missed, so treat
+                these shares as approximate.
+              </Sidenote>
+              <Sidenote>
+                The same people are followed all the way across, so a ribbon is
+                one group of real careers.
+              </Sidenote>
+            {/snippet}
+          </MarginNotes>
+        {:else if flowYear}
           <DecadePicker
             options={years.map((y) => String(y.year))}
             bind:selected={() => yearIndex, (i) => (picked = i)}
