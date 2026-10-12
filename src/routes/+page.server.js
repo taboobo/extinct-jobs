@@ -1,4 +1,4 @@
-// Loads the job list for the home page.
+// Loads the job list for the home page (at build time; the page gets only these fields).
 // jobs.json is exported by the extinct-jobs-data pipeline (see its provenance file).
 import data from '$lib/data/jobs.json';
 

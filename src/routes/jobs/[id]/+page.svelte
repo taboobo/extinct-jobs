@@ -237,6 +237,23 @@ each census, where its workers went next and came from, and jobs that ended the 
       </section>
     {/if}
 
+    {#if job.references?.length}
+      <section class="wide sources">
+        <h2>Sources</h2>
+        <ol>
+          {#each job.references as ref (ref.text)}
+            <li>
+              {#if ref.url}<a href={ref.url}>{ref.text}</a
+                >{:else}{ref.text}{/if}
+            </li>
+          {/each}
+        </ol>
+        {#if job.origin === 'wikipedia'}
+          <p class="note">Sources cited by Wikipedia for this job.</p>
+        {/if}
+      </section>
+    {/if}
+
     <p class="source">
       {#if job.descriptionSource === 'wikipedia' && job.reasonSource === 'wikipedia'}
         Description and reason adapted from <a href={job.wikipediaUrl}
@@ -378,6 +395,18 @@ each census, where its workers went next and came from, and jobs that ended the 
     font-family: var(--font-sans);
     color: var(--color-text);
     margin-bottom: var(--spacing-sm);
+  }
+
+  .sources ol {
+    padding-left: var(--spacing-md);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    line-height: var(--leading-caption);
+    max-width: 75ch;
+
+    li + li {
+      margin-top: var(--spacing-xs);
+    }
   }
 
   .share-peak {

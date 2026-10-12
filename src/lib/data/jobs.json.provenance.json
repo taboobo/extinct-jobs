@@ -1,13 +1,13 @@
 {
   "output": "data/processed/site/jobs.json",
-  "sha256": "5d16a4842deab8221405b6bef68f5a0ca6e674987e70f88aad1c998020042456",
+  "sha256": "53e395e48300c19788b9a07bbcbdbc6daf584cf435f488b5146ec7fe020f3b9e",
   "rows": 115,
-  "built_at": "2026-10-12T01:02:02+00:00",
+  "built_at": "2026-10-12T01:04:46+00:00",
   "script": {
     "path": "scripts/export_site_data.py",
-    "sha256": "4676be5d7d608c07abb0c54a383762662ce945598dbde03bee797861258b6a85",
+    "sha256": "af9ebc3bf7db7aa8e19254d1b0fcf63505988a11fa80b2e2edb23519fed7b120",
     "git": {
-      "commit": "30aca7e1a741febac5a0c3009a37942f3fad4c23",
+      "commit": "262e8512bd598c6e605c4d8442a1f21da27464b2",
       "file_committed": true,
       "file_modified_since_commit": true
     }
@@ -15,7 +15,7 @@
   "inputs": [
     {
       "path": "data/processed/wikipedia_obsolete_occupations.csv",
-      "sha256": "496a030edef54903ecc499b85d7a587265d442aedfc783685c3d897611436f11",
+      "sha256": "a99d927bac348d235abd0aa8ce8721e3c2d49eed30fb80c91fe19ea996a86394",
       "source": null
     },
     {
@@ -112,6 +112,7 @@
     "defaultFlow: index of the pair where the job's estimated workforce fell the most.",
     "categories: OCC1950 codes referenced by flows, with weighted category totals by year (category_counts) and the Wikipedia job they exactly match, for hover cards.",
     "Non-occupational OCC1950 codes relabelled in plain language (e.g. 999 -> 'No occupation listed').",
+    "references: Wikipedia's citations for the job's row in the list (Wikipedia jobs) or the sources column of data/manual/census_jobs.csv (census jobs).",
     "uk: British census counts 1841-1861 per year and area from uk_job_counts.csv (published census report tables, transcribed by Ditto Books), with the matched titles and the note from data/manual/uk_terms.csv.",
     "series[].share: people / estimated workers that year, where workers = the sum of category_counts persons_est over all occupational OCC1950 codes (top-level 'workers').",
     "Census jobs (origin 'census') from data/manual/census_jobs.csv: description from the manual table or the first three sentences of the Wikipedia article intro; reason from the manual table (draft flag from its status); image from the article; series and flows from the job's OCC1950 category; endCentury = century of the first census after the peak where the category's share of workers fell below 10% of its peak share (IPUMS public sample counts, 1850-2024). Where the manual table gives earlier_code/earlier_until, that code is used for census years up to earlier_until (series and flows); 'note' explains such quirks on the page."

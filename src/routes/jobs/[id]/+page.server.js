@@ -1,4 +1,5 @@
-// Loads one job for its detail page, plus what its preview cards need.
+// Loads one job for its detail page, plus what its preview cards need (at build time,
+// so the browser only downloads this job's data, not the whole jobs.json).
 import { error } from '@sveltejs/kit';
 import data from '$lib/data/jobs.json';
 import { jobSummary, relatedJobs } from '$lib/jobs.js';
