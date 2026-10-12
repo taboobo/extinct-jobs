@@ -52,8 +52,12 @@ each census, where its workers went next and came from, and jobs that ended the 
     <div class="title">
       <h1>{job.name}</h1>
       <p class="era">
-        <span>Practiced from {centuryLabel(job.startCentury)}</span>
-        <span class="ended">to {centuryLabel(job.endCentury)}</span>
+        {#if job.startCentury == null && job.endedByYear}
+          <span class="ended">Mostly gone by {job.endedByYear}</span>
+        {:else}
+          <span>Practiced from {centuryLabel(job.startCentury)}</span>
+          <span class="ended">to {centuryLabel(job.endCentury)}</span>
+        {/if}
       </p>
       {#if job.reasonTypes.length}
         <p class="reasons">
@@ -121,6 +125,9 @@ each census, where its workers went next and came from, and jobs that ended the 
                 other jobs with similar names.
               {/if}
             </Sidenote>
+            {#if job.note}
+              <Sidenote>{job.note}</Sidenote>
+            {/if}
             {#if hasFaint}
               <Sidenote>
                 Pale bars rest on fewer than 10 sample records and are rough.
@@ -207,10 +214,27 @@ each census, where its workers went next and came from, and jobs that ended the 
     {/if}
 
     <p class="source">
-      Description and reason adapted from <a href={job.wikipediaUrl}
-        >Wikipedia</a
-      >
-      (CC BY-SA 4.0).
+      {#if job.descriptionSource === 'wikipedia' && job.reasonSource === 'wikipedia'}
+        Description and reason adapted from <a href={job.wikipediaUrl}
+          >Wikipedia</a
+        >
+        (CC BY-SA 4.0).
+      {:else}
+        {#if job.descriptionSource === 'wikipedia'}
+          Description adapted from <a href={job.wikipediaUrl}>Wikipedia</a> (CC BY-SA
+          4.0).
+        {/if}
+        {#if job.draft}
+          {job.descriptionSource === 'wikipedia'
+            ? 'The reason it disappeared is'
+            : 'This text is'}
+          an Extinct Jobs draft and still needs sources.
+        {/if}
+        {#if job.origin === 'census'}
+          This job comes from the U.S. census’s own job categories, where it was
+          “{job.census.category}”.
+        {/if}
+      {/if}
     </p>
   </div>
 </article>

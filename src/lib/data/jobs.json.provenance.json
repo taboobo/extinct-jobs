@@ -1,13 +1,13 @@
 {
   "output": "data/processed/site/jobs.json",
-  "sha256": "ab8172b554944b4c08912090e9fa090eadb9468e4442202d44c4b37682f23b50",
-  "rows": 102,
-  "built_at": "2026-10-12T00:29:16+00:00",
+  "sha256": "60b639447fe2ca152819ee84d4ba98b52aa5893ca7e6c0f60f50511ee6558dd5",
+  "rows": 115,
+  "built_at": "2026-10-12T00:35:47+00:00",
   "script": {
     "path": "scripts/export_site_data.py",
-    "sha256": "ad1cbd698686f7c1351146d5e82a8f13421c4c38a13d7d141affd470af7b64c7",
+    "sha256": "7e2421138fcc52df91b8be5d4277cc66b28d8c005ca7b0cf6e1937cd37ac1118",
     "git": {
-      "commit": "af21b23918bbd80ca03a83a8785064ac264260c5",
+      "commit": "e3ecbaaf7d455970e7eb6be1ee242d28c633eadc",
       "file_committed": true,
       "file_modified_since_commit": true
     }
@@ -48,6 +48,44 @@
         "notes": "Images are linked (hotlinked from upload.wikimedia.org), not copied.",
         "retrieved_at": "2026-10-11T23:54:21+00:00"
       }
+    },
+    {
+      "path": "data/manual/census_jobs.csv",
+      "sha256": "d0774400fde3e53476cc1cc4f8f011a5bc0c216968b59ed469c7b1028547f57d",
+      "source": null
+    },
+    {
+      "path": "data/raw/wikipedia_articles/articles.json",
+      "sha256": "3c0817e30e4405054fe7fd0aedb92f4c814501dccfd836ca71e236549ced3d42",
+      "source": {
+        "name": "Wikipedia article intros and main images for census-category jobs",
+        "url": "https://en.wikipedia.org/w/api.php",
+        "license": "Text CC BY-SA 4.0; images per file (see image.LicenseShortName)",
+        "notes": "Titles from data/manual/census_jobs.csv; revision ids recorded per article.",
+        "retrieved_at": "2026-10-12T00:35:32+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ipums/occ1950_variable_page.html",
+      "sha256": "914e89a70838303c80efa075bf69aa41f74bd799d65927c23258ca0150687c43",
+      "source": {
+        "name": "IPUMS USA OCC1950 codes and sample frequencies; 1880 occupation codes",
+        "url": "https://usa.ipums.org/usa-action/variables/OCC1950",
+        "license": "IPUMS USA terms of use; cite Ruggles et al., IPUMS USA, Minneapolis, MN: IPUMS",
+        "notes": "Frequencies are unweighted sample counts keyed by sample id -> category id. Sample and category ids are defined in the variable page's codeData script block.",
+        "retrieved_at": "2026-10-11T21:36:57+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ipums/occ1950_frequencies.json",
+      "sha256": "b487bd0a59891adf54cd8f2f58b3ef31dfa8ee82e86a994a7a393ef712151d2c",
+      "source": {
+        "name": "IPUMS USA OCC1950 codes and sample frequencies; 1880 occupation codes",
+        "url": "https://usa.ipums.org/usa-action/variables/OCC1950",
+        "license": "IPUMS USA terms of use; cite Ruggles et al., IPUMS USA, Minneapolis, MN: IPUMS",
+        "notes": "Frequencies are unweighted sample counts keyed by sample id -> category id. Sample and category ids are defined in the variable page's codeData script block.",
+        "retrieved_at": "2026-10-11T21:36:57+00:00"
+      }
     }
   ],
   "steps": [
@@ -58,7 +96,8 @@
     "flows[].arrivals: the reverse: A jobs of people in the job's category in B (origins limited to working-age people with an occupation in A), requiring the job's title in B's sample.",
     "defaultFlow: index of the pair where the job's estimated workforce fell the most.",
     "categories: OCC1950 codes referenced by flows, with weighted category totals by year (category_counts) and the Wikipedia job they exactly match, for hover cards.",
-    "Non-occupational OCC1950 codes relabelled in plain language (e.g. 999 -> 'No occupation listed')."
+    "Non-occupational OCC1950 codes relabelled in plain language (e.g. 999 -> 'No occupation listed').",
+    "Census jobs (origin 'census') from data/manual/census_jobs.csv: description from the manual table or the first three sentences of the Wikipedia article intro; reason from the manual table (draft flag from its status); image from the article; series and flows from the job's OCC1950 category; endCentury = century of the first census after the peak where the category's share of workers fell below 10% of its peak share (IPUMS public sample counts, 1850-2024). Where the manual table gives earlier_code/earlier_until, that code is used for census years up to earlier_until (series and flows); 'note' explains such quirks on the page."
   ],
   "overrides_applied": [],
   "warnings": []
