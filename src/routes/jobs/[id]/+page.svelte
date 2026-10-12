@@ -12,6 +12,7 @@ each census, where its workers went next and came from, and jobs that ended the 
   import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
   import DecadePicker from '$lib/components/ExtinctJobs/DecadePicker.svelte';
   import BritishCensus from '$lib/components/ExtinctJobs/BritishCensus.svelte';
+  import BookMentions from '$lib/components/ExtinctJobs/BookMentions.svelte';
   import {
     centuryLabel,
     formatNumber,
@@ -167,6 +168,13 @@ each census, where its workers went next and came from, and jobs that ended the 
         <p class="note">{noCensusReason}</p>
       {/if}
     </section>
+
+    {#if job.books}
+      <section class="wide">
+        <h2>How often it was written about</h2>
+        <BookMentions books={job.books} name={job.name.toLowerCase()} />
+      </section>
+    {/if}
 
     {#if job.uk}
       <section class="wide">

@@ -15,6 +15,7 @@ import MarginNotes from '$lib/components/ExtinctJobs/MarginNotes.svelte';
 import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
 import DecadePicker from '$lib/components/ExtinctJobs/DecadePicker.svelte';
 import BritishCensus from '$lib/components/ExtinctJobs/BritishCensus.svelte';
+import BookMentions from '$lib/components/ExtinctJobs/BookMentions.svelte';
 import {
   centuryLabel,
   formatOneIn,
@@ -472,5 +473,38 @@ describe('BritishCensus', () => {
     expect(
       screen.getByText('Counted with railway engine drivers.')
     ).toBeTruthy();
+  });
+});
+
+describe('BookMentions', () => {
+  const books = {
+    query: 'lamplighter, lamplighters',
+    peakYear: 1900,
+    note: null,
+    points: [
+      { year: 1850, perMillion: 0.05 },
+      { year: 1900, perMillion: 0.11 },
+      { year: 1950, perMillion: 0.04 },
+    ],
+  };
+
+  it('marks the peak and names the source', () => {
+    const { container } = render(BookMentions, {
+      props: { books, name: 'lamplighter' },
+    });
+    expect(container.querySelector('.peak-label').textContent).toBe(
+      'Peak 1900'
+    );
+    expect(
+      screen.getByRole('link', { name: 'Google Books Ngram' })
+    ).toBeTruthy();
+  });
+
+  it('shows a value on focus', async () => {
+    const { container } = render(BookMentions, { props: { books } });
+    await fireEvent.focus(container.querySelectorAll('rect.hit')[1]);
+    expect(container.querySelector('.readout').textContent).toMatch(
+      /1900–1904: 0\.11 per\s+million words/
+    );
   });
 });

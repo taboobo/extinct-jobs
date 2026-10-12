@@ -1,13 +1,13 @@
 {
   "output": "data/processed/site/jobs.json",
-  "sha256": "53e395e48300c19788b9a07bbcbdbc6daf584cf435f488b5146ec7fe020f3b9e",
+  "sha256": "0287088df8530264d3e915ddc6e755e913b935ff5a6c8706d4ad0e5e985c91ac",
   "rows": 115,
-  "built_at": "2026-10-12T01:04:46+00:00",
+  "built_at": "2026-10-12T02:08:21+00:00",
   "script": {
     "path": "scripts/export_site_data.py",
-    "sha256": "af9ebc3bf7db7aa8e19254d1b0fcf63505988a11fa80b2e2edb23519fed7b120",
+    "sha256": "344e52bc6c7befe301bb2918d0335522cf57f2faeb1e3fe8693ea4e816dfccb9",
     "git": {
-      "commit": "262e8512bd598c6e605c4d8442a1f21da27464b2",
+      "commit": "2a028cc73adfb2958260fb3789f5e67d8e776711",
       "file_committed": true,
       "file_modified_since_commit": true
     }
@@ -31,6 +31,26 @@
     {
       "path": "data/processed/transitions_1850_1860.csv",
       "sha256": "3200939cbfe825adc6da0c40432d1aa16e2c52a9744bb1cd3ed03d23c2f24821",
+      "source": null
+    },
+    {
+      "path": "data/processed/transitions_1860_1870.csv",
+      "sha256": "32c3271f61ad56ce79f502939e968cb14048d73d7167c264fa07921d28fcce37",
+      "source": null
+    },
+    {
+      "path": "data/processed/transitions_1870_1880.csv",
+      "sha256": "87513ad5d5863f9d92e8cfbaf46efbf16a42fd33c5541d0242a75729a98627d9",
+      "source": null
+    },
+    {
+      "path": "data/processed/transitions_1880_1900.csv",
+      "sha256": "31c1f43457ca9b414b33c90e8cef1613565b682f7877f28699e88b821c1f3950",
+      "source": null
+    },
+    {
+      "path": "data/processed/transitions_1900_1910.csv",
+      "sha256": "05932b4a651667b026fd6c88a7b4db5c2bd17313f353a61bda11bb9932de7943",
       "source": null
     },
     {
@@ -101,6 +121,1067 @@
       "path": "data/manual/uk_terms.csv",
       "sha256": "9606152fdc9050f6e939a455f0ed0b1a828b29bd318006db5470543da7cfed34",
       "source": null
+    },
+    {
+      "path": "data/manual/ngram_terms.csv",
+      "sha256": "e5f6a4b6d9a859f9ac498eb4b4bc54e5d531b40318f62e3e4c6f2c9b857c442e",
+      "source": null
+    },
+    {
+      "path": "data/raw/ngrams/SOURCE.json",
+      "sha256": "cc3cd179fc7603deda32bc7820eadd9075b25733fd1d4b59ea47a1b1798d0a87",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/alchemist.json",
+      "sha256": "b9f065d5aae1048a0d01a094fd75308776c455e96c132d97ca0d78a6fff38e98",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/alewife.json",
+      "sha256": "3c02a24ce78c458262ab931c2f16bca52f3e7d691688e271417b546611af9b9d",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/alnager.json",
+      "sha256": "ac7b60dd8a9466189b83fcc4ae7572f970ea3caa1d9d7d76edbd65a0fc44ebf8",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/ash-burner.json",
+      "sha256": "8025a12f5c7a6d366f52a33f7f65b628dc59d977f52e2293e3951f4019026958",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/baby-farmer.json",
+      "sha256": "32c288da89a578ef3362608e70f47d8c9be80e85f4793c7893fcdf68c3dae55e",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/between-maid.json",
+      "sha256": "1fa7b757bc7b2acffe53ac37bb6f6fe377f62ae54bd9c61393bed13245be8f85",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/blacksmith.json",
+      "sha256": "f19f4bb991ae8ee96bfb51496a2f20d6fd76502f324654bd6a161bc375523450",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/boarding-house-keeper.json",
+      "sha256": "f696eeb1fa098acdbf528e853adb7db7c5ccc8924720d036d984ab17412c5664",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/body-snatcher.json",
+      "sha256": "3cc3a292e5d60bb4b1d1ffc5183eb45da93a5af1e6ea569b83b20b51b7412740",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/breaker-boy.json",
+      "sha256": "42be2c15546b280d8d077e690ce765a6eb77278b5dc030b4640b82770ea0ef6c",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/brush-maker.json",
+      "sha256": "89c0ad223ac295a6122a0e5634476262670c6a652a8ce96e366e5a4fe278fc41",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/buckle-maker.json",
+      "sha256": "67c1ff4bda70caa169882691cc6c0c5064aad7bacf2c3f0f84c8cb4a994784f7",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/burlak.json",
+      "sha256": "980921ade4c29c963c66b0c64e5b9a590755e40fe4d2f0ed3c7b7e653f6e85b4",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/canal-boatman.json",
+      "sha256": "99f22eb0946feecef461c7f41caddb3946a2218ca9538ee1eec4590d93aec951",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/cat-s-meat-man.json",
+      "sha256": "487070681f3bdcc7435ae89c226e17acc8b955698f851f8890fc59dcab4c31bf",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/cavalryman.json",
+      "sha256": "2c52ec48aed8958f0adc58c79d629198c9cf10ea1aba0259d8756a38cb4dee5e",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/climbing-boy.json",
+      "sha256": "fb2aa9add59eea96d5ec6ae8b5572463da938aa1cd7b8da0cc996d80113c7fdf",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/coach-maker.json",
+      "sha256": "1468c3ac768f80b8f46daf5afb9969f0211604ce140571febc8b438a99ddd320",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/coachman.json",
+      "sha256": "54bfceea1517bc3786f09a434efd723a7bcd7abf3245091b3d931204ae38efc0",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/colporter.json",
+      "sha256": "dfd5e28d6f91db67f18f9aafef4bca50ab1b6dec848e4bc257e1488b67079cfc",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/cork-cutter.json",
+      "sha256": "721b653538084710ecc74dea771d429c882317977b62b6d463fb1d38f24aed2a",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/crossing-sweeper.json",
+      "sha256": "c3d667dd626f94c6ab21fdb3f8f547ba2770dd7c4ec7beb5341c1944bf21cf77",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/dog-whipper.json",
+      "sha256": "b646aa681af36b6e39fe5e6743cc42b87575d4a36cebc32099d8506855001dc7",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/drysalter.json",
+      "sha256": "d125b6dff6cf35c5fb577cc4d7e45c7e8241c41279d8b44473777b4b6fafe094",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/elevator-operator.json",
+      "sha256": "baeb6594713be9cf6d723cd5f77922c59bf5149b6edd77e7145028ed8f4cb7f6",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/elocutionist.json",
+      "sha256": "19addc5daff4530c5a9ace97f07cedf23d820ad02af8da898a1df4bff407a758",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/escheator.json",
+      "sha256": "e3956c772f606abefcb351912de67eb23cc0388184d54f200eff03e18a4783e7",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/expressman.json",
+      "sha256": "8cf93b1366c046378bb79305a59d206e65f78d763d77ed74bac10cc43f6bf918",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/fifer.json",
+      "sha256": "367dbb226ae73ed83c21fcfe6dd1802ab0d3d40fbb5f0107a94c741551c4964e",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/footman.json",
+      "sha256": "12e6049703ae6a2d9886563d7ef3142e8a170485ae39cc443e45c4edb8f07377",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/garden-hermit.json",
+      "sha256": "355b2ae207edf8f93cd6ef0f43a2beadad1f38f602469aa300b074128b5f105f",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/gong-farmer.json",
+      "sha256": "c389ca2220b66c28cca936c1d9d84fdae9e7543a143642c7d336c08aa0d3bcfc",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/hall-boy.json",
+      "sha256": "cd877375124f9b3ae296340bc5e1c457ccf6e5b131c7339a0b7d89f7ddc12040",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/ice-cutter.json",
+      "sha256": "90eeb4a947aa86caebe2e907ae30461a1ef5fb8aeff2548d1100d18cd036df4f",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/illuminator-of-manuscripts.json",
+      "sha256": "ed1eee8d499b4a512ef87242015dd3983a0d2a531fe853e4941d94702b1f9242",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/ivory-carver.json",
+      "sha256": "9e4843e9b72f5942cbbc4fb2be5ea55096d53f31e548a818cc94d6f8b277fdda",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/keypunch-operator.json",
+      "sha256": "0dc393c35c4ba8a1dcce165bd1b28cbfc984235571835b649bf6e8310170032a",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/kitchen-maid.json",
+      "sha256": "d2f217ba6087305c65a999c52a7f9ac2fb9c400d6f55c830cbdd64c2087b5568",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/knocker-up.json",
+      "sha256": "369e8d03efe3587fe36533c67d68d176a4df89746c90722c695ac7af46ae7e1a",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/lady-s-companion.json",
+      "sha256": "ee09cb8ceb413c8f19a294ec87b5ed231cc141bd2617d1b52eb975e4570da19f",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/lamplighter.json",
+      "sha256": "4d5f979f515d2ec4bc7bb48cc1e7daac29042a2d6905227dca4506b8421bad67",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/laundress.json",
+      "sha256": "5e16c3495f4ff4cd763a0eb820436122b1d42011cde3d53d7d867102a6e16d5a",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/leech-collector.json",
+      "sha256": "c921095244ec84441e9cbbcaa9e3b997e343b3c546d8c763ab0aba2a7dea8d11",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/limeburner.json",
+      "sha256": "4579e405e4af03af5f3b8089bb37ff512dd9fe1643e53ca27485cdd89ef14f84",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/link-boy.json",
+      "sha256": "0abd079e752f345fd4a4f6fbb2c8731c2d26f0b751f1d69d147ec9d4d76ff657",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/locomotive-fireman.json",
+      "sha256": "476e6bb5a8e164e7edcef6e607ec5cfd5fa426eec176edc1a532d020f3ac0e00",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/man-at-arms.json",
+      "sha256": "1fc90dd5ef9231f28e505b0c18196fb4426130ac5a81c787d0097e70bcfd42e8",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/matchgirl.json",
+      "sha256": "3441c2a560576ea298fb40bc576731a88146af9c25b855545ffacbffe9886f10",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/milliner.json",
+      "sha256": "648097d85d08e040dbbb838ed957dff26d4440a98d5bd292dc8587da5da3b0aa",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/mudlark.json",
+      "sha256": "657266fd504dcea1c7c9a879a94828a63e1e108c0928f72735f943ebefdeae57",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/mule-scavenger.json",
+      "sha256": "cabb771a59d858ef744faf534710805fc4a6b597b8c1349423d637809136d554",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/needle-maker.json",
+      "sha256": "0e7b4c74a8f06d4cf12fd2fa06d768cf922faa5b0554e8281a99ffe96ef9d354",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/oakum-picker.json",
+      "sha256": "11db7d21ce8228e523a6b034e3ba3023c355aa5b8ce60e7ee3f5aa5e41483da3",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/phrenologist.json",
+      "sha256": "ca6b38cfc07740f46be526413333f20966cc41d2c166953ddd0b5d1711141be6",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/physiognomist.json",
+      "sha256": "3b4836b51a5bb53396f134bfbd760ad1e7e61a2a9bd83f56042e61db274c8bff",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/pin-boy.json",
+      "sha256": "7cc5590e6d1736511ac72b81f5ed5558d98739f41fa2d94bd79e54a0eb1b4f10",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/pin-maker.json",
+      "sha256": "152acc8701e0fdf2a56cbd0a0419da22b2618bcb3fb0c1c10f29c38cee6a3d9f",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/plague-doctor.json",
+      "sha256": "14dd3478e05df2aee600f761242c4f993550d84b0fdd9e3960177bc46a1995ed",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/postilion.json",
+      "sha256": "d947bd0db0d719289d4d324855c789c9f25675d378a9660e8d52f57c18364792",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/poundmaster.json",
+      "sha256": "da830e16ebaf24dfdc1ffe26432bcde91ccd042e0e0a724129bf4ebeb3c96d81",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/powder-monkey.json",
+      "sha256": "b4aa91f8b2de15c332cefa53c905298cb71185f232cbd207bf82c6b6c2257964",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/priest-hunter.json",
+      "sha256": "b0cb5bb3717a2680f8240867ae1b0c493205a6efec747082c9cae9fb27dfac42",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/printer-s-devil.json",
+      "sha256": "fb7c613a8919364ed0b868b6328e2d059ea1c271d7d30ea221b78c06ffbd7bd7",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/privateer.json",
+      "sha256": "2043f4d5c68ae3e12829d455d363d28ad11ab7b48193b51fa126d5fb4e3b3b31",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/punkah-wallah.json",
+      "sha256": "18a717684135604c7561c695d92b19c248742478f7ba210eb023bc9c5cda94c0",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/railroad-brakeman.json",
+      "sha256": "348cf6cf3f2e2355c5f355f3b45b249eb6f3c0175eaf8fb4f01470e5cb67492d",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/railway-mail-clerk.json",
+      "sha256": "4512443997c4783cdbe678a1020b5e5eca02729ccd4482f0fa1f80f286df40e8",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/resident-minister.json",
+      "sha256": "d26f420fa3b85cdc46cc7371f5ad09d2c8b0f0dda840fa443c98477fde711837",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/resin-worker.json",
+      "sha256": "c6d90ea05a95dc3ae7a853e1a0ce16e7096bb69739f01774699af396371c3c6a",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/riding-officer.json",
+      "sha256": "10b5adc905afc2120de012b95702b8af621ae0f5374580f07d8056f73ed04d62",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/saltpetre-worker.json",
+      "sha256": "d7717e7375deef449827ff29637fac53baf9f5dd148208f88e2fa5f0d7de489c",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/scrivener.json",
+      "sha256": "4abf46c1d42eda6e4409da7e6098271b7573f1667c3cd1eb2f0913ec70369af3",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/scullery-maid.json",
+      "sha256": "16cbdf2e5b34c99b84c246cd675b9a9ac4e9d43e4d90c4d3e56282e3785a463a",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/sedan-chair-bearer.json",
+      "sha256": "d063577f466d9db04e1f287ba3a2d5d39292e8cd1bfb78d530ee5fe6e8bffacb",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/seneschal.json",
+      "sha256": "53581156043d92324b79e609f7faed89a2a8db35675fd2ba88f689486284e1bf",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/slave-catcher.json",
+      "sha256": "01160a7535c13f198533e04d1eb9b109032b16af61cd5016e059334c0561318f",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/soda-jerk.json",
+      "sha256": "dd0330ee2714c03b49a2869036bdbc85f5465e0efd0f272b6db2313d5cce5293",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/still-room-maid.json",
+      "sha256": "412bdc49cafc11014a96de9f9f3c447b77e39cc5d62e14c91bc0b373000cf805",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/stocking-weaver.json",
+      "sha256": "0b2695a2903a20a7432d54ad7be4cc689b737501c49d0ad3198ba7aca44f6abc",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/stonecutter.json",
+      "sha256": "b508cf6f2fdc095fbcde957a2674b9fbe890d4b120cdf3aea29c6dcf5eae035e",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/streetcar-conductor.json",
+      "sha256": "ee7b330a91754bf5dba47df9dea98246d90d2ced3eb772fc3a897277200c4e45",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/streetcar-motorman.json",
+      "sha256": "9d77f8753a2e1b76afba6c50470cbfc085548b8234a4d31d8ce8d4cde88506a3",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/sutler.json",
+      "sha256": "dad46d765f080314e8e1bef4694546faa54e1edf9f25c9244a57eee288a17988",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/switchboard-operator.json",
+      "sha256": "850a12d836d4ac811eba09f9a94003c1f8ea2725dc7c58f59db7e8226fc179a8",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/tallow-chandler.json",
+      "sha256": "928c78abd8d1de0dfc26e5b64af8f32496fbf227f208f5fcc9fdbd7ec06d9e01",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/telegraph-operator.json",
+      "sha256": "dc16ceb1ba189b8b79fd9429e02991b17a69901c83c7644c0278efa508d5999c",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/thief-taker.json",
+      "sha256": "5c4148b0d51c43230e9c2071526ebb3732be908ebbdbb42fd6dd305d6597cf44",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/tondenhei.json",
+      "sha256": "7055d606e84c86533a9179c05b927ddd31184906f87cdf53ab97d28d377f2298",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/tosher.json",
+      "sha256": "e098b45d22db3ff4f683d21aefbc8fd7ea2a9cfb13583f4a00c52d0a175bf334",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/town-crier.json",
+      "sha256": "07b195a48e5844ccab2758e9cb7b7dab8616af600eac074cb70cab88c706e26c",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/water-carrier.json",
+      "sha256": "3a79a548a8d892f61c8a32049247d2872a412bee427e092e6c4165c35ca0f84a",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/wheelwright.json",
+      "sha256": "274acdaf860ddf04ce679c8adbeb93f868a95ed52e5d1fc011c87d2ba533e890",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/wire-drawer.json",
+      "sha256": "3e592b9effa6a18a11ab40c65d639184abe11618f3b0e93a883cf7f50b0aa702",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/woad-dyer.json",
+      "sha256": "e9e0d799cd29567ea3e67f317cc9712ff07bc03cc3ad63d15ce677d9f5a138c9",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
+    },
+    {
+      "path": "data/raw/ngrams/wool-comber.json",
+      "sha256": "f71e2f2f6689bacbc47c0a005ba1fa7146c230562afb3ae7fee998d85ed90282",
+      "source": {
+        "name": "Google Books Ngram Viewer: yearly frequency of each job's name, 1800-2019",
+        "url": "https://books.google.com/ngrams/json",
+        "license": "Google Books Ngram data: CC BY 3.0; queried through the Ngram Viewer's JSON endpoint",
+        "notes": "Queries from data/manual/ngram_terms.csv (status ok only); corpus en-2019, case-insensitive, no smoothing. Each file stores the query, parameters and response.",
+        "retrieved_at": "2026-10-12T02:08:13+00:00"
+      }
     }
   ],
   "steps": [
@@ -114,6 +1195,7 @@
     "Non-occupational OCC1950 codes relabelled in plain language (e.g. 999 -> 'No occupation listed').",
     "references: Wikipedia's citations for the job's row in the list (Wikipedia jobs) or the sources column of data/manual/census_jobs.csv (census jobs).",
     "uk: British census counts 1841-1861 per year and area from uk_job_counts.csv (published census report tables, transcribed by Ditto Books), with the matched titles and the note from data/manual/uk_terms.csv.",
+    "books: Google Books Ngram (en-2019, case-insensitive, unsmoothed) yearly frequency of the job's name and plural, from data/raw/ngrams/, averaged over 5-year blocks and expressed per million words; only terms marked ok in data/manual/ngram_terms.csv (ambiguous names such as surnames are skipped).",
     "series[].share: people / estimated workers that year, where workers = the sum of category_counts persons_est over all occupational OCC1950 codes (top-level 'workers').",
     "Census jobs (origin 'census') from data/manual/census_jobs.csv: description from the manual table or the first three sentences of the Wikipedia article intro; reason from the manual table (draft flag from its status); image from the article; series and flows from the job's OCC1950 category; endCentury = century of the first census after the peak where the category's share of workers fell below 10% of its peak share (IPUMS public sample counts, 1850-2024). Where the manual table gives earlier_code/earlier_until, that code is used for census years up to earlier_until (series and flows); 'note' explains such quirks on the page."
   ],
