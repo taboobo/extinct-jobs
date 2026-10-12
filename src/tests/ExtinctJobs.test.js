@@ -260,6 +260,20 @@ describe('HoverCard', () => {
     await fireEvent.click(button);
     expect(button.getAttribute('aria-expanded')).toBe('true');
   });
+
+  it('shows a dot trigger that still has a spoken name', async () => {
+    render(HoverCard, {
+      props: {
+        label: 'Why this peak',
+        dot: true,
+        card: text('<span>x</span>'),
+      },
+    });
+    const button = screen.getByRole('button', { name: 'Why this peak' });
+    expect(button.textContent).toBe('?');
+    await fireEvent.focusIn(button);
+    expect(screen.getByRole('dialog', { name: 'Why this peak' })).toBeTruthy();
+  });
 });
 
 describe('JobCard and CategoryCard', () => {
@@ -506,6 +520,59 @@ describe('BookMentions', () => {
     expect(container.querySelector('figcaption').textContent).toMatch(
       /“lamplighter”, “lamp lighter” and “lamp-lighter”, with their plurals/
     );
+  });
+
+  it('has no peak marker when the peak is not in question', () => {
+    render(BookMentions, { props: { books } });
+    expect(
+      screen.queryByRole('button', { name: /peak may be misleading/ })
+    ).toBeNull();
+  });
+
+  it('explains a peak that came after the job ended', async () => {
+    render(BookMentions, {
+      props: {
+        books: {
+          ...books,
+          peakCaveat: {
+            afterEnd: true,
+            endedByYear: 1870,
+            endCentury: 19,
+            note: null,
+          },
+        },
+      },
+    });
+    const dot = screen.getByRole('button', {
+      name: 'Why the 1900 peak may be misleading',
+    });
+    await fireEvent.focusIn(dot);
+    expect(screen.getByRole('dialog').textContent).toMatch(
+      /mostly gone by 1870[\s\S]*history writing or\s+fiction/
+    );
+  });
+
+  it('shows a checked explanation instead of the general guess', async () => {
+    render(BookMentions, {
+      props: {
+        books: {
+          ...books,
+          peakCaveat: {
+            afterEnd: true,
+            endedByYear: null,
+            endCentury: 17,
+            note: 'Also a fish.',
+          },
+        },
+      },
+    });
+    await fireEvent.focusIn(
+      screen.getByRole('button', { name: /peak may be misleading/ })
+    );
+    const card = screen.getByRole('dialog').textContent;
+    expect(card).toMatch(/ended in the\s+1600s/);
+    expect(card).toMatch(/Also a fish\./);
+    expect(card).not.toMatch(/history writing/);
   });
 
   it('shows a value on focus', async () => {

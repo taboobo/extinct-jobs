@@ -27,7 +27,8 @@
     argTypes: {
       books: {
         control: 'object',
-        description: '{ spellings, withPlurals, points, peakYear, note }',
+        description:
+          '{ spellings, withPlurals, points, peakYear, note, peakCaveat }',
       },
       name: {
         control: 'text',
@@ -48,5 +49,29 @@
       note: null,
     },
     name: 'lamplighter',
+  }}
+/>
+
+<!-- A peak long after the job ended gets a "?" marker with the reason -->
+<Story
+  name="Questionable peak"
+  args={{
+    books: {
+      spellings: ['matchgirl', 'match girl'],
+      withPlurals: true,
+      points: points.map((p) => ({
+        ...p,
+        perMillion: 0.01 + (p.year - 1800) / 5000,
+      })),
+      peakYear: 2015,
+      note: null,
+      peakCaveat: {
+        afterEnd: true,
+        endedByYear: null,
+        endCentury: 20,
+        note: '“Match girl” makes up most of this line, and since 1900, 80–89% of “match girl” in books is part of “little match girl”, from Hans Christian Andersen’s story.',
+      },
+    },
+    name: 'matchgirl',
   }}
 />

@@ -1,13 +1,13 @@
 {
   "output": "data/processed/site/jobs.json",
-  "sha256": "f5953e7c13e0c0bfb4ffb066970a4859e62f0262fc0d2526eedd8b35b50f8139",
+  "sha256": "52144eceb29bb4e0c3dff5fe4b8de1ef93dd8d7406fe96e934a12ee522e18428",
   "rows": 115,
-  "built_at": "2026-10-12T02:34:32+00:00",
+  "built_at": "2026-10-12T02:39:00+00:00",
   "script": {
     "path": "scripts/export_site_data.py",
-    "sha256": "f5eb8b80887cc048cf30c91eb5bdb8649d9bc234560af2cd113ced0cf03c5c0c",
+    "sha256": "0ca471c765a86fc7c9dc9172deeee467b702f80ba751ba67faf8ccadb929dcd5",
     "git": {
-      "commit": "cd9958609ae1335184ddbd686d44bc7039e25857",
+      "commit": "1d9be0e6bb8e9d28be40cfc46358c98536a28a7c",
       "file_committed": true,
       "file_modified_since_commit": true
     }
@@ -124,7 +124,7 @@
     },
     {
       "path": "data/manual/ngram_terms.csv",
-      "sha256": "b71c1dfa02cc9f1b4e7406958e1f7e45571b8c668829b158b201c654a6d2f690",
+      "sha256": "5ef94c168c969d723b9696f2b4bb4b67cbcefba489ee7051cf1fa6833b6ff73b",
       "source": null
     },
     {
@@ -3444,7 +3444,7 @@
     "Non-occupational OCC1950 codes relabelled in plain language (e.g. 999 -> 'No occupation listed').",
     "references: Wikipedia's citations for the job's row in the list (Wikipedia jobs) or the sources column of data/manual/census_jobs.csv (census jobs).",
     "uk: British census counts 1841-1861 per year and area from uk_job_counts.csv (published census report tables, transcribed by Ditto Books), with the matched titles and the note from data/manual/uk_terms.csv.",
-    "books: Google Books Ngram (en-2019, case-insensitive, unsmoothed) yearly frequency of every spelling marked ok in data/manual/ngram_variants.csv (the job's name, other spellings found in the census and HISCO, and hand-picked synonyms), each fetched alone from data/raw/ngrams/variants/ and summed, averaged over 5-year blocks and expressed per million words. Ambiguous names (surnames, words with another big meaning) are not searched. books.spellings lists the singular forms; withPlurals says plurals were counted too.",
+    "books: Google Books Ngram (en-2019, case-insensitive, unsmoothed) yearly frequency of every spelling marked ok in data/manual/ngram_variants.csv (the job's name, other spellings found in the census and HISCO, and hand-picked synonyms), each fetched alone from data/raw/ngrams/variants/ and summed, averaged over 5-year blocks and expressed per million words. Ambiguous names (surnames, words with another big meaning) are not searched. books.spellings lists the singular forms; withPlurals says plurals were counted too. books.peakCaveat: afterEnd is true when the peak 5-year block starts 25+ years after endedByYear, or after the end of endCentury when only the century is known; note is peak_note from ngram_terms.csv, a checked explanation (checks in data/raw/ngrams/checks/).",
     "series[].share: people / estimated workers that year, where workers = the sum of category_counts persons_est over all occupational OCC1950 codes (top-level 'workers').",
     "Census jobs (origin 'census') from data/manual/census_jobs.csv: description from the manual table or the first three sentences of the Wikipedia article intro; reason from the manual table (draft flag from its status); image from the article; series and flows from the job's OCC1950 category; endCentury = century of the first census after the peak where the category's share of workers fell below 10% of its peak share (IPUMS public sample counts, 1850-2024). Where the manual table gives earlier_code/earlier_until, that code is used for census years up to earlier_until (series and flows); 'note' explains such quirks on the page."
   ],

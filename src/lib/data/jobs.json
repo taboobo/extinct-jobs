@@ -229,7 +229,13 @@
           }
         ],
         "peakYear": 2015,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 20
+        }
       }
     },
     {
@@ -461,7 +467,13 @@
           }
         ],
         "peakYear": 1965,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": "Alewife is also a fish. In 1960s books the word is most often followed by “population”, “fishery” or “fisheries” (checked in Google Books Ngram).",
+          "endedByYear": null,
+          "endCentury": 17
+        }
       }
     },
     {
@@ -689,7 +701,13 @@
           }
         ],
         "peakYear": 1815,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 18
+        }
       }
     },
     {
@@ -1079,7 +1097,8 @@
           }
         ],
         "peakYear": 1810,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -1323,7 +1342,8 @@
           }
         ],
         "peakYear": 1890,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -1551,7 +1571,8 @@
           }
         ],
         "peakYear": 1805,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -2806,7 +2827,8 @@
           }
         ],
         "peakYear": 1880,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -4069,7 +4091,8 @@
           }
         ],
         "peakYear": 1885,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -4305,7 +4328,13 @@
           }
         ],
         "peakYear": 2010,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 19
+        }
       }
     },
     {
@@ -5284,7 +5313,8 @@
           }
         ],
         "peakYear": 1900,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -5644,7 +5674,8 @@
           }
         ],
         "peakYear": 1830,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -5983,7 +6014,8 @@
           }
         ],
         "peakYear": 1815,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -6211,7 +6243,8 @@
           }
         ],
         "peakYear": 1940,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -7490,7 +7523,8 @@
           }
         ],
         "peakYear": 1880,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -7756,7 +7790,8 @@
           }
         ],
         "peakYear": 1845,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -8205,7 +8240,13 @@
           }
         ],
         "peakYear": 2015,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 20
+        }
       }
     },
     {
@@ -8582,7 +8623,8 @@
           }
         ],
         "peakYear": 1815,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -8944,7 +8986,8 @@
           }
         ],
         "peakYear": 1825,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -9317,7 +9360,8 @@
           }
         ],
         "peakYear": 1820,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -9609,7 +9653,8 @@
           }
         ],
         "peakYear": 1850,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -10285,7 +10330,8 @@
           }
         ],
         "peakYear": 1860,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -10543,7 +10589,8 @@
           }
         ],
         "peakYear": 1865,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -10892,7 +10939,8 @@
           }
         ],
         "peakYear": 1880,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -11220,7 +11268,8 @@
           }
         ],
         "peakYear": 1840,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -11856,7 +11905,8 @@
           }
         ],
         "peakYear": 1940,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -12429,7 +12479,8 @@
           }
         ],
         "peakYear": 1895,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -12661,7 +12712,13 @@
           }
         ],
         "peakYear": 1910,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 17
+        }
       }
     },
     {
@@ -13782,7 +13839,8 @@
           }
         ],
         "peakYear": 1905,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -14010,7 +14068,8 @@
           }
         ],
         "peakYear": 1880,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -14306,7 +14365,8 @@
           }
         ],
         "peakYear": 1805,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -14878,7 +14938,8 @@
           }
         ],
         "peakYear": 1845,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -16262,7 +16323,8 @@
           }
         ],
         "peakYear": 1905,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -16554,7 +16616,8 @@
           }
         ],
         "peakYear": 1905,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -17615,7 +17678,13 @@
           }
         ],
         "peakYear": 1845,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 16
+        }
       }
     },
     {
@@ -17976,7 +18045,8 @@
           }
         ],
         "peakYear": 1915,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -18268,7 +18338,8 @@
           }
         ],
         "peakYear": 1965,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -18560,7 +18631,13 @@
           }
         ],
         "peakYear": 2010,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 20
+        }
       }
     },
     {
@@ -18792,7 +18869,8 @@
           }
         ],
         "peakYear": 1875,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -19084,7 +19162,8 @@
           }
         ],
         "peakYear": 1850,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -19397,7 +19476,8 @@
           }
         ],
         "peakYear": 1860,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -20507,7 +20587,8 @@
           }
         ],
         "peakYear": 1865,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -20848,7 +20929,8 @@
           }
         ],
         "peakYear": 1860,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -21304,7 +21386,8 @@
           }
         ],
         "peakYear": 1840,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -21532,7 +21615,8 @@
           }
         ],
         "peakYear": 1800,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -22548,7 +22632,8 @@
           }
         ],
         "peakYear": 1935,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -22781,7 +22866,13 @@
           }
         ],
         "peakYear": 1805,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 16
+        }
       }
     },
     {
@@ -23328,7 +23419,13 @@
           }
         ],
         "peakYear": 2015,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": "“Match girl” makes up most of this line, and since 1900, 80–89% of “match girl” in books is part of “little match girl”, from Hans Christian Andersen's story (checked in Google Books Ngram).",
+          "endedByYear": null,
+          "endCentury": 20
+        }
       }
     },
     {
@@ -24487,7 +24584,8 @@
           }
         ],
         "peakYear": 1860,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -24719,7 +24817,8 @@
           }
         ],
         "peakYear": 1860,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -25253,7 +25352,8 @@
           }
         ],
         "peakYear": 1835,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -25585,7 +25685,13 @@
           }
         ],
         "peakYear": 1905,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 19
+        }
       }
     },
     {
@@ -25851,7 +25957,8 @@
           }
         ],
         "peakYear": 1835,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -26083,7 +26190,8 @@
           }
         ],
         "peakYear": 1800,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -26596,7 +26704,8 @@
           }
         ],
         "peakYear": 1940,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -26973,7 +27082,8 @@
           }
         ],
         "peakYear": 1815,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -27205,7 +27315,13 @@
           }
         ],
         "peakYear": 2015,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 17
+        }
       }
     },
     {
@@ -27450,7 +27566,8 @@
           }
         ],
         "peakYear": 1820,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -27764,7 +27881,8 @@
           }
         ],
         "peakYear": 1865,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -28000,7 +28118,13 @@
           }
         ],
         "peakYear": 1940,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": "In mining, a powder monkey is a blaster's helper; the 1950 census index lists the title only in mining (Alphabetical Index of Occupations, p. 243).",
+          "endedByYear": null,
+          "endCentury": 19
+        }
       }
     },
     {
@@ -28232,7 +28356,8 @@
           }
         ],
         "peakYear": 1850,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -28524,7 +28649,8 @@
           }
         ],
         "peakYear": 1830,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -28756,7 +28882,8 @@
           }
         ],
         "peakYear": 1800,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -28984,7 +29111,8 @@
           }
         ],
         "peakYear": 1895,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -30063,7 +30191,8 @@
           }
         ],
         "peakYear": 1905,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -30862,7 +30991,8 @@
           }
         ],
         "peakYear": 1910,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -31135,7 +31265,8 @@
           }
         ],
         "peakYear": 1835,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -31427,7 +31558,8 @@
           }
         ],
         "peakYear": 1960,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -31651,7 +31783,8 @@
           }
         ],
         "peakYear": 1800,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -31887,7 +32020,13 @@
           }
         ],
         "peakYear": 1830,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 18
+        }
       }
     },
     {
@@ -33480,7 +33619,8 @@
           }
         ],
         "peakYear": 1840,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -33708,7 +33848,13 @@
           }
         ],
         "peakYear": 2010,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 20
+        }
       }
     },
     {
@@ -33957,7 +34103,13 @@
           }
         ],
         "peakYear": 1940,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 19
+        }
       }
     },
     {
@@ -34189,7 +34341,13 @@
           }
         ],
         "peakYear": 1835,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 18
+        }
       }
     },
     {
@@ -34425,7 +34583,13 @@
           }
         ],
         "peakYear": 2015,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 19
+        }
       }
     },
     {
@@ -34868,7 +35032,13 @@
           }
         ],
         "peakYear": 2010,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 20
+        }
       }
     },
     {
@@ -35096,7 +35266,8 @@
           }
         ],
         "peakYear": 1850,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -35486,7 +35657,8 @@
           }
         ],
         "peakYear": 1845,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -36715,7 +36887,8 @@
           }
         ],
         "peakYear": 1890,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -37594,7 +37767,8 @@
           }
         ],
         "peakYear": 1940,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -38244,7 +38418,8 @@
           }
         ],
         "peakYear": 1940,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -38480,7 +38655,8 @@
           }
         ],
         "peakYear": 1860,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -39189,7 +39365,8 @@
           }
         ],
         "peakYear": 1940,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -39574,7 +39751,8 @@
           }
         ],
         "peakYear": 1840,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -41663,7 +41841,8 @@
           }
         ],
         "peakYear": 1915,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -41899,7 +42078,8 @@
           }
         ],
         "peakYear": 1820,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -42131,7 +42311,13 @@
           }
         ],
         "peakYear": 2010,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 20
+        }
       }
     },
     {
@@ -42359,7 +42545,13 @@
           }
         ],
         "peakYear": 2015,
-        "note": null
+        "note": null,
+        "peakCaveat": {
+          "afterEnd": true,
+          "note": null,
+          "endedByYear": null,
+          "endCentury": 20
+        }
       }
     },
     {
@@ -42617,7 +42809,8 @@
           }
         ],
         "peakYear": 1935,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -42986,7 +43179,8 @@
           }
         ],
         "peakYear": 1935,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -43363,7 +43557,8 @@
           }
         ],
         "peakYear": 1875,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -43710,7 +43905,8 @@
           }
         ],
         "peakYear": 1900,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -43950,7 +44146,8 @@
           }
         ],
         "peakYear": 1800,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     },
     {
@@ -44246,7 +44443,8 @@
           }
         ],
         "peakYear": 1800,
-        "note": null
+        "note": null,
+        "peakCaveat": null
       }
     }
   ],

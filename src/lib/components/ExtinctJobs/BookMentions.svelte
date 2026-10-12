@@ -5,12 +5,17 @@ BookMentions.svelte — How often a job's name appeared in English-language book
 with the peak marked. Hovering, tapping or tabbing to a point shows its value.
 
 Props:
-- books: { spellings, withPlurals, points: [{ year, perMillion }], peakYear, note }
-  from jobs.json; spellings are every form searched (summed), plurals counted when
-  withPlurals is true
+- books: { spellings, withPlurals, points: [{ year, perMillion }], peakYear, note,
+  peakCaveat } from jobs.json; spellings are every form searched (summed), plurals
+  counted when withPlurals is true. peakCaveat ({ afterEnd, note, endedByYear,
+  endCentury } or null) adds a "?" marker by the peak whose card says why the peak
+  may not be about the job.
 - name: the job name, used in the accessible description
 -->
 <script>
+  import HoverCard from '$lib/components/ExtinctJobs/HoverCard.svelte';
+  import { centuryLabel } from '$lib/jobs.js';
+
   let { books, name = 'this job' } = $props();
 
   let width = $state(640);
@@ -33,6 +38,26 @@ Props:
   );
   const peak = $derived(points.find((p) => p.year === books.peakYear));
   const ticks = [1800, 1850, 1900, 1950, 2000];
+
+  // Keep "Peak 2015" inside the chart near either edge; the "?" marker for a
+  // questionable peak sits beside the label, on whichever side has room.
+  const LABEL_HALF = 30;
+  const DOT = 16;
+  const caveat = $derived(books.peakCaveat ?? null);
+  const labelAnchor = $derived.by(() => {
+    if (!peak) return 'middle';
+    const px = x(peak.year);
+    if (px - LABEL_HALF < PAD.left) return 'start';
+    if (px + LABEL_HALF + (caveat ? DOT + 6 : 0) > W - PAD.right) return 'end';
+    return 'middle';
+  });
+  const caveatLeft = $derived.by(() => {
+    if (!peak) return 0;
+    const px = x(peak.year);
+    if (labelAnchor === 'start') return px + 2 * LABEL_HALF + 4;
+    if (labelAnchor === 'end') return px - 2 * LABEL_HALF - DOT - 4;
+    return px + LABEL_HALF + 4;
+  });
 
   let active = $state(null);
   const activePoint = $derived(active == null ? null : points[active]);
@@ -80,7 +105,7 @@ Props:
         class="peak-label"
         x={x(peak.year)}
         y={y(peak.perMillion) - 8}
-        text-anchor="middle">Peak {peak.year}</text
+        text-anchor={labelAnchor}>Peak {peak.year}</text
       >
     {/if}
     {#each points as p, i (p.year)}
@@ -122,6 +147,42 @@ Props:
       {/if}
     {/each}
   </svg>
+  {#if peak && caveat}
+    <span
+      class="caveat"
+      style:left="{caveatLeft}px"
+      style:top="{y(peak.perMillion) - 21}px"
+    >
+      <HoverCard label="Why the {peak.year} peak may be misleading" dot>
+        {#snippet card()}
+          <span class="caveat-card">
+            <span class="caveat-title"
+              >Why the {peak.year} peak may be misleading</span
+            >
+            {#if caveat.afterEnd}
+              <span class="caveat-text">
+                {#if caveat.endedByYear}
+                  The job had mostly gone by {caveat.endedByYear}, decades
+                  before this peak.
+                {:else}
+                  Wikipedia's list says this job ended in the {centuryLabel(
+                    caveat.endCentury
+                  )}, before this peak.
+                {/if}
+                {#if !caveat.note}
+                  Books from this time probably mention it in history writing or
+                  fiction, or use the word in another sense.
+                {/if}
+              </span>
+            {/if}
+            {#if caveat.note}
+              <span class="caveat-text">{caveat.note}</span>
+            {/if}
+          </span>
+        {/snippet}
+      </HoverCard>
+    </span>
+  {/if}
   {#if activePoint}
     <p class="readout" aria-live="polite">
       {activePoint.year}–{activePoint.year + 4}: {fmt(activePoint.perMillion)} per
@@ -143,6 +204,25 @@ Props:
     position: relative;
     margin: 0;
     max-width: 52rem;
+  }
+
+  .caveat {
+    position: absolute;
+    line-height: 0;
+  }
+
+  .caveat-title {
+    display: block;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-xxs);
+  }
+
+  .caveat-text {
+    display: block;
+
+    & + & {
+      margin-top: var(--spacing-xs);
+    }
   }
 
   svg {

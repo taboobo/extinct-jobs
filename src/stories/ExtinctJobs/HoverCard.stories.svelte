@@ -45,3 +45,15 @@
     </HoverCard>
   </p>
 </Story>
+
+<!-- A small round "?" marker; the label is read out and names the card -->
+<Story name="Dot" asChild>
+  <p>
+    Peak 2015
+    <HoverCard label="Why the 2015 peak may be misleading" dot>
+      {#snippet card()}<span
+          >Most of these mentions are part of “little match girl”.</span
+        >{/snippet}
+    </HoverCard>
+  </p>
+</Story>

@@ -14,11 +14,13 @@ Props:
 - label: trigger text
 - href: optional link target; without it the trigger is a button
 - card: snippet with the card's contents
+- dot: show the trigger as a small round "?" marker instead of text; the label
+  is still read out by screen readers and names the card
 -->
 <script>
   import { onDestroy } from 'svelte';
 
-  let { label, href = null, card } = $props();
+  let { label, href = null, card, dot = false } = $props();
 
   const OPEN_DELAY = 350;
   const CLOSE_DELAY = 200;
@@ -135,9 +137,12 @@ Props:
       bind:this={trigger}
       type="button"
       class="trigger"
+      class:dot
+      aria-label={dot ? label : undefined}
       aria-expanded={open}
       aria-controls={id}
-      onclick={onTriggerClick}>{label}</button
+      onclick={onTriggerClick}
+      >{#if dot}<span aria-hidden="true">?</span>{:else}{label}{/if}</button
     >
   {/if}
 
@@ -179,6 +184,34 @@ Props:
   .trigger[aria-expanded='true'] {
     color: var(--color-accent);
     text-decoration-color: currentColor;
+  }
+
+  .trigger.dot {
+    display: inline-grid;
+    place-items: center;
+    width: 1rem;
+    height: 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1;
+    text-decoration: none;
+    color: var(--color-accent);
+    background: var(--color-paper);
+    border: var(--border-width-thin) solid currentColor;
+    border-radius: 50%;
+  }
+
+  .trigger.dot:hover,
+  .trigger.dot[aria-expanded='true'] {
+    color: var(--color-paper);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .trigger.dot:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
   }
 
   .card {
