@@ -350,17 +350,6 @@ describe('JobList', () => {
         .getAttribute('href')
     ).toBe('/jobs/telegraph-operator');
   });
-
-  it('shows the century each job ended', () => {
-    render(JobList, { props: { jobs } });
-    expect(screen.getAllByText('1900s').length).toBe(1);
-    expect(screen.getByText('1800s')).toBeTruthy();
-  });
-
-  it('notes jobs without census records', () => {
-    render(JobList, { props: { jobs } });
-    expect(screen.getByText('Not in census records')).toBeTruthy();
-  });
 });
 
 describe('Masthead', () => {

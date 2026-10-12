@@ -102,6 +102,10 @@ each census, where its workers went next and came from, and jobs that ended the 
     <section>
       <h2>Why it disappeared</h2>
       <p>{job.reason}</p>
+      {#if data.related.length}
+        <h3 class="related-heading">Other jobs that ended this way</h3>
+        <RelatedJobs jobs={data.related} />
+      {/if}
     </section>
 
     <section class="wide">
@@ -222,13 +226,6 @@ each census, where its workers went next and came from, and jobs that ended the 
             </Sidenote>
           {/snippet}
         </MarginNotes>
-      </section>
-    {/if}
-
-    {#if data.related.length}
-      <section class="wide">
-        <h2>Jobs that ended the same way</h2>
-        <RelatedJobs jobs={data.related} />
       </section>
     {/if}
 
@@ -379,6 +376,13 @@ each census, where its workers went next and came from, and jobs that ended the 
     margin-top: calc(-1 * var(--spacing-xs));
     font-family: var(--font-sans);
     color: var(--color-text);
+  }
+
+  .related-heading {
+    margin: var(--spacing-md) 0 var(--spacing-xs);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
   }
 
   .rough-note {

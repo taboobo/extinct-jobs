@@ -11,7 +11,7 @@
   const pick = (ids) =>
     data.jobs
       .filter((j) => ids.includes(j.id))
-      .map((j) => ({ ...j, series: j.census.series }));
+      .map(({ id, name, summary }) => ({ id, name, summary }));
 
   const { Story } = defineMeta({
     title: 'ExtinctJobs/JobList',
@@ -20,7 +20,7 @@
     argTypes: {
       jobs: {
         control: 'object',
-        description: 'Job summaries with a series of census points',
+        description: 'Job summaries: { id, name, summary }',
       },
     },
   });
