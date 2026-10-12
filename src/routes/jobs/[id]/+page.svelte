@@ -11,6 +11,7 @@ each census, where its workers went next and came from, and jobs that ended the 
   import Sidenote from '$lib/components/ExtinctJobs/Sidenote.svelte';
   import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
   import DecadePicker from '$lib/components/ExtinctJobs/DecadePicker.svelte';
+  import BritishCensus from '$lib/components/ExtinctJobs/BritishCensus.svelte';
   import {
     centuryLabel,
     formatNumber,
@@ -166,6 +167,13 @@ each census, where its workers went next and came from, and jobs that ended the 
         <p class="note">{noCensusReason}</p>
       {/if}
     </section>
+
+    {#if job.uk}
+      <section class="wide">
+        <h2>In Britain and Ireland</h2>
+        <BritishCensus uk={job.uk} />
+      </section>
+    {/if}
 
     {#if census.series.length}
       <section class="wide">

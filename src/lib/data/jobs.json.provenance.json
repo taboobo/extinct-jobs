@@ -1,13 +1,13 @@
 {
   "output": "data/processed/site/jobs.json",
-  "sha256": "f3384062596d9af56fd97f52972ee8aead421904fd932460ded6d5468d39e074",
+  "sha256": "5d16a4842deab8221405b6bef68f5a0ca6e674987e70f88aad1c998020042456",
   "rows": 115,
-  "built_at": "2026-10-12T00:37:29+00:00",
+  "built_at": "2026-10-12T01:02:02+00:00",
   "script": {
     "path": "scripts/export_site_data.py",
-    "sha256": "6ebb0e021ee97d98ff402415349d6ca8d82bd2e8a7053c116c5e49f20e9567ba",
+    "sha256": "4676be5d7d608c07abb0c54a383762662ce945598dbde03bee797861258b6a85",
     "git": {
-      "commit": "544382d6e32811fef6e7677fbb598f79690eac53",
+      "commit": "30aca7e1a741febac5a0c3009a37942f3fad4c23",
       "file_committed": true,
       "file_modified_since_commit": true
     }
@@ -26,6 +26,11 @@
     {
       "path": "data/processed/category_counts_1850_1940.csv",
       "sha256": "761bd64636512f74e767f8b3c388d0884413c769bdeb367316ea72c04ab5cab7",
+      "source": null
+    },
+    {
+      "path": "data/processed/transitions_1850_1860.csv",
+      "sha256": "3200939cbfe825adc6da0c40432d1aa16e2c52a9744bb1cd3ed03d23c2f24821",
       "source": null
     },
     {
@@ -86,6 +91,16 @@
         "notes": "Frequencies are unweighted sample counts keyed by sample id -> category id. Sample and category ids are defined in the variable page's codeData script block.",
         "retrieved_at": "2026-10-11T21:36:57+00:00"
       }
+    },
+    {
+      "path": "data/processed/uk_job_counts.csv",
+      "sha256": "b23113a2a49796dfe21780488fd7889c3103e08fef1d077be268a09a2d145efa",
+      "source": null
+    },
+    {
+      "path": "data/manual/uk_terms.csv",
+      "sha256": "9606152fdc9050f6e939a455f0ed0b1a828b29bd318006db5470543da7cfed34",
+      "source": null
     }
   ],
   "steps": [
@@ -97,6 +112,7 @@
     "defaultFlow: index of the pair where the job's estimated workforce fell the most.",
     "categories: OCC1950 codes referenced by flows, with weighted category totals by year (category_counts) and the Wikipedia job they exactly match, for hover cards.",
     "Non-occupational OCC1950 codes relabelled in plain language (e.g. 999 -> 'No occupation listed').",
+    "uk: British census counts 1841-1861 per year and area from uk_job_counts.csv (published census report tables, transcribed by Ditto Books), with the matched titles and the note from data/manual/uk_terms.csv.",
     "series[].share: people / estimated workers that year, where workers = the sum of category_counts persons_est over all occupational OCC1950 codes (top-level 'workers').",
     "Census jobs (origin 'census') from data/manual/census_jobs.csv: description from the manual table or the first three sentences of the Wikipedia article intro; reason from the manual table (draft flag from its status); image from the article; series and flows from the job's OCC1950 category; endCentury = century of the first census after the peak where the category's share of workers fell below 10% of its peak share (IPUMS public sample counts, 1850-2024). Where the manual table gives earlier_code/earlier_until, that code is used for census years up to earlier_until (series and flows); 'note' explains such quirks on the page."
   ],

@@ -32,7 +32,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "alewife",
@@ -66,7 +67,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "alnager",
@@ -100,7 +102,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "armourer-chain-mail",
@@ -134,7 +137,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "armourer-plate-armour",
@@ -168,7 +172,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "ash-burner",
@@ -266,7 +271,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "baby-farmer",
@@ -300,7 +306,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "between-maid",
@@ -334,7 +341,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "blacksmith",
@@ -434,6 +442,156 @@
       },
       "note": null,
       "flows": [
+        {
+          "from": 1850,
+          "to": 1860,
+          "transitions": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 501,
+            "category": "Blacksmiths",
+            "linkedPeople": 41337,
+            "destinations": [
+              {
+                "code": 501,
+                "label": "Blacksmiths",
+                "share": 0.5467,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.2074,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.0585,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0289,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.0273,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0188,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 820,
+                "label": "Farm laborers, wage workers",
+                "share": 0.0108,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 554,
+                "label": "Mechanics and repairmen (n.e.c.)",
+                "share": 0.0099,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.0916,
+                "same": false,
+                "other": true
+              }
+            ]
+          },
+          "arrivals": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 501,
+            "category": "Blacksmiths",
+            "linkedPeople": 31937,
+            "origins": [
+              {
+                "code": 501,
+                "label": "Blacksmiths",
+                "share": 0.7077,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.1504,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.0625,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0164,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 554,
+                "label": "Mechanics and repairmen (n.e.c.)",
+                "share": 0.0099,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0093,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0054,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 544,
+                "label": "Machinists",
+                "share": 0.0045,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.0339,
+                "same": false,
+                "other": true
+              }
+            ]
+          }
+        },
         {
           "from": 1910,
           "to": 1920,
@@ -585,7 +743,77 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 1,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 97340,
+            "males": 96828,
+            "females": 512,
+            "titles": [
+              {
+                "title": "Blacksmith",
+                "people": 97340
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 112776,
+            "males": 112184,
+            "females": 592,
+            "titles": [
+              {
+                "title": "Blacksmith",
+                "people": 112776
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 108165,
+            "males": 107770,
+            "females": 395,
+            "titles": [
+              {
+                "title": "Blacksmith",
+                "people": 108165
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 18679,
+            "males": 18679,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Blacksmiths",
+                "people": 18679
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 19610,
+            "males": 19600,
+            "females": 10,
+            "titles": [
+              {
+                "title": "Blacksmith",
+                "people": 19610
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "boarding-house-keeper",
@@ -685,6 +913,156 @@
       },
       "note": "The 1850 and 1860 censuses often left women's jobs blank, so early counts for this mostly female job are far too low.",
       "flows": [
+        {
+          "from": 1850,
+          "to": 1860,
+          "transitions": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 752,
+            "category": "Boarding and lodging house keepers",
+            "linkedPeople": 557,
+            "destinations": [
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.2065,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.1526,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.1149,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 752,
+                "label": "Boarding and lodging house keepers",
+                "share": 0.0952,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.0575,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0431,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0377,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.0197,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.2729,
+                "same": false,
+                "other": true
+              }
+            ]
+          },
+          "arrivals": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 752,
+            "category": "Boarding and lodging house keepers",
+            "linkedPeople": 841,
+            "origins": [
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.2949,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.2164,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.126,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 752,
+                "label": "Boarding and lodging house keepers",
+                "share": 0.063,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0583,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 582,
+                "label": "Shoemakers and repairers, except factory",
+                "share": 0.044,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0404,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.0297,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1272,
+                "same": false,
+                "other": true
+              }
+            ]
+          }
+        },
         {
           "from": 1910,
           "to": 1920,
@@ -836,7 +1214,85 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 1,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 10250,
+            "males": 1318,
+            "females": 8932,
+            "titles": [
+              {
+                "title": "Lodging and Boarding-house Keeper",
+                "people": 10250
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 23089,
+            "males": 2962,
+            "females": 20127,
+            "titles": [
+              {
+                "title": "Lodging-house keeper",
+                "people": 23089
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 22730,
+            "males": 3443,
+            "females": 19287,
+            "titles": [
+              {
+                "title": "Lodging, Boarding,—House Keeper",
+                "people": 20700
+              },
+              {
+                "title": "Lodging, Boarding,—House Keeper’s Wife",
+                "people": 2030
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 1993,
+            "males": 368,
+            "females": 1625,
+            "titles": [
+              {
+                "title": "Board and Lodging-house Keepers",
+                "people": 1993
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 4573,
+            "males": 153,
+            "females": 4420,
+            "titles": [
+              {
+                "title": "Lodging-house Keeper’s Wife",
+                "people": 102
+              },
+              {
+                "title": "Lodging, Boarding,—house Keeper",
+                "people": 4471
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "body-snatcher",
@@ -870,7 +1326,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "breaker-boy",
@@ -1119,7 +1576,8 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": null
     },
     {
       "id": "brush-maker",
@@ -1217,7 +1675,64 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 9976,
+            "males": 8023,
+            "females": 1953,
+            "titles": [
+              {
+                "title": "Brush, Broom,—maker",
+                "people": 9976
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 11178,
+            "males": 8520,
+            "females": 2658,
+            "titles": [
+              {
+                "title": "Brush, Broom,—Maker, Seller",
+                "people": 11178
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 617,
+            "males": 368,
+            "females": 249,
+            "titles": [
+              {
+                "title": "Brush Makers",
+                "people": 617
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 535,
+            "males": 433,
+            "females": 102,
+            "titles": [
+              {
+                "title": "Brush, Broom Maker",
+                "people": 535
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "buckle-maker",
@@ -1315,7 +1830,51 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 252,
+            "males": 209,
+            "females": 43,
+            "titles": [
+              {
+                "title": "Buckle-maker",
+                "people": 252
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 380,
+            "males": 283,
+            "females": 97,
+            "titles": [
+              {
+                "title": "Clasp, Buckle,—maker",
+                "people": 380
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 343,
+            "males": 263,
+            "females": 80,
+            "titles": [
+              {
+                "title": "Buckle, Clasp,—Maker",
+                "people": 343
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "burlak",
@@ -1349,7 +1908,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "canal-boatman",
@@ -1449,6 +2009,156 @@
       },
       "note": null,
       "flows": [
+        {
+          "from": 1850,
+          "to": 1860,
+          "transitions": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 623,
+            "category": "Boatmen, canalmen, and lock keepers",
+            "linkedPeople": 7663,
+            "destinations": [
+              {
+                "code": 623,
+                "label": "Boatmen, canalmen, and lock keepers",
+                "share": 0.1933,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.1498,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1155,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.0839,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.062,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 673,
+                "label": "Sailors and deck hands",
+                "share": 0.0542,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 910,
+                "label": "Fishermen and oystermen",
+                "share": 0.0427,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 240,
+                "label": "Officers, pilots, pursers and engineers, ship",
+                "share": 0.0425,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.2562,
+                "same": false,
+                "other": true
+              }
+            ]
+          },
+          "arrivals": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 623,
+            "category": "Boatmen, canalmen, and lock keepers",
+            "linkedPeople": 3954,
+            "origins": [
+              {
+                "code": 623,
+                "label": "Boatmen, canalmen, and lock keepers",
+                "share": 0.3746,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.2339,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.1282,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 673,
+                "label": "Sailors and deck hands",
+                "share": 0.0716,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0283,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0225,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0223,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 240,
+                "label": "Officers, pilots, pursers and engineers, ship",
+                "share": 0.0169,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1017,
+                "same": false,
+                "other": true
+              }
+            ]
+          }
+        },
         {
           "from": 1910,
           "to": 1920,
@@ -1600,7 +2310,101 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 1,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 869,
+            "males": 844,
+            "females": 25,
+            "titles": [
+              {
+                "title": "Bridge and Canal-contractor",
+                "people": 6
+              },
+              {
+                "title": "Canal Agent",
+                "people": 27
+              },
+              {
+                "title": "Canal Service",
+                "people": 836
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 4569,
+            "males": 4457,
+            "females": 112,
+            "titles": [
+              {
+                "title": "Canal and Inland Navigation Service",
+                "people": 3031
+              },
+              {
+                "title": "Lighterman",
+                "people": 1538
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 35660,
+            "males": 35426,
+            "females": 234,
+            "titles": [
+              {
+                "title": "Bargeman,—woman, Lighterman, Waterman",
+                "people": 31428
+              },
+              {
+                "title": "Canal, Inland Navigation,—Service",
+                "people": 4190
+              },
+              {
+                "title": "Canals, Rivers,—Others connected with",
+                "people": 42
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 659,
+            "males": 659,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Canal Boatmen",
+                "people": 634
+              },
+              {
+                "title": "Canal Managers",
+                "people": 25
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 601,
+            "males": 594,
+            "females": 7,
+            "titles": [
+              {
+                "title": "Canal & Inland Navigation Service",
+                "people": 601
+              }
+            ]
+          }
+        ],
+        "note": "Bargemen, lightermen and watermen are counted together."
+      }
     },
     {
       "id": "cat-s-meat-man",
@@ -1634,7 +2438,38 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 60,
+            "males": 51,
+            "females": 9,
+            "titles": [
+              {
+                "title": "Catsmeat,—dealer, vendor",
+                "people": 60
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 108,
+            "males": 78,
+            "females": 30,
+            "titles": [
+              {
+                "title": "Catsmeat Dealer, Vendor",
+                "people": 108
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "cavalryman",
@@ -1732,7 +2567,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "climbing-boy",
@@ -1830,7 +2666,77 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 5028,
+            "males": 4897,
+            "females": 131,
+            "titles": [
+              {
+                "title": "Chimney-sweeper",
+                "people": 5028
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 6732,
+            "males": 6641,
+            "females": 91,
+            "titles": [
+              {
+                "title": "Chimney-sweeper",
+                "people": 6732
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 5920,
+            "males": 5844,
+            "females": 76,
+            "titles": [
+              {
+                "title": "Chimney Sweeper",
+                "people": 5920
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 760,
+            "males": 760,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Chimney Sweeps",
+                "people": 760
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 339,
+            "males": 337,
+            "females": 2,
+            "titles": [
+              {
+                "title": "Chimney Sweeper",
+                "people": 339
+              }
+            ]
+          }
+        ],
+        "note": "Counts all chimney sweeps, not only climbing boys."
+      }
     },
     {
       "id": "coach-maker",
@@ -1928,7 +2834,72 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 12603,
+            "males": 12491,
+            "females": 112,
+            "titles": [
+              {
+                "title": "Coach-maker ( all branches )",
+                "people": 12603
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 16590,
+            "males": 16431,
+            "females": 159,
+            "titles": [
+              {
+                "title": "Coachmaker",
+                "people": 16590
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 18870,
+            "males": 18653,
+            "females": 217,
+            "titles": [
+              {
+                "title": "Coachmaker",
+                "people": 18870
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 1548,
+            "males": 1547,
+            "females": 1,
+            "titles": [
+              {
+                "title": "Carriage Maker",
+                "people": 1
+              },
+              {
+                "title": "Coachmaker",
+                "people": 1526
+              },
+              {
+                "title": "Railway Carriage Maker",
+                "people": 21
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "coachman",
@@ -2026,7 +2997,89 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 14469,
+            "males": 14469,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Coachman, Coach-guard and Postboy",
+                "people": 14469
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 24415,
+            "males": 24415,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Coachman (not Domestic Servant), Guard, Postboy",
+                "people": 16836
+              },
+              {
+                "title": "Domestic Servant Coachman",
+                "people": 7579
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 29148,
+            "males": 29148,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Coachman (Domestic Servant)",
+                "people": 11897
+              },
+              {
+                "title": "Coachman (not Domestic Servant)",
+                "people": 17251
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 747,
+            "males": 747,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Grooms and Coachmen",
+                "people": 747
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 3240,
+            "males": 3240,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Coachman",
+                "people": 1311
+              },
+              {
+                "title": "Coachman (not domestic)",
+                "people": 1929
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "colporter",
@@ -2124,7 +3177,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "computer",
@@ -2222,7 +3276,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "cooper",
@@ -2320,7 +3375,101 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 18996,
+            "males": 18867,
+            "females": 129,
+            "titles": [
+              {
+                "title": "Cooper",
+                "people": 18379
+              },
+              {
+                "title": "Cooper (Back-maker)",
+                "people": 41
+              },
+              {
+                "title": "Wine Cooper",
+                "people": 576
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 20881,
+            "males": 20776,
+            "females": 105,
+            "titles": [
+              {
+                "title": "Cooper",
+                "people": 20245
+              },
+              {
+                "title": "Wine-cooper, Cask-dealer",
+                "people": 636
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 18512,
+            "males": 18408,
+            "females": 104,
+            "titles": [
+              {
+                "title": "Cask Dealer, Wine Cooper",
+                "people": 691
+              },
+              {
+                "title": "Cooper",
+                "people": 17821
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 7411,
+            "males": 7411,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Coopers",
+                "people": 7218
+              },
+              {
+                "title": "Wine Coopers",
+                "people": 193
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 4300,
+            "males": 4297,
+            "females": 3,
+            "titles": [
+              {
+                "title": "Cooper",
+                "people": 4275
+              },
+              {
+                "title": "Wine Cooper, Cask Dealer",
+                "people": 25
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "cork-cutter",
@@ -2418,7 +3567,77 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 1910,
+            "males": 1866,
+            "females": 44,
+            "titles": [
+              {
+                "title": "Cork-cutter and Manufacturer",
+                "people": 1910
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 2300,
+            "males": 2249,
+            "females": 51,
+            "titles": [
+              {
+                "title": "Cork-cutter",
+                "people": 2300
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 2257,
+            "males": 2177,
+            "females": 80,
+            "titles": [
+              {
+                "title": "Corkcutter, manufacture",
+                "people": 2257
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 497,
+            "males": 488,
+            "females": 9,
+            "titles": [
+              {
+                "title": "Cork Cutters",
+                "people": 497
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 670,
+            "males": 651,
+            "females": 19,
+            "titles": [
+              {
+                "title": "Corkcutter, Manufacturer",
+                "people": 670
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "crossing-sweeper",
@@ -2452,7 +3671,38 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 32,
+            "males": 21,
+            "females": 11,
+            "titles": [
+              {
+                "title": "Crossing-sweeper (not otherwise returned)",
+                "people": 32
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 69,
+            "males": 54,
+            "females": 15,
+            "titles": [
+              {
+                "title": "Crossing Sweeper",
+                "people": 69
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "doffer",
@@ -2550,7 +3800,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "dog-whipper",
@@ -2584,7 +3835,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "drummer-military",
@@ -2618,7 +3870,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "drysalter",
@@ -2652,7 +3905,51 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 587,
+            "males": 581,
+            "females": 6,
+            "titles": [
+              {
+                "title": "Drysalter",
+                "people": 587
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 613,
+            "males": 594,
+            "females": 19,
+            "titles": [
+              {
+                "title": "Drysalter",
+                "people": 613
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 196,
+            "males": 195,
+            "females": 1,
+            "titles": [
+              {
+                "title": "Drysalter",
+                "people": 196
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "elevator-operator",
@@ -2880,7 +4177,8 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": null
     },
     {
       "id": "elocutionist",
@@ -2978,7 +4276,38 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 4,
+            "males": 0,
+            "females": 4,
+            "titles": [
+              {
+                "title": "Teacher of Elocution",
+                "people": 4
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 3,
+            "males": 3,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Teachers of Elocution",
+                "people": 3
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "escheator",
@@ -3012,7 +4341,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "expressman",
@@ -3110,6 +4440,84 @@
         "seriesSource": "title"
       },
       "flows": [
+        {
+          "from": 1850,
+          "to": 1860,
+          "transitions": null,
+          "arrivals": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "broader",
+            "code": 683,
+            "category": "Truck and tractor drivers",
+            "linkedPeople": 9608,
+            "origins": [
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.2739,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.2588,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 683,
+                "label": "Truck and tractor drivers",
+                "share": 0.2031,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0529,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0379,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 582,
+                "label": "Shoemakers and repairers, except factory",
+                "share": 0.0199,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0195,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.0119,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1222,
+                "same": false,
+                "other": true
+              }
+            ]
+          }
+        },
         {
           "from": 1910,
           "to": 1920,
@@ -3261,7 +4669,8 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 1,
+      "uk": null
     },
     {
       "id": "fifer",
@@ -3295,7 +4704,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "footman",
@@ -3393,7 +4803,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "fuller",
@@ -3491,7 +4902,68 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 1231,
+            "males": 1209,
+            "females": 22,
+            "titles": [
+              {
+                "title": "Fuller",
+                "people": 1231
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 1469,
+            "males": 1467,
+            "females": 2,
+            "titles": [
+              {
+                "title": "Fuller",
+                "people": 1469
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 1028,
+            "males": 1028,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Fuller",
+                "people": 1001
+              },
+              {
+                "title": "Fuller’s Earth manufacture, Dealer",
+                "people": 27
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 50,
+            "males": 50,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Fuller",
+                "people": 50
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "garden-hermit",
@@ -3525,7 +4997,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "gladiator",
@@ -3559,7 +5032,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "gong-farmer",
@@ -3593,7 +5067,77 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 609,
+            "males": 609,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Scavenger and Nightman",
+                "people": 609
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 1322,
+            "males": 1320,
+            "females": 2,
+            "titles": [
+              {
+                "title": "Scavenger and nightman",
+                "people": 1322
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 1374,
+            "males": 1374,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Nightman, Scavenger",
+                "people": 1374
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 54,
+            "males": 54,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Scavengers",
+                "people": 54
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 365,
+            "males": 365,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Scavenger",
+                "people": 365
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "grain-miller",
@@ -3693,6 +5237,156 @@
       },
       "note": null,
       "flows": [
+        {
+          "from": 1850,
+          "to": 1860,
+          "transitions": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 555,
+            "category": "Millers, grain, flour, feed, etc.",
+            "linkedPeople": 12963,
+            "destinations": [
+              {
+                "code": 555,
+                "label": "Millers, grain, flour, feed, etc.",
+                "share": 0.3546,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.3137,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.0718,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0552,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.0398,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0194,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 820,
+                "label": "Farm laborers, wage workers",
+                "share": 0.0159,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0154,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1141,
+                "same": false,
+                "other": true
+              }
+            ]
+          },
+          "arrivals": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 555,
+            "category": "Millers, grain, flour, feed, etc.",
+            "linkedPeople": 12928,
+            "origins": [
+              {
+                "code": 555,
+                "label": "Millers, grain, flour, feed, etc.",
+                "share": 0.3556,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.3356,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.0889,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0441,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0382,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0278,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 560,
+                "label": "Millwrights",
+                "share": 0.0152,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 501,
+                "label": "Blacksmiths",
+                "share": 0.0113,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.0835,
+                "same": false,
+                "other": true
+              }
+            ]
+          }
+        },
         {
           "from": 1910,
           "to": 1920,
@@ -3844,7 +5538,93 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 1,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 25747,
+            "males": 25198,
+            "females": 549,
+            "titles": [
+              {
+                "title": "Miller",
+                "people": 25742
+              },
+              {
+                "title": "Rice-miller and Merchant",
+                "people": 5
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 37338,
+            "males": 36776,
+            "females": 562,
+            "titles": [
+              {
+                "title": "Madder,—miller, grinder",
+                "people": 7
+              },
+              {
+                "title": "Miller",
+                "people": 37268
+              },
+              {
+                "title": "Rice,—merchant, miller",
+                "people": 63
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 32103,
+            "males": 31689,
+            "females": 414,
+            "titles": [
+              {
+                "title": "Miller",
+                "people": 32103
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 4417,
+            "males": 4385,
+            "females": 32,
+            "titles": [
+              {
+                "title": "Millers",
+                "people": 4417
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 4140,
+            "males": 4117,
+            "females": 23,
+            "titles": [
+              {
+                "title": "Logwood Miller",
+                "people": 6
+              },
+              {
+                "title": "Miller",
+                "people": 4134
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "hall-boy",
@@ -3942,7 +5722,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "ice-cutter",
@@ -4040,7 +5821,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "iceman",
@@ -4289,7 +6071,38 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 5,
+            "males": 5,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Ice-dealer",
+                "people": 5
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 16,
+            "males": 16,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Ice-dealer",
+                "people": 16
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "illuminator-of-manuscripts",
@@ -4323,7 +6136,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "ivory-carver",
@@ -4421,7 +6235,77 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 490,
+            "males": 478,
+            "females": 12,
+            "titles": [
+              {
+                "title": "Ivory-cutter, Worker, and Dealer",
+                "people": 490
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 667,
+            "males": 652,
+            "females": 15,
+            "titles": [
+              {
+                "title": "Ivory,—cutter, worker, dealer",
+                "people": 667
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 1053,
+            "males": 998,
+            "females": 55,
+            "titles": [
+              {
+                "title": "Ivory Cutter, Worker, Turner",
+                "people": 1053
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 8,
+            "males": 8,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Turners of Ivory",
+                "people": 8
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 7,
+            "males": 7,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Ivory Cutter, Worker, Dealer",
+                "people": 7
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "keypunch-operator",
@@ -4519,7 +6403,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "kitchen-maid",
@@ -4617,7 +6502,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "knocker-up",
@@ -4651,7 +6537,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "lady-s-companion",
@@ -4749,7 +6636,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "lamplighter",
@@ -4847,7 +6735,25 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 90,
+            "males": 90,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Lamplighters",
+                "people": 90
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "laundress",
@@ -5098,7 +7004,76 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 51289,
+            "males": 583,
+            "females": 50706,
+            "titles": [
+              {
+                "title": "Laundry-keeper, Washer, and Mangler",
+                "people": 51289
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 146091,
+            "males": 718,
+            "females": 145373,
+            "titles": [
+              {
+                "title": "Washerwoman, Laundry-keeper, Mangler",
+                "people": 146091
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 171647,
+            "males": 1165,
+            "females": 170482,
+            "titles": [
+              {
+                "title": "Laundry-keeper, Mangler, Washer-woman",
+                "people": 167607
+              },
+              {
+                "title": "Laundrymaid (Domestic Servant)",
+                "people": 4040
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 13666,
+            "males": 6,
+            "females": 13660,
+            "titles": [
+              {
+                "title": "Laundry Keeper",
+                "people": 6
+              },
+              {
+                "title": "Laundrymaid",
+                "people": 1120
+              },
+              {
+                "title": "Washerwoman, Mangler",
+                "people": 12540
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "lector",
@@ -5196,7 +7171,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "leech-collector",
@@ -5230,7 +7206,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "legger",
@@ -5328,7 +7305,25 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 33,
+            "males": 33,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Boat-legger",
+                "people": 33
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "limeburner",
@@ -5426,7 +7421,38 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 2111,
+            "males": 2049,
+            "females": 62,
+            "titles": [
+              {
+                "title": "Lime-burner",
+                "people": 2111
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 378,
+            "males": 377,
+            "females": 1,
+            "titles": [
+              {
+                "title": "Lime Burners",
+                "people": 378
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "link-boy",
@@ -5460,7 +7486,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "locomotive-fireman",
@@ -5704,7 +7731,51 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": {
+        "counts": [
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 7594,
+            "males": 7594,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Railway Engine,—driver, stoker",
+                "people": 7594
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 10414,
+            "males": 10414,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Engine Driver, Stoker,—Railway",
+                "people": 10414
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 1457,
+            "males": 1457,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Railway Engineer, Driver, Stoker",
+                "people": 1457
+              }
+            ]
+          }
+        ],
+        "note": "Counted with railway engine drivers."
+      }
     },
     {
       "id": "man-at-arms",
@@ -5738,7 +7809,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "match-maker",
@@ -5836,7 +7908,77 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 279,
+            "males": 199,
+            "females": 80,
+            "titles": [
+              {
+                "title": "Match-maker and Seller",
+                "people": 279
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 734,
+            "males": 473,
+            "females": 261,
+            "titles": [
+              {
+                "title": "Match,—maker, seller",
+                "people": 734
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 532,
+            "males": 343,
+            "females": 189,
+            "titles": [
+              {
+                "title": "Match Maker, Seller",
+                "people": 532
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 30,
+            "males": 20,
+            "females": 10,
+            "titles": [
+              {
+                "title": "Match Makers and Dealers",
+                "people": 30
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 108,
+            "males": 53,
+            "females": 55,
+            "titles": [
+              {
+                "title": "Match Maker, Seller",
+                "people": 108
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "matchgirl",
@@ -5934,7 +8076,77 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 279,
+            "males": 199,
+            "females": 80,
+            "titles": [
+              {
+                "title": "Match-maker and Seller",
+                "people": 279
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 734,
+            "males": 473,
+            "females": 261,
+            "titles": [
+              {
+                "title": "Match,—maker, seller",
+                "people": 734
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 532,
+            "males": 343,
+            "females": 189,
+            "titles": [
+              {
+                "title": "Match Maker, Seller",
+                "people": 532
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 30,
+            "males": 20,
+            "females": 10,
+            "titles": [
+              {
+                "title": "Match Makers and Dealers",
+                "people": 30
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 108,
+            "males": 53,
+            "females": 55,
+            "titles": [
+              {
+                "title": "Match Maker, Seller",
+                "people": 108
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "milliner",
@@ -6034,6 +8246,56 @@
       },
       "note": "The 1850 and 1860 censuses often left women's jobs blank, so early counts for this mostly female job are far too low.",
       "flows": [
+        {
+          "from": 1850,
+          "to": 1860,
+          "transitions": null,
+          "arrivals": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 645,
+            "category": "Milliners",
+            "linkedPeople": 136,
+            "origins": [
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.375,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.1912,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 555,
+                "label": "Millers, grain, flour, feed, etc.",
+                "share": 0.1618,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1471,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.125,
+                "same": false,
+                "other": false
+              }
+            ]
+          }
+        },
         {
           "from": 1910,
           "to": 1920,
@@ -6185,7 +8447,81 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 1,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 106801,
+            "males": 563,
+            "females": 106238,
+            "titles": [
+              {
+                "title": "Dress-maker and Milliner",
+                "people": 106801
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 267791,
+            "males": 366,
+            "females": 267425,
+            "titles": [
+              {
+                "title": "Milliner, Dressmaker",
+                "people": 267791
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 287101,
+            "males": 803,
+            "females": 286298,
+            "titles": [
+              {
+                "title": "Dressmaker and Milliner",
+                "people": 287101
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 6629,
+            "males": 0,
+            "females": 6629,
+            "titles": [
+              {
+                "title": "Milliners",
+                "people": 6629
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 33097,
+            "males": 31,
+            "females": 33066,
+            "titles": [
+              {
+                "title": "Milliner",
+                "people": 31
+              },
+              {
+                "title": "Milliner, Dressmaker",
+                "people": 33066
+              }
+            ]
+          }
+        ],
+        "note": "Milliners are counted together with dressmakers in these tables."
+      }
     },
     {
       "id": "mudlark",
@@ -6219,7 +8555,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "mule-scavenger",
@@ -6317,7 +8654,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "mute",
@@ -6415,7 +8753,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "needle-maker",
@@ -6513,7 +8852,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "ninja",
@@ -6547,7 +8887,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "oakum-picker",
@@ -6581,7 +8922,51 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 121,
+            "males": 66,
+            "females": 55,
+            "titles": [
+              {
+                "title": "Oakum,—worker, dealer",
+                "people": 121
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 199,
+            "males": 35,
+            "females": 164,
+            "titles": [
+              {
+                "title": "Oakum Worker, Dealer",
+                "people": 199
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 43,
+            "males": 5,
+            "females": 38,
+            "titles": [
+              {
+                "title": "Oakum Worker",
+                "people": 43
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "phrenologist",
@@ -6615,7 +9000,38 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 4,
+            "males": 4,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Phrenologist",
+                "people": 4
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 27,
+            "males": 24,
+            "females": 3,
+            "titles": [
+              {
+                "title": "Phrenologist",
+                "people": 27
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "physiognomist",
@@ -6649,7 +9065,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "pin-boy",
@@ -6826,7 +9243,8 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": null
     },
     {
       "id": "pin-maker",
@@ -6924,7 +9342,81 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 1330,
+            "males": 492,
+            "females": 838,
+            "titles": [
+              {
+                "title": "Pin Manufacture ( all branches )",
+                "people": 1330
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 1295,
+            "males": 439,
+            "females": 856,
+            "titles": [
+              {
+                "title": "Pin manufacture",
+                "people": 1295
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 729,
+            "males": 322,
+            "females": 407,
+            "titles": [
+              {
+                "title": "Pin manufacture",
+                "people": 729
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 106,
+            "males": 24,
+            "females": 82,
+            "titles": [
+              {
+                "title": "Pin Makers",
+                "people": 106
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 4,
+            "males": 2,
+            "females": 2,
+            "titles": [
+              {
+                "title": "Clothes-pin Maker",
+                "people": 2
+              },
+              {
+                "title": "Pin Manufacture",
+                "people": 2
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "plague-doctor",
@@ -6958,7 +9450,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "postilion",
@@ -6992,7 +9485,25 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 221,
+            "males": 221,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Postilions",
+                "people": 221
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "poundmaster",
@@ -7090,7 +9601,25 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 24,
+            "males": 24,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Pound Keepers",
+                "people": 24
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "powder-monkey",
@@ -7124,7 +9653,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "priest-hunter",
@@ -7158,7 +9688,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "printer-s-devil",
@@ -7256,7 +9787,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "privateer",
@@ -7290,7 +9822,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "punkah-wallah",
@@ -7324,7 +9857,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "railroad-brakeman",
@@ -7424,6 +9958,49 @@
       },
       "note": null,
       "flows": [
+        {
+          "from": 1850,
+          "to": 1860,
+          "transitions": null,
+          "arrivals": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 624,
+            "category": "Brakemen, railroad",
+            "linkedPeople": 145,
+            "origins": [
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.4759,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.3793,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0759,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.069,
+                "same": false,
+                "other": false
+              }
+            ]
+          }
+        },
         {
           "from": 1910,
           "to": 1920,
@@ -7575,7 +10152,8 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": null
     },
     {
       "id": "railway-mail-clerk",
@@ -7811,7 +10389,8 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": null
     },
     {
       "id": "reeve",
@@ -7845,7 +10424,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "resident-minister",
@@ -7879,7 +10459,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "resin-worker",
@@ -7977,7 +10558,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "riding-officer",
@@ -8011,7 +10593,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "saltpetre-worker",
@@ -8045,7 +10628,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "samurai",
@@ -8079,7 +10663,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "sawyer",
@@ -8177,6 +10762,156 @@
         "seriesSource": "title"
       },
       "flows": [
+        {
+          "from": 1850,
+          "to": 1860,
+          "transitions": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "broader",
+            "code": 674,
+            "category": "Sawyers",
+            "linkedPeople": 4230,
+            "destinations": [
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.317,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 674,
+                "label": "Sawyers",
+                "share": 0.104,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 55,
+                "label": "Lawyers and judges",
+                "share": 0.0929,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.0853,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.0851,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0442,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0409,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 555,
+                "label": "Millers, grain, flour, feed, etc.",
+                "share": 0.0317,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1988,
+                "same": false,
+                "other": true
+              }
+            ]
+          },
+          "arrivals": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "broader",
+            "code": 674,
+            "category": "Sawyers",
+            "linkedPeople": 3780,
+            "origins": [
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.3328,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1802,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 55,
+                "label": "Lawyers and judges",
+                "share": 0.1222,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 674,
+                "label": "Sawyers",
+                "share": 0.1164,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0519,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0307,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 555,
+                "label": "Millers, grain, flour, feed, etc.",
+                "share": 0.0275,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0262,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1122,
+                "same": false,
+                "other": true
+              }
+            ]
+          }
+        },
         {
           "from": 1910,
           "to": 1920,
@@ -8328,7 +11063,85 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 1,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 29593,
+            "males": 29573,
+            "females": 20,
+            "titles": [
+              {
+                "title": "Sawyer",
+                "people": 29593
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 35443,
+            "males": 35420,
+            "females": 23,
+            "titles": [
+              {
+                "title": "Sawyer",
+                "people": 35443
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 31647,
+            "males": 31635,
+            "females": 12,
+            "titles": [
+              {
+                "title": "Sawyer",
+                "people": 31647
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 2755,
+            "males": 2755,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Sawyers (Hand)",
+                "people": 2715
+              },
+              {
+                "title": "Sawyers (Machine)",
+                "people": 38
+              },
+              {
+                "title": "Soap Sawyers and Stampers",
+                "people": 2
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 4631,
+            "males": 4629,
+            "females": 2,
+            "titles": [
+              {
+                "title": "Sawyer",
+                "people": 4631
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "scribe",
@@ -8426,7 +11239,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "scrivener",
@@ -8524,7 +11338,64 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 192,
+            "males": 192,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Scrivener",
+                "people": 192
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 74,
+            "males": 74,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Scrivener",
+                "people": 74
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 34,
+            "males": 34,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Scrivener",
+                "people": 34
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 12,
+            "males": 10,
+            "females": 2,
+            "titles": [
+              {
+                "title": "Scriveners",
+                "people": 12
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "scullery-maid",
@@ -8558,7 +11429,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "sedan-chair-bearer",
@@ -8592,7 +11464,25 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 1,
+            "males": 1,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Sedan Chairman",
+                "people": 1
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "seneschal",
@@ -8626,7 +11516,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "slave-catcher",
@@ -8660,7 +11551,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "soda-jerk",
@@ -8909,7 +11801,8 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": null
     },
     {
       "id": "still-room-maid",
@@ -8943,7 +11836,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "stocking-weaver",
@@ -9041,7 +11935,97 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 43994,
+            "males": 32454,
+            "females": 11540,
+            "titles": [
+              {
+                "title": "Haberdasher and Hosier",
+                "people": 4063
+              },
+              {
+                "title": "Hose (Stocking) Manufacture ( all branches )",
+                "people": 39931
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 71730,
+            "males": 39040,
+            "females": 32690,
+            "titles": [
+              {
+                "title": "Hose (Stocking) manufacture",
+                "people": 65499
+              },
+              {
+                "title": "Hosier, Haberdasher",
+                "people": 6231
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 52322,
+            "males": 28743,
+            "females": 23579,
+            "titles": [
+              {
+                "title": "Haberdasher, Hosier",
+                "people": 6453
+              },
+              {
+                "title": "Hose (Stocking) manufacture",
+                "people": 45869
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 334,
+            "males": 241,
+            "females": 93,
+            "titles": [
+              {
+                "title": "Hosiers",
+                "people": 259
+              },
+              {
+                "title": "Stocking Weavers",
+                "people": 75
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 942,
+            "males": 364,
+            "females": 578,
+            "titles": [
+              {
+                "title": "Hose, Stocking Manufacture",
+                "people": 456
+              },
+              {
+                "title": "Hosier, Haberdasher",
+                "people": 486
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "stonecutter",
@@ -9141,6 +12125,156 @@
       },
       "note": null,
       "flows": [
+        {
+          "from": 1850,
+          "to": 1860,
+          "transitions": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 584,
+            "category": "Stone cutters and stone carvers",
+            "linkedPeople": 3688,
+            "destinations": [
+              {
+                "code": 584,
+                "label": "Stone cutters and stone carvers",
+                "share": 0.388,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.1505,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 504,
+                "label": "Brickmasons, stonemasons, and tile setters",
+                "share": 0.0846,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.0672,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0586,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.0483,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0431,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 984,
+                "label": "Retired",
+                "share": 0.0174,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1424,
+                "same": false,
+                "other": true
+              }
+            ]
+          },
+          "arrivals": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 584,
+            "category": "Stone cutters and stone carvers",
+            "linkedPeople": 2730,
+            "origins": [
+              {
+                "code": 584,
+                "label": "Stone cutters and stone carvers",
+                "share": 0.5242,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.1341,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1073,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 504,
+                "label": "Brickmasons, stonemasons, and tile setters",
+                "share": 0.0901,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0385,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0282,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 650,
+                "label": "Mine operatives and laborers",
+                "share": 0.0161,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0128,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.0487,
+                "same": false,
+                "other": true
+              }
+            ]
+          }
+        },
         {
           "from": 1910,
           "to": 1920,
@@ -9292,7 +12426,51 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 1,
+      "uk": {
+        "counts": [
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 3256,
+            "males": 3241,
+            "females": 15,
+            "titles": [
+              {
+                "title": "Stone,—cutter, dresser, polisher",
+                "people": 3256
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 3156,
+            "males": 3156,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Stone-cutters",
+                "people": 3156
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 1392,
+            "males": 1392,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Stone Cutter, Dresser, Polisher",
+                "people": 1392
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "streetcar-conductor",
@@ -9536,7 +12714,8 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": null
     },
     {
       "id": "streetcar-motorman",
@@ -9773,7 +12952,8 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": null
     },
     {
       "id": "sutler",
@@ -9807,7 +12987,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "switchboard-operator",
@@ -10035,7 +13216,8 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": null
     },
     {
       "id": "tallow-chandler",
@@ -10133,7 +13315,97 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 3876,
+            "males": 3772,
+            "females": 104,
+            "titles": [
+              {
+                "title": "Ship Chandler",
+                "people": 211
+              },
+              {
+                "title": "Tallow and Wax-chandler",
+                "people": 3665
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 5656,
+            "males": 5407,
+            "females": 249,
+            "titles": [
+              {
+                "title": "Ship-chandler",
+                "people": 372
+              },
+              {
+                "title": "Tallow-chandler",
+                "people": 5284
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 5183,
+            "males": 4957,
+            "females": 226,
+            "titles": [
+              {
+                "title": "Ship-chandler",
+                "people": 497
+              },
+              {
+                "title": "Tallow Chandler",
+                "people": 4686
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 1080,
+            "males": 1016,
+            "females": 64,
+            "titles": [
+              {
+                "title": "Chandlers and Soap Boilers",
+                "people": 1066
+              },
+              {
+                "title": "Ship Chandlers",
+                "people": 14
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 383,
+            "males": 358,
+            "females": 25,
+            "titles": [
+              {
+                "title": "Ship Chandler",
+                "people": 60
+              },
+              {
+                "title": "Tallow Chandler",
+                "people": 323
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "teamster",
@@ -10233,6 +13505,156 @@
       },
       "note": "Before 1910 the census coding used here puts teamsters and draymen in the category 'Truck and tractor drivers' (there were no trucks yet), so counts and moves before 1910 come from that category.",
       "flows": [
+        {
+          "from": 1850,
+          "to": 1860,
+          "transitions": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 683,
+            "category": "Truck and tractor drivers",
+            "linkedPeople": 9608,
+            "destinations": [
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.206,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 683,
+                "label": "Truck and tractor drivers",
+                "share": 0.2031,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.1395,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 999,
+                "label": "No occupation listed",
+                "share": 0.0796,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0724,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0587,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 820,
+                "label": "Farm laborers, wage workers",
+                "share": 0.0263,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0174,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.197,
+                "same": false,
+                "other": true
+              }
+            ]
+          },
+          "arrivals": {
+            "from": 1850,
+            "to": 1860,
+            "basis": "exact",
+            "code": 683,
+            "category": "Truck and tractor drivers",
+            "linkedPeople": 9608,
+            "origins": [
+              {
+                "code": 970,
+                "label": "Laborers (n.e.c.)",
+                "share": 0.2739,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 100,
+                "label": "Farmers (owners and tenants)",
+                "share": 0.2588,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 683,
+                "label": "Truck and tractor drivers",
+                "share": 0.2031,
+                "same": true,
+                "other": false
+              },
+              {
+                "code": 690,
+                "label": "Operative and kindred workers (n.e.c.)",
+                "share": 0.0529,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 290,
+                "label": "Managers, officials, and proprietors (n.e.c.)",
+                "share": 0.0379,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 582,
+                "label": "Shoemakers and repairers, except factory",
+                "share": 0.0199,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 510,
+                "label": "Carpenters",
+                "share": 0.0195,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": 490,
+                "label": "Salesmen and sales clerks (n.e.c.)",
+                "share": 0.0119,
+                "same": false,
+                "other": false
+              },
+              {
+                "code": null,
+                "label": "Everything else",
+                "share": 0.1222,
+                "same": false,
+                "other": true
+              }
+            ]
+          }
+        },
         {
           "from": 1910,
           "to": 1920,
@@ -10384,7 +13806,77 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 1,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 34296,
+            "males": 33687,
+            "females": 609,
+            "titles": [
+              {
+                "title": "Carrier, Carter, and Waggoner",
+                "people": 34296
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 56981,
+            "males": 56252,
+            "females": 729,
+            "titles": [
+              {
+                "title": "Carman, Carrier, Carter, Drayman",
+                "people": 56981
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 67651,
+            "males": 67070,
+            "females": 581,
+            "titles": [
+              {
+                "title": "Carman, Carrier, Carter, Drayman",
+                "people": 67651
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 3639,
+            "males": 3618,
+            "females": 21,
+            "titles": [
+              {
+                "title": "Carriers and Carters",
+                "people": 3639
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 13828,
+            "males": 13765,
+            "females": 63,
+            "titles": [
+              {
+                "title": "Carrier, Carter, Drayman",
+                "people": 13828
+              }
+            ]
+          }
+        ],
+        "note": "British equivalents: carters, carmen and draymen (also includes carriers)."
+      }
     },
     {
       "id": "telegraph-operator",
@@ -10633,7 +14125,8 @@
           }
         }
       ],
-      "defaultFlow": 0
+      "defaultFlow": 0,
+      "uk": null
     },
     {
       "id": "thief-taker",
@@ -10667,7 +14160,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "tondenhei",
@@ -10701,7 +14195,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "tosher",
@@ -10735,7 +14230,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "town-crier",
@@ -10769,7 +14265,38 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 197,
+            "males": 197,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Town crier and bellman",
+                "people": 197
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 181,
+            "males": 181,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Town Crier and Bellman",
+                "people": 181
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "water-carrier",
@@ -10867,7 +14394,77 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 29,
+            "males": 20,
+            "females": 9,
+            "titles": [
+              {
+                "title": "Water-carrier and Dealer",
+                "people": 29
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 197,
+            "males": 153,
+            "females": 44,
+            "titles": [
+              {
+                "title": "Water,—carrier, dealer",
+                "people": 197
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 97,
+            "males": 77,
+            "females": 20,
+            "titles": [
+              {
+                "title": "Water Carrier, Dealer",
+                "people": 97
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 163,
+            "males": 110,
+            "females": 53,
+            "titles": [
+              {
+                "title": "Water Carriers",
+                "people": 163
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 2,
+            "males": 2,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Water Carrier",
+                "people": 2
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "wheelwright",
@@ -10965,7 +14562,77 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 26274,
+            "males": 26121,
+            "females": 153,
+            "titles": [
+              {
+                "title": "Wheelwright",
+                "people": 26274
+              }
+            ]
+          },
+          {
+            "year": 1851,
+            "area": "Great Britain",
+            "people": 30244,
+            "males": 30138,
+            "females": 106,
+            "titles": [
+              {
+                "title": "Wheelwright",
+                "people": 30244
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 30070,
+            "males": 29987,
+            "females": 83,
+            "titles": [
+              {
+                "title": "Wheelwright",
+                "people": 30070
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 591,
+            "males": 591,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Wheelwright",
+                "people": 591
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Scotland",
+            "people": 1281,
+            "males": 1280,
+            "females": 1,
+            "titles": [
+              {
+                "title": "Wheelwright",
+                "people": 1281
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "wire-drawer",
@@ -11063,7 +14730,55 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": {
+        "counts": [
+          {
+            "year": 1841,
+            "area": "Great Britain",
+            "people": 1359,
+            "males": 1349,
+            "females": 10,
+            "titles": [
+              {
+                "title": "Wire-drawer and Maker",
+                "people": 1359
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "England and Wales",
+            "people": 77,
+            "males": 67,
+            "females": 10,
+            "titles": [
+              {
+                "title": "Copper-wire Drawer",
+                "people": 2
+              },
+              {
+                "title": "Gold, Silver, Wire Drawer",
+                "people": 75
+              }
+            ]
+          },
+          {
+            "year": 1861,
+            "area": "Ireland",
+            "people": 4,
+            "males": 4,
+            "females": 0,
+            "titles": [
+              {
+                "title": "Wire Drawers",
+                "people": 4
+              }
+            ]
+          }
+        ],
+        "note": null
+      }
     },
     {
       "id": "woad-dyer",
@@ -11097,7 +14812,8 @@
         "seriesSource": null
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     },
     {
       "id": "wool-comber",
@@ -11195,7 +14911,8 @@
         "seriesSource": "title"
       },
       "flows": [],
-      "defaultFlow": null
+      "defaultFlow": null,
+      "uk": null
     }
   ],
   "categories": {
@@ -12697,6 +16414,76 @@
       ],
       "jobId": null
     },
+    "554": {
+      "label": "Mechanics and repairmen (n.e.c.)",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 29840,
+          "records": 296,
+          "reliable": true,
+          "share": 0.005587
+        },
+        {
+          "year": 1860,
+          "people": 40203,
+          "records": 399,
+          "reliable": true,
+          "share": 0.0047863
+        },
+        {
+          "year": 1870,
+          "people": 30794,
+          "records": 302,
+          "reliable": true,
+          "share": 0.002374
+        },
+        {
+          "year": 1880,
+          "people": 28863,
+          "records": 3112,
+          "reliable": true,
+          "share": 0.001584
+        },
+        {
+          "year": 1900,
+          "people": 42363,
+          "records": 2152,
+          "reliable": true,
+          "share": 0.0014392
+        },
+        {
+          "year": 1910,
+          "people": 48631,
+          "records": 487,
+          "reliable": true,
+          "share": 0.001255
+        },
+        {
+          "year": 1920,
+          "people": 122954,
+          "records": 1214,
+          "reliable": true,
+          "share": 0.0029428
+        },
+        {
+          "year": 1930,
+          "people": 193059,
+          "records": 9566,
+          "reliable": true,
+          "share": 0.003939
+        },
+        {
+          "year": 1940,
+          "people": 434985,
+          "records": 4413,
+          "reliable": true,
+          "share": 0.008445
+        }
+      ],
+      "jobId": null
+    },
     "555": {
       "label": "Millers, grain, flour, feed, etc.",
       "occupational": true,
@@ -12766,6 +16553,146 @@
         }
       ],
       "jobId": "grain-miller"
+    },
+    "560": {
+      "label": "Millwrights",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 8612,
+          "records": 88,
+          "reliable": true,
+          "share": 0.0016124
+        },
+        {
+          "year": 1860,
+          "people": 7583,
+          "records": 77,
+          "reliable": true,
+          "share": 0.0009028
+        },
+        {
+          "year": 1870,
+          "people": 8264,
+          "records": 84,
+          "reliable": true,
+          "share": 0.0006371
+        },
+        {
+          "year": 1880,
+          "people": 7865,
+          "records": 821,
+          "reliable": true,
+          "share": 0.0004316
+        },
+        {
+          "year": 1900,
+          "people": 11503,
+          "records": 586,
+          "reliable": true,
+          "share": 0.0003908
+        },
+        {
+          "year": 1910,
+          "people": 16452,
+          "records": 164,
+          "reliable": true,
+          "share": 0.0004246
+        },
+        {
+          "year": 1920,
+          "people": 37806,
+          "records": 375,
+          "reliable": true,
+          "share": 0.0009049
+        },
+        {
+          "year": 1930,
+          "people": 46837,
+          "records": 2316,
+          "reliable": true,
+          "share": 0.0009556
+        },
+        {
+          "year": 1940,
+          "people": 43276,
+          "records": 442,
+          "reliable": true,
+          "share": 0.0008402
+        }
+      ],
+      "jobId": null
+    },
+    "582": {
+      "label": "Shoemakers and repairers, except factory",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 143248,
+          "records": 1422,
+          "reliable": true,
+          "share": 0.0268206
+        },
+        {
+          "year": 1860,
+          "people": 154998,
+          "records": 1548,
+          "reliable": true,
+          "share": 0.0184531
+        },
+        {
+          "year": 1870,
+          "people": 111877,
+          "records": 1113,
+          "reliable": true,
+          "share": 0.0086249
+        },
+        {
+          "year": 1880,
+          "people": 7382,
+          "records": 792,
+          "reliable": true,
+          "share": 0.0004051
+        },
+        {
+          "year": 1900,
+          "people": 12000,
+          "records": 607,
+          "reliable": true,
+          "share": 0.0004077
+        },
+        {
+          "year": 1910,
+          "people": 61578,
+          "records": 615,
+          "reliable": true,
+          "share": 0.0015891
+        },
+        {
+          "year": 1920,
+          "people": 69166,
+          "records": 683,
+          "reliable": true,
+          "share": 0.0016555
+        },
+        {
+          "year": 1930,
+          "people": 70111,
+          "records": 3474,
+          "reliable": true,
+          "share": 0.0014305
+        },
+        {
+          "year": 1940,
+          "people": 68577,
+          "records": 702,
+          "reliable": true,
+          "share": 0.0013314
+        }
+      ],
+      "jobId": null
     },
     "583": {
       "label": "Stationary engineers",
@@ -14611,6 +18538,12 @@
     "979": {
       "label": "Occupation not classified",
       "occupational": true,
+      "series": [],
+      "jobId": null
+    },
+    "984": {
+      "label": "Retired",
+      "occupational": false,
       "series": [],
       "jobId": null
     },

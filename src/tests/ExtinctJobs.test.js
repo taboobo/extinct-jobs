@@ -14,6 +14,7 @@ import Sidenote from '$lib/components/ExtinctJobs/Sidenote.svelte';
 import MarginNotes from '$lib/components/ExtinctJobs/MarginNotes.svelte';
 import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
 import DecadePicker from '$lib/components/ExtinctJobs/DecadePicker.svelte';
+import BritishCensus from '$lib/components/ExtinctJobs/BritishCensus.svelte';
 import {
   centuryLabel,
   formatOneIn,
@@ -428,5 +429,48 @@ describe('share of workers', () => {
       screen.getByRole('button', { name: 'Share of all workers' })
     );
     expect(container.querySelector('.peak-label').textContent).toBe('1 in 50');
+  });
+});
+
+describe('BritishCensus', () => {
+  const uk = {
+    note: 'Counted with railway engine drivers.',
+    counts: [
+      {
+        year: 1861,
+        area: 'England and Wales',
+        people: 67651,
+        males: 67070,
+        females: 581,
+        titles: [{ title: 'Carman, Carrier, Carter, Drayman', people: 67651 }],
+      },
+      {
+        year: 1861,
+        area: 'Scotland',
+        people: 14000,
+        males: 13900,
+        females: 100,
+        titles: [
+          { title: 'Carrier, Carter', people: 13000 },
+          { title: 'Drayman', people: 1000 },
+        ],
+      },
+    ],
+  };
+
+  it('lists each census and area with its count', () => {
+    render(BritishCensus, { props: { uk } });
+    expect(screen.getByText('67,651')).toBeTruthy();
+    expect(screen.getByText('Scotland')).toBeTruthy();
+  });
+
+  it('summarizes several counted titles and shows the note', () => {
+    render(BritishCensus, { props: { uk } });
+    expect(
+      screen.getByRole('button', { name: 'Carrier, Carter and 1 more' })
+    ).toBeTruthy();
+    expect(
+      screen.getByText('Counted with railway engine drivers.')
+    ).toBeTruthy();
   });
 });
