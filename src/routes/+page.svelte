@@ -5,7 +5,7 @@ Home page: the ledger of extinct jobs and a button to open a random one.
 <script>
   import { goto } from '$app/navigation';
   import { base } from '$app/paths';
-  import JobLedger from '$lib/components/ExtinctJobs/JobLedger.svelte';
+  import JobList from '$lib/components/ExtinctJobs/JobList.svelte';
 
   let { data } = $props();
 
@@ -40,7 +40,7 @@ Home page: the ledger of extinct jobs and a button to open a random one.
     >
   </header>
 
-  <JobLedger {jobs} />
+  <JobList {jobs} />
 </div>
 
 <style lang="scss">
@@ -59,8 +59,8 @@ Home page: the ledger of extinct jobs and a button to open a random one.
   h1 {
     font-family: var(--font-display);
     font-weight: var(--font-weight-extrabold);
-    font-size: clamp(4.5rem, 14vw, 11rem);
-    line-height: 0.85;
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    line-height: 1.05;
     letter-spacing: var(--letter-spacing-tight);
     color: var(--color-dark);
     margin: 0;

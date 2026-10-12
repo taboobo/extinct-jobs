@@ -2,7 +2,8 @@
   TransitionBars.stories.svelte
 
   Stories for the TransitionBars component.
-  Where workers in a job in one census were working ten years later. Staying in the same job is marked; the remainder is drawn as an outline.
+  Job moves between two censuses as horizontal bars, in either direction. Category
+  names open a CategoryCard preview when `categories` is given.
 -->
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
@@ -15,20 +16,47 @@
     component: TransitionBars,
     tags: ['autodocs'],
     argTypes: {
-      transitions: {
+      flow: {
         control: 'object',
         description:
-          '{ from, to, basis, category, linkedPeople, destinations }',
+          '{ from, to, basis, category, linkedPeople, destinations | origins }',
+      },
+      direction: {
+        control: 'select',
+        options: ['to', 'from'],
+        description: "'to': where people went; 'from': where they came from",
+      },
+      categories: {
+        control: 'object',
+        description:
+          'code -> { label, occupational, series, jobId } for previews',
       },
     },
   });
 </script>
 
-<!-- Exact census category -->
+<!-- Where telegraph operators went, with category previews -->
 <Story
-  name="Telegraph operator"
-  args={{ transitions: job('telegraph-operator').transitions }}
+  name="Went to"
+  args={{
+    flow: job('telegraph-operator').transitions,
+    direction: 'to',
+    categories: data.categories,
+  }}
+/>
+
+<!-- Where telegraph operators came from -->
+<Story
+  name="Came from"
+  args={{
+    flow: job('telegraph-operator').arrivals,
+    direction: 'from',
+    categories: data.categories,
+  }}
 />
 
 <!-- Broader census category that includes the job -->
-<Story name="Iceman" args={{ transitions: job('iceman').transitions }} />
+<Story
+  name="Broader category"
+  args={{ flow: job('iceman').transitions, categories: data.categories }}
+/>

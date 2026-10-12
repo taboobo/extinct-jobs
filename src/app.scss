@@ -23,7 +23,8 @@
   --color-paper: #f4f7f1; /* Page background */
   --color-rule: #b7cbbe; /* Stronger ledger ruling — table rules, chart gridlines */
   --color-margin: #b23a32; /* Ledger red margin rule — marks when a job ended */
-  --color-faint-bar: #b9c4d6; /* Estimates based on few records */
+  --color-faint-bar: #b9c4d6; /* Light bars: flows between jobs */
+  --color-bar: #8494b3; /* Chart bars (the highlight uses --color-accent) */
 
   /* Ink gradient (kept for template components such as the dropcap) */
   --color-cuny-blue-dark: #1c2433;

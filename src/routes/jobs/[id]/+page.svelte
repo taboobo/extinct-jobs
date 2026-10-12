@@ -1,19 +1,24 @@
 <!--
 @component
 Job detail page: what the job was, why it ended, how many people did it in
-each census, how census takers wrote it, and where its workers went next.
+each census, where its workers went next and came from, and jobs that ended the same way. Caveats sit in margin notes.
 -->
 <script>
   import { base } from '$app/paths';
   import CensusChart from '$lib/components/ExtinctJobs/CensusChart.svelte';
-  import SpellingList from '$lib/components/ExtinctJobs/SpellingList.svelte';
   import TransitionBars from '$lib/components/ExtinctJobs/TransitionBars.svelte';
+  import MarginNotes from '$lib/components/ExtinctJobs/MarginNotes.svelte';
+  import Sidenote from '$lib/components/ExtinctJobs/Sidenote.svelte';
+  import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
   import { centuryLabel, formatNumber, peak } from '$lib/jobs.js';
 
   let { data } = $props();
   const job = $derived(data.job);
   const census = $derived(job.census);
   const top = $derived(peak(census.series));
+  const hasFaint = $derived(
+    census.series.some((s) => s.people > 0 && !s.reliable)
+  );
 
   // Why there is no census chart, in plain language.
   const noCensusReason = $derived(
@@ -85,55 +90,97 @@ each census, how census takers wrote it, and where its workers went next.
           <p class="peak">
             {#if census.seriesSource === 'title'}At least{/if}
             <span class="peak-number">{formatNumber(top.people)}</span>
-            people at the peak, in {top.year}
+            people at the peak, in {top.year}{#if !top.reliable}
+              <span class="rough-note">(a rough estimate from few records)</span
+              >{/if}
           </p>
         {/if}
-        <CensusChart
-          series={census.series}
-          name={job.name.toLowerCase()}
-          source={census.seriesSource}
-        />
-        <p class="note">
-          {#if census.seriesSource === 'category'}
-            Based on the census category for {census.category.toLowerCase()}.
-          {:else}
-            A few matches may be other jobs with similar names.
-          {/if}
-          <a href="{base}/about">How these numbers were made</a>
-        </p>
+        <MarginNotes>
+          <CensusChart
+            series={census.series}
+            name={job.name.toLowerCase()}
+            source={census.seriesSource}
+          />
+          {#snippet notes()}
+            <Sidenote>
+              {#if census.seriesSource === 'category'}
+                Based on the census category for {census.category.toLowerCase()},
+                estimated from census samples.
+              {:else}
+                Counted from the titles people wrote, so a few matches may be
+                other jobs with similar names.
+              {/if}
+            </Sidenote>
+            {#if hasFaint}
+              <Sidenote>
+                Pale bars rest on fewer than 10 sample records and are rough.
+              </Sidenote>
+            {/if}
+            <Sidenote>
+              The 1890 census records were destroyed in a 1921 fire.
+              <a href="{base}/about">How these numbers were made</a>
+            </Sidenote>
+          {/snippet}
+        </MarginNotes>
       {:else}
         <p class="note">{noCensusReason}</p>
       {/if}
     </section>
 
-    {#if census.spellings.length}
-      <section>
-        <h2>How census takers wrote it</h2>
-        <p class="note">
-          The census recorded jobs in the enumerator’s words. From 1910, job and
-          industry went in separate columns.
-        </p>
-        <SpellingList spellings={census.spellings} />
-      </section>
-    {/if}
-
     {#if census.series.length}
       <section class="wide">
         <h2>Where they went next</h2>
         {#if job.transitions}
-          <TransitionBars transitions={job.transitions} />
-          <p class="note">
-            Based on people the IPUMS project matched between the two censuses.
-            Matching works better for some people than others (for example,
-            women who changed their surname at marriage are often missed), so
-            treat these shares as approximate.
-          </p>
+          <MarginNotes>
+            <TransitionBars
+              flow={job.transitions}
+              direction="to"
+              categories={data.categories}
+            />
+            {#snippet notes()}
+              <Sidenote>
+                Based on people IPUMS matched between the two censuses. Women
+                who changed their surname at marriage are often missed, so treat
+                these shares as approximate.
+              </Sidenote>
+              <Sidenote>
+                Hover or tap a job to see how big it was. “Everything else”
+                includes many small groups.
+              </Sidenote>
+            {/snippet}
+          </MarginNotes>
         {:else}
           <p class="note">
             There aren’t enough matched census records yet to follow people in
             this job from one census to the next.
           </p>
         {/if}
+      </section>
+    {/if}
+
+    {#if job.arrivals}
+      <section class="wide">
+        <h2>Where workers came from</h2>
+        <MarginNotes>
+          <TransitionBars
+            flow={job.arrivals}
+            direction="from"
+            categories={data.categories}
+          />
+          {#snippet notes()}
+            <Sidenote>
+              Only people who had a job in 1910 and were 15 to 64 then are
+              counted.
+            </Sidenote>
+          {/snippet}
+        </MarginNotes>
+      </section>
+    {/if}
+
+    {#if data.related.length}
+      <section class="wide">
+        <h2>Jobs that ended the same way</h2>
+        <RelatedJobs jobs={data.related} />
       </section>
     {/if}
 
@@ -168,8 +215,8 @@ each census, how census takers wrote it, and where its workers went next.
     border-bottom: var(--border-width-divider) solid var(--color-dark);
 
     &.with-image {
-      grid-template-columns: 3fr 2fr;
-      align-items: end;
+      grid-template-columns: 2fr 1fr;
+      align-items: start;
 
       @include mobile {
         grid-template-columns: 1fr;
@@ -180,8 +227,8 @@ each census, how census takers wrote it, and where its workers went next.
   h1 {
     font-family: var(--font-display);
     font-weight: var(--font-weight-extrabold);
-    font-size: clamp(3.5rem, 11vw, 9rem);
-    line-height: 0.88;
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    line-height: 1.05;
     letter-spacing: var(--letter-spacing-tight);
     color: var(--color-dark);
     margin: 0;
@@ -213,7 +260,7 @@ each census, how census takers wrote it, and where its workers went next.
 
     img {
       width: 100%;
-      max-height: 28rem;
+      max-height: 18rem;
       object-fit: cover;
       border: var(--border-width-thin) solid var(--color-rule);
       filter: grayscale(0.35) contrast(1.05);
@@ -261,6 +308,10 @@ each census, how census takers wrote it, and where its workers went next.
     font-family: var(--font-sans);
     color: var(--color-text);
     margin-bottom: var(--spacing-sm);
+  }
+
+  .rough-note {
+    color: var(--color-medium-gray);
   }
 
   .peak-number {

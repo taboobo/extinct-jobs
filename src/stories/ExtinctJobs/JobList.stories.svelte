@@ -1,12 +1,12 @@
 <!--
-  JobLedger.stories.svelte
+  JobList.stories.svelte
 
-  Stories for the JobLedger component.
+  Stories for the JobList component.
   The ruled ledger table of jobs: name, centuries practiced, why it ended, and a census trend.
 -->
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
-  import JobLedger from '$lib/components/ExtinctJobs/JobLedger.svelte';
+  import JobList from '$lib/components/ExtinctJobs/JobList.svelte';
   import data from '$lib/data/jobs.json';
   const pick = (ids) =>
     data.jobs
@@ -14,8 +14,8 @@
       .map((j) => ({ ...j, series: j.census.series }));
 
   const { Story } = defineMeta({
-    title: 'ExtinctJobs/JobLedger',
-    component: JobLedger,
+    title: 'ExtinctJobs/JobList',
+    component: JobList,
     tags: ['autodocs'],
     argTypes: {
       jobs: {

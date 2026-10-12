@@ -25,10 +25,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "alewife",
@@ -55,10 +55,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "alnager",
@@ -85,10 +85,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "armourer-chain-mail",
@@ -115,10 +115,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "armourer-plate-armour",
@@ -145,10 +145,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "ash-burner",
@@ -230,10 +230,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": []
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "baby-farmer",
@@ -260,10 +260,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "between-maid",
@@ -290,10 +290,10 @@
         "category": "Private household workers (n.e.c.)",
         "confidence": "medium",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "body-snatcher",
@@ -320,10 +320,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "breaker-boy",
@@ -405,116 +405,149 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "SLATE PICKER",
-            "records": 625,
-            "firstYear": 1870,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "BREAKER BOY",
-            "records": 46,
-            "firstYear": 1880,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "SLATEPICKER",
-            "records": 21,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "SLATE PICKER BREAKER",
-            "records": 15,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "SLATE PICKER COAL BREAKER",
-            "records": 9,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "SLATE PICKER COLLIERY",
-            "records": 6,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "COAL PICKER",
-            "records": 5,
-            "firstYear": 1880,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "SLATE PICKER COAL",
-            "records": 5,
-            "firstYear": 1900,
-            "lastYear": 1900
-          }
-        ]
+        "seriesSource": "title"
       },
       "transitions": {
         "from": 1910,
         "to": 1920,
         "basis": "broader",
+        "code": 650,
         "category": "Mine operatives and laborers",
         "linkedPeople": 264437,
         "destinations": [
           {
+            "code": 650,
             "label": "Mine operatives and laborers",
             "share": 0.5288,
             "same": true,
             "other": false
           },
           {
+            "code": 970,
             "label": "Laborers (n.e.c.)",
             "share": 0.0873,
             "same": false,
             "other": false
           },
           {
+            "code": 100,
             "label": "Farmers (owners and tenants)",
             "share": 0.0678,
             "same": false,
             "other": false
           },
           {
+            "code": 999,
             "label": "No occupation listed",
             "share": 0.039,
             "same": false,
             "other": false
           },
           {
+            "code": 290,
             "label": "Managers, officials, and proprietors (n.e.c.)",
             "share": 0.0286,
             "same": false,
             "other": false
           },
           {
+            "code": 690,
             "label": "Operative and kindred workers (n.e.c.)",
             "share": 0.0277,
             "same": false,
             "other": false
           },
           {
+            "code": 523,
             "label": "Foremen (n.e.c.)",
             "share": 0.0214,
             "same": false,
             "other": false
           },
           {
+            "code": 979,
             "label": "Occupation not classified",
             "share": 0.018,
             "same": false,
             "other": false
           },
           {
+            "code": null,
             "label": "Everything else",
             "share": 0.1813,
+            "same": false,
+            "other": true
+          }
+        ]
+      },
+      "arrivals": {
+        "from": 1910,
+        "to": 1920,
+        "basis": "broader",
+        "code": 650,
+        "category": "Mine operatives and laborers",
+        "linkedPeople": 257764,
+        "origins": [
+          {
+            "code": 650,
+            "label": "Mine operatives and laborers",
+            "share": 0.5425,
+            "same": true,
+            "other": false
+          },
+          {
+            "code": 970,
+            "label": "Laborers (n.e.c.)",
+            "share": 0.1003,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 820,
+            "label": "Farm laborers, wage workers",
+            "share": 0.0763,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 100,
+            "label": "Farmers (owners and tenants)",
+            "share": 0.0751,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 979,
+            "label": "Occupation not classified",
+            "share": 0.0293,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 690,
+            "label": "Operative and kindred workers (n.e.c.)",
+            "share": 0.0188,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 290,
+            "label": "Managers, officials, and proprietors (n.e.c.)",
+            "share": 0.0176,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 683,
+            "label": "Truck and tractor drivers",
+            "share": 0.0133,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": null,
+            "label": "Everything else",
+            "share": 0.1269,
             "same": false,
             "other": true
           }
@@ -601,29 +634,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "BRUSH MAKER",
-            "records": 582,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "BRUSHMAKER",
-            "records": 47,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "TOOTH BRUSH MAKER",
-            "records": 6,
-            "firstYear": 1880,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "buckle-maker",
@@ -705,17 +719,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "BUCKLE MAKER",
-            "records": 15,
-            "firstYear": 1880,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "burlak",
@@ -742,10 +749,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "cavalryman",
@@ -827,29 +834,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "STATE TROOPER",
-            "records": 35,
-            "firstYear": 1930,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "TROOPER",
-            "records": 22,
-            "firstYear": 1930,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "SARGENT CAVALRY",
-            "records": 7,
-            "firstYear": 1870,
-            "lastYear": 1870
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "cat-s-meat-man",
@@ -876,10 +864,10 @@
         "category": "Hucksters and peddlers",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "climbing-boy",
@@ -961,17 +949,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "CHIMNEY SWEEP",
-            "records": 23,
-            "firstYear": 1880,
-            "lastYear": 1930
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "coach-maker",
@@ -1053,59 +1034,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "WAGON MAKER",
-            "records": 2643,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "CARRIAGE MAKER",
-            "records": 1172,
-            "firstYear": 1850,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "CARRIAGE BUILDER",
-            "records": 218,
-            "firstYear": 1860,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "COACH MAKER",
-            "records": 183,
-            "firstYear": 1850,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "WAGONMAKER",
-            "records": 176,
-            "firstYear": 1850,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "COACHMAKER",
-            "records": 35,
-            "firstYear": 1850,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "WAGON & CARRIAGE MAKER",
-            "records": 10,
-            "firstYear": 1880,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "APPRENTICE TO WAGON MAKER",
-            "records": 9,
-            "firstYear": 1880,
-            "lastYear": 1880
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "coachman",
@@ -1187,47 +1119,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "COACHMAN",
-            "records": 4077,
-            "firstYear": 1850,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "PRIVATE COACHMAN",
-            "records": 16,
-            "firstYear": 1870,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "COACHMAN PRIVATE",
-            "records": 9,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "COACHMAN P F",
-            "records": 7,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "SERVANT COACHMAN",
-            "records": 6,
-            "firstYear": 1880,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "COACHMAN PRIVATE FAMILY",
-            "records": 5,
-            "firstYear": 1900,
-            "lastYear": 1900
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "colporter",
@@ -1309,17 +1204,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "COLPORTEUR",
-            "records": 14,
-            "firstYear": 1860,
-            "lastYear": 1930
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "computer",
@@ -1401,17 +1289,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "COMPUTER",
-            "records": 15,
-            "firstYear": 1900,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "cooper",
@@ -1493,59 +1374,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "COOPER",
-            "records": 8402,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "WORKS IN COOPER SHOP",
-            "records": 110,
-            "firstYear": 1880,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "COOPER SHOP",
-            "records": 32,
-            "firstYear": 1870,
-            "lastYear": 1920
-          },
-          {
-            "writtenAs": "RETIRED COOPER",
-            "records": 30,
-            "firstYear": 1880,
-            "lastYear": 1920
-          },
-          {
-            "writtenAs": "OAK COOPER",
-            "records": 27,
-            "firstYear": 1860,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "LABORER COOPER SHOP",
-            "records": 22,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "BARREL COOPER",
-            "records": 16,
-            "firstYear": 1860,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "COOPER & FARMER",
-            "records": 15,
-            "firstYear": 1850,
-            "lastYear": 1900
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "cork-cutter",
@@ -1627,17 +1459,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "CORK CUTTER",
-            "records": 25,
-            "firstYear": 1850,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "crossing-sweeper",
@@ -1664,10 +1489,10 @@
         "category": "Laborers (n.e.c.)",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "doffer",
@@ -1749,59 +1574,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "DOFFER",
-            "records": 1400,
-            "firstYear": 1900,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "DOFFER COTTON MILL",
-            "records": 97,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "COTTON MILL DOFFER",
-            "records": 95,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "DOFFER (COTTON MILL)",
-            "records": 30,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "COTTON DOFFER",
-            "records": 15,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "DOFFER COTTON",
-            "records": 14,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "DOFFER (C MILL)",
-            "records": 9,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "DOFFER (HEMP MILL)",
-            "records": 7,
-            "firstYear": 1900,
-            "lastYear": 1900
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "dog-whipper",
@@ -1828,10 +1604,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "drummer-military",
@@ -1858,10 +1634,10 @@
         "category": "Members of the armed services",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "drysalter",
@@ -1888,10 +1664,10 @@
         "category": "Managers, officials, and proprietors (n.e.c.)",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "elevator-operator",
@@ -1955,116 +1731,149 @@
             "reliable": true
           }
         ],
-        "seriesSource": "category",
-        "spellings": [
-          {
-            "writtenAs": "ELEVATOR OPERATOR",
-            "records": 1977,
-            "firstYear": 1900,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "OPERATOR (industry: ELEVATOR)",
-            "records": 567,
-            "firstYear": 1910,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "ELEVATOR MAN",
-            "records": 565,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "ELEVATOR BOY",
-            "records": 335,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "ELEVATOR",
-            "records": 263,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "ELEVATOR OPR",
-            "records": 153,
-            "firstYear": 1900,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "ELEVATOR RUNNER",
-            "records": 95,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "ELEVATOR GIRL",
-            "records": 93,
-            "firstYear": 1920,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "category"
       },
       "transitions": {
         "from": 1910,
         "to": 1920,
         "basis": "exact",
+        "code": 761,
         "category": "Elevator operators",
         "linkedPeople": 8785,
         "destinations": [
           {
+            "code": 761,
             "label": "Elevator operators",
             "share": 0.1277,
             "same": true,
             "other": false
           },
           {
+            "code": 970,
             "label": "Laborers (n.e.c.)",
             "share": 0.1011,
             "same": false,
             "other": false
           },
           {
+            "code": 690,
             "label": "Operative and kindred workers (n.e.c.)",
             "share": 0.0812,
             "same": false,
             "other": false
           },
           {
+            "code": 390,
             "label": "Clerical and kindred workers (n.e.c.)",
             "share": 0.0484,
             "same": false,
             "other": false
           },
           {
+            "code": 979,
             "label": "Occupation not classified",
             "share": 0.0478,
             "same": false,
             "other": false
           },
           {
+            "code": 999,
             "label": "No occupation listed",
             "share": 0.0421,
             "same": false,
             "other": false
           },
           {
+            "code": 290,
             "label": "Managers, officials, and proprietors (n.e.c.)",
             "share": 0.0376,
             "same": false,
             "other": false
           },
           {
+            "code": 544,
             "label": "Machinists",
             "share": 0.032,
             "same": false,
             "other": false
           },
           {
+            "code": null,
             "label": "Everything else",
             "share": 0.4822,
+            "same": false,
+            "other": true
+          }
+        ]
+      },
+      "arrivals": {
+        "from": 1910,
+        "to": 1920,
+        "basis": "exact",
+        "code": 761,
+        "category": "Elevator operators",
+        "linkedPeople": 9426,
+        "origins": [
+          {
+            "code": 970,
+            "label": "Laborers (n.e.c.)",
+            "share": 0.148,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 761,
+            "label": "Elevator operators",
+            "share": 0.119,
+            "same": true,
+            "other": false
+          },
+          {
+            "code": 690,
+            "label": "Operative and kindred workers (n.e.c.)",
+            "share": 0.092,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 979,
+            "label": "Occupation not classified",
+            "share": 0.0472,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 290,
+            "label": "Managers, officials, and proprietors (n.e.c.)",
+            "share": 0.0466,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 100,
+            "label": "Farmers (owners and tenants)",
+            "share": 0.0456,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 490,
+            "label": "Salesmen and sales clerks (n.e.c.)",
+            "share": 0.0321,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 820,
+            "label": "Farm laborers, wage workers",
+            "share": 0.029,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": null,
+            "label": "Everything else",
+            "share": 0.4405,
             "same": false,
             "other": true
           }
@@ -2151,29 +1960,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "TEACHER ELOCUTION",
-            "records": 11,
-            "firstYear": 1880,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "ELOCUTION TEACHER",
-            "records": 10,
-            "firstYear": 1880,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "TEACHER OF ELOCUTION",
-            "records": 9,
-            "firstYear": 1880,
-            "lastYear": 1930
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "escheator",
@@ -2200,10 +1990,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "expressman",
@@ -2285,116 +2075,149 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "EXPRESSMAN",
-            "records": 1728,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "EXPRESS MAN",
-            "records": 464,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "EXPRESS MESSENGER",
-            "records": 369,
-            "firstYear": 1860,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "DRIVER (industry: EXPRESS CO)",
-            "records": 181,
-            "firstYear": 1910,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "TRUCK DRIVER (industry: EXPRESS CO)",
-            "records": 179,
-            "firstYear": 1920,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "DRIVER (industry: EXPRESS)",
-            "records": 138,
-            "firstYear": 1910,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "TEAMSTER (industry: EXPRESS)",
-            "records": 89,
-            "firstYear": 1910,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "DRIVER (industry: EXPRESS WAGON)",
-            "records": 81,
-            "firstYear": 1910,
-            "lastYear": 1930
-          }
-        ]
+        "seriesSource": "title"
       },
       "transitions": {
         "from": 1910,
         "to": 1920,
         "basis": "broader",
+        "code": 683,
         "category": "Truck and tractor drivers",
         "linkedPeople": 66952,
         "destinations": [
           {
+            "code": 683,
             "label": "Truck and tractor drivers",
             "share": 0.1307,
             "same": true,
             "other": false
           },
           {
+            "code": 970,
             "label": "Laborers (n.e.c.)",
             "share": 0.1272,
             "same": false,
             "other": false
           },
           {
+            "code": 960,
             "label": "Teamsters",
             "share": 0.0584,
             "same": false,
             "other": false
           },
           {
+            "code": 290,
             "label": "Managers, officials, and proprietors (n.e.c.)",
             "share": 0.0568,
             "same": false,
             "other": false
           },
           {
+            "code": 690,
             "label": "Operative and kindred workers (n.e.c.)",
             "share": 0.0563,
             "same": false,
             "other": false
           },
           {
+            "code": 650,
             "label": "Mine operatives and laborers",
             "share": 0.0511,
             "same": false,
             "other": false
           },
           {
+            "code": 100,
             "label": "Farmers (owners and tenants)",
             "share": 0.0421,
             "same": false,
             "other": false
           },
           {
+            "code": 979,
             "label": "Occupation not classified",
             "share": 0.0406,
             "same": false,
             "other": false
           },
           {
+            "code": null,
             "label": "Everything else",
             "share": 0.4369,
+            "same": false,
+            "other": true
+          }
+        ]
+      },
+      "arrivals": {
+        "from": 1910,
+        "to": 1920,
+        "basis": "broader",
+        "code": 683,
+        "category": "Truck and tractor drivers",
+        "linkedPeople": 97374,
+        "origins": [
+          {
+            "code": 970,
+            "label": "Laborers (n.e.c.)",
+            "share": 0.1411,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 960,
+            "label": "Teamsters",
+            "share": 0.1122,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 820,
+            "label": "Farm laborers, wage workers",
+            "share": 0.0919,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 683,
+            "label": "Truck and tractor drivers",
+            "share": 0.0899,
+            "same": true,
+            "other": false
+          },
+          {
+            "code": 100,
+            "label": "Farmers (owners and tenants)",
+            "share": 0.0753,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 690,
+            "label": "Operative and kindred workers (n.e.c.)",
+            "share": 0.0629,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 632,
+            "label": "Deliverymen and routemen",
+            "share": 0.0448,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 290,
+            "label": "Managers, officials, and proprietors (n.e.c.)",
+            "share": 0.0398,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": null,
+            "label": "Everything else",
+            "share": 0.3422,
             "same": false,
             "other": true
           }
@@ -2426,10 +2249,10 @@
         "category": "Members of the armed services",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "footman",
@@ -2511,17 +2334,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "FOOTMAN",
-            "records": 46,
-            "firstYear": 1870,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "fuller",
@@ -2603,17 +2419,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "FULLER",
-            "records": 30,
-            "firstYear": 1850,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "garden-hermit",
@@ -2640,10 +2449,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "gladiator",
@@ -2670,10 +2479,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "gong-farmer",
@@ -2700,10 +2509,10 @@
         "category": "Laborers (n.e.c.)",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "hall-boy",
@@ -2785,17 +2594,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "HALL BOY",
-            "records": 72,
-            "firstYear": 1880,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "ice-cutter",
@@ -2877,17 +2679,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "ICE CUTTER",
-            "records": 24,
-            "firstYear": 1900,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "iceman",
@@ -2969,116 +2764,149 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "ICE DEALER",
-            "records": 682,
-            "firstYear": 1860,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "ICE MAN",
-            "records": 502,
-            "firstYear": 1870,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "ICEMAN",
-            "records": 286,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "TRUCK DRIVER (industry: ICE CO)",
-            "records": 137,
-            "firstYear": 1920,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "DRIVER (industry: ICE WAGON)",
-            "records": 114,
-            "firstYear": 1910,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "TRUCK DRIVER (industry: ICE PLANT)",
-            "records": 104,
-            "firstYear": 1920,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "ICE PEDDLER",
-            "records": 97,
-            "firstYear": 1870,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "SALESMAN (industry: ICE)",
-            "records": 74,
-            "firstYear": 1920,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
       "transitions": {
         "from": 1910,
         "to": 1920,
         "basis": "broader",
+        "code": 632,
         "category": "Deliverymen and routemen",
         "linkedPeople": 62646,
         "destinations": [
           {
+            "code": 970,
             "label": "Laborers (n.e.c.)",
             "share": 0.1115,
             "same": false,
             "other": false
           },
           {
+            "code": 490,
             "label": "Salesmen and sales clerks (n.e.c.)",
             "share": 0.0743,
             "same": false,
             "other": false
           },
           {
+            "code": 290,
             "label": "Managers, officials, and proprietors (n.e.c.)",
             "share": 0.0709,
             "same": false,
             "other": false
           },
           {
+            "code": 683,
             "label": "Truck and tractor drivers",
             "share": 0.0697,
             "same": false,
             "other": false
           },
           {
+            "code": 632,
             "label": "Deliverymen and routemen",
             "share": 0.0602,
             "same": true,
             "other": false
           },
           {
+            "code": 690,
             "label": "Operative and kindred workers (n.e.c.)",
             "share": 0.0573,
             "same": false,
             "other": false
           },
           {
+            "code": 100,
             "label": "Farmers (owners and tenants)",
             "share": 0.0477,
             "same": false,
             "other": false
           },
           {
+            "code": 979,
             "label": "Occupation not classified",
             "share": 0.0392,
             "same": false,
             "other": false
           },
           {
+            "code": null,
             "label": "Everything else",
             "share": 0.4692,
+            "same": false,
+            "other": true
+          }
+        ]
+      },
+      "arrivals": {
+        "from": 1910,
+        "to": 1920,
+        "basis": "broader",
+        "code": 632,
+        "category": "Deliverymen and routemen",
+        "linkedPeople": 28148,
+        "origins": [
+          {
+            "code": 970,
+            "label": "Laborers (n.e.c.)",
+            "share": 0.1374,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 632,
+            "label": "Deliverymen and routemen",
+            "share": 0.134,
+            "same": true,
+            "other": false
+          },
+          {
+            "code": 960,
+            "label": "Teamsters",
+            "share": 0.0827,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 820,
+            "label": "Farm laborers, wage workers",
+            "share": 0.0729,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 490,
+            "label": "Salesmen and sales clerks (n.e.c.)",
+            "share": 0.066,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 690,
+            "label": "Operative and kindred workers (n.e.c.)",
+            "share": 0.0639,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 100,
+            "label": "Farmers (owners and tenants)",
+            "share": 0.0611,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 290,
+            "label": "Managers, officials, and proprietors (n.e.c.)",
+            "share": 0.0527,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": null,
+            "label": "Everything else",
+            "share": 0.3293,
             "same": false,
             "other": true
           }
@@ -3110,10 +2938,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "ivory-carver",
@@ -3195,35 +3023,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "IVORY TURNER",
-            "records": 9,
-            "firstYear": 1870,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "DEALER IN IVORY",
-            "records": 6,
-            "firstYear": 1880,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "WORK IN IVORY FACTORY",
-            "records": 6,
-            "firstYear": 1880,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "LABORER IVORY COMBS",
-            "records": 5,
-            "firstYear": 1900,
-            "lastYear": 1900
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "keypunch-operator",
@@ -3305,17 +3108,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "KEY PUNCH OPERATOR",
-            "records": 36,
-            "firstYear": 1920,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "kitchen-maid",
@@ -3397,23 +3193,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "KITCHEN MAID",
-            "records": 148,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "KITCHENMAID",
-            "records": 9,
-            "firstYear": 1880,
-            "lastYear": 1930
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "knocker-up",
@@ -3440,10 +3223,10 @@
         "category": "Service workers, except private household (n.e.c.)",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "lady-s-companion",
@@ -3525,29 +3308,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "COMPANION",
-            "records": 512,
-            "firstYear": 1860,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "LADIES COMPANION",
-            "records": 10,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "COMPANION NURSE",
-            "records": 7,
-            "firstYear": 1930,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "lamplighter",
@@ -3629,29 +3393,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "LAMP LIGHTER",
-            "records": 160,
-            "firstYear": 1870,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "LAMPLIGHTER",
-            "records": 43,
-            "firstYear": 1870,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "CITY LAMP LIGHTER",
-            "records": 5,
-            "firstYear": 1880,
-            "lastYear": 1900
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "lector",
@@ -3733,59 +3478,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "METER READER",
-            "records": 558,
-            "firstYear": 1900,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "PROOF READER",
-            "records": 524,
-            "firstYear": 1870,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "READER",
-            "records": 49,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "COPY READER",
-            "records": 30,
-            "firstYear": 1870,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "PUBLIC READER",
-            "records": 6,
-            "firstYear": 1880,
-            "lastYear": 1920
-          },
-          {
-            "writtenAs": "INDEX READER",
-            "records": 5,
-            "firstYear": 1930,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "MAIL READER",
-            "records": 5,
-            "firstYear": 1910,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "PROF READER",
-            "records": 5,
-            "firstYear": 1900,
-            "lastYear": 1930
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "leech-collector",
@@ -3812,10 +3508,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "legger",
@@ -3897,17 +3593,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "LEGGER",
-            "records": 30,
-            "firstYear": 1930,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "limeburner",
@@ -3989,23 +3678,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "LIME BURNER",
-            "records": 139,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "LIMEBURNER",
-            "records": 5,
-            "firstYear": 1850,
-            "lastYear": 1880
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "link-boy",
@@ -4032,10 +3708,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "man-at-arms",
@@ -4062,10 +3738,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "matchgirl",
@@ -4147,35 +3823,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "WORKS IN MATCH FACTORY",
-            "records": 30,
-            "firstYear": 1880,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "MATCH FACTORY",
-            "records": 29,
-            "firstYear": 1880,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "WORK MATCH FACTORY",
-            "records": 6,
-            "firstYear": 1880,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "WORK IN MATCH FACTORY",
-            "records": 5,
-            "firstYear": 1880,
-            "lastYear": 1880
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "match-maker",
@@ -4257,47 +3908,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "WORKS IN MATCH FACTORY",
-            "records": 30,
-            "firstYear": 1880,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "MATCH FACTORY",
-            "records": 29,
-            "firstYear": 1880,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "MATCH MAKER",
-            "records": 26,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "WORK MATCH FACTORY",
-            "records": 6,
-            "firstYear": 1880,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "MATCHMAKER",
-            "records": 5,
-            "firstYear": 1920,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "WORK IN MATCH FACTORY",
-            "records": 5,
-            "firstYear": 1880,
-            "lastYear": 1880
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "mudlark",
@@ -4324,10 +3938,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "mule-scavenger",
@@ -4409,23 +4023,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "SCAVENGER",
-            "records": 148,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "CITY SCAVENGER",
-            "records": 6,
-            "firstYear": 1880,
-            "lastYear": 1930
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "mute",
@@ -4507,23 +4108,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "MUTE",
-            "records": 9,
-            "firstYear": 1900,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "INMATE DEAF MUTE",
-            "records": 7,
-            "firstYear": 1900,
-            "lastYear": 1900
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "needle-maker",
@@ -4605,17 +4193,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "NEEDLE MAKER",
-            "records": 48,
-            "firstYear": 1880,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "ninja",
@@ -4642,10 +4223,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "oakum-picker",
@@ -4672,10 +4253,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "phrenologist",
@@ -4702,10 +4283,10 @@
         "category": "Therapists and healers (n.e.c.)",
         "confidence": "medium",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "physiognomist",
@@ -4732,10 +4313,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "pin-boy",
@@ -4817,41 +4398,82 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
+        "seriesSource": "title"
+      },
+      "transitions": null,
+      "arrivals": {
+        "from": 1910,
+        "to": 1920,
+        "basis": "broader",
+        "code": 732,
+        "category": "Attendants, recreation and amusement",
+        "linkedPeople": 1021,
+        "origins": [
           {
-            "writtenAs": "PIN SETTER",
-            "records": 178,
-            "firstYear": 1880,
-            "lastYear": 1940
+            "code": 970,
+            "label": "Laborers (n.e.c.)",
+            "share": 0.1978,
+            "same": false,
+            "other": false
           },
           {
-            "writtenAs": "PIN BOY",
-            "records": 158,
-            "firstYear": 1910,
-            "lastYear": 1940
+            "code": 290,
+            "label": "Managers, officials, and proprietors (n.e.c.)",
+            "share": 0.1166,
+            "same": false,
+            "other": false
           },
           {
-            "writtenAs": "BOWLING ALLEY",
-            "records": 17,
-            "firstYear": 1850,
-            "lastYear": 1940
+            "code": 820,
+            "label": "Farm laborers, wage workers",
+            "share": 0.1058,
+            "same": false,
+            "other": false
           },
           {
-            "writtenAs": "PINSETTER",
-            "records": 15,
-            "firstYear": 1930,
-            "lastYear": 1940
+            "code": 100,
+            "label": "Farmers (owners and tenants)",
+            "share": 0.096,
+            "same": false,
+            "other": false
           },
           {
-            "writtenAs": "PINBOY",
-            "records": 11,
-            "firstYear": 1910,
-            "lastYear": 1940
+            "code": 690,
+            "label": "Operative and kindred workers (n.e.c.)",
+            "share": 0.0872,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 490,
+            "label": "Salesmen and sales clerks (n.e.c.)",
+            "share": 0.0735,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 979,
+            "label": "Occupation not classified",
+            "share": 0.0568,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 390,
+            "label": "Clerical and kindred workers (n.e.c.)",
+            "share": 0.0343,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": null,
+            "label": "Everything else",
+            "share": 0.2321,
+            "same": false,
+            "other": true
           }
         ]
-      },
-      "transitions": null
+      }
     },
     {
       "id": "pin-maker",
@@ -4933,17 +4555,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "PIN MAKER",
-            "records": 11,
-            "firstYear": 1880,
-            "lastYear": 1930
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "plague-doctor",
@@ -4970,10 +4585,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "postilion",
@@ -5000,10 +4615,10 @@
         "category": "Teamsters",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "poundmaster",
@@ -5085,23 +4700,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "POUND MASTER",
-            "records": 9,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "POUND KEEPER",
-            "records": 5,
-            "firstYear": 1880,
-            "lastYear": 1900
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "powder-monkey",
@@ -5128,10 +4730,10 @@
         "category": "Members of the armed services",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "priest-hunter",
@@ -5158,10 +4760,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "printer-s-devil",
@@ -5243,17 +4845,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "PRINTERS DEVIL",
-            "records": 13,
-            "firstYear": 1880,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "privateer",
@@ -5280,10 +4875,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "punkah-wallah",
@@ -5310,10 +4905,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "reeve",
@@ -5340,10 +4935,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "resident-minister",
@@ -5370,10 +4965,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "resin-worker",
@@ -5455,59 +5050,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "TURPENTINE LABORER",
-            "records": 619,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "WORKS TURPENTINE",
-            "records": 247,
-            "firstYear": 1880,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "TURPENTINE",
-            "records": 181,
-            "firstYear": 1860,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "WORKS IN TURPENTINE",
-            "records": 161,
-            "firstYear": 1880,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "TURPENTINE HAND",
-            "records": 157,
-            "firstYear": 1860,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "TURPENTINE CHIPPER",
-            "records": 101,
-            "firstYear": 1880,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "LABORER TURPENTINE",
-            "records": 84,
-            "firstYear": 1900,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "WORKS ON TURPENTINE FARM",
-            "records": 59,
-            "firstYear": 1880,
-            "lastYear": 1880
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "riding-officer",
@@ -5534,10 +5080,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "saltpetre-worker",
@@ -5564,10 +5110,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "samurai",
@@ -5594,10 +5140,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "sawyer",
@@ -5679,116 +5225,149 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "SAWYER",
-            "records": 3386,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "WOOD SAWYER",
-            "records": 294,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "LOG SAWYER",
-            "records": 95,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "SAWYER SAW MILL",
-            "records": 87,
-            "firstYear": 1880,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "HEAD SAWYER",
-            "records": 81,
-            "firstYear": 1860,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "BAND SAWYER",
-            "records": 77,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "SHINGLE SAWYER",
-            "records": 76,
-            "firstYear": 1870,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "SAWYER IN MILL",
-            "records": 51,
-            "firstYear": 1860,
-            "lastYear": 1900
-          }
-        ]
+        "seriesSource": "title"
       },
       "transitions": {
         "from": 1910,
         "to": 1920,
         "basis": "broader",
+        "code": 674,
         "category": "Sawyers",
         "linkedPeople": 20311,
         "destinations": [
           {
+            "code": 100,
             "label": "Farmers (owners and tenants)",
             "share": 0.1618,
             "same": false,
             "other": false
           },
           {
+            "code": 970,
             "label": "Laborers (n.e.c.)",
             "share": 0.1326,
             "same": false,
             "other": false
           },
           {
+            "code": 674,
             "label": "Sawyers",
             "share": 0.1208,
             "same": true,
             "other": false
           },
           {
+            "code": 690,
             "label": "Operative and kindred workers (n.e.c.)",
             "share": 0.0974,
             "same": false,
             "other": false
           },
           {
+            "code": 290,
             "label": "Managers, officials, and proprietors (n.e.c.)",
             "share": 0.0507,
             "same": false,
             "other": false
           },
           {
+            "code": 979,
             "label": "Occupation not classified",
             "share": 0.0376,
             "same": false,
             "other": false
           },
           {
+            "code": 510,
             "label": "Carpenters",
             "share": 0.0367,
             "same": false,
             "other": false
           },
           {
+            "code": 55,
             "label": "Lawyers and judges",
             "share": 0.0356,
             "same": false,
             "other": false
           },
           {
+            "code": null,
             "label": "Everything else",
             "share": 0.3269,
+            "same": false,
+            "other": true
+          }
+        ]
+      },
+      "arrivals": {
+        "from": 1910,
+        "to": 1920,
+        "basis": "broader",
+        "code": 674,
+        "category": "Sawyers",
+        "linkedPeople": 12832,
+        "origins": [
+          {
+            "code": 970,
+            "label": "Laborers (n.e.c.)",
+            "share": 0.1972,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 674,
+            "label": "Sawyers",
+            "share": 0.1912,
+            "same": true,
+            "other": false
+          },
+          {
+            "code": 100,
+            "label": "Farmers (owners and tenants)",
+            "share": 0.1283,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 690,
+            "label": "Operative and kindred workers (n.e.c.)",
+            "share": 0.0988,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 820,
+            "label": "Farm laborers, wage workers",
+            "share": 0.0916,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 979,
+            "label": "Occupation not classified",
+            "share": 0.0377,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 55,
+            "label": "Lawyers and judges",
+            "share": 0.0376,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 290,
+            "label": "Managers, officials, and proprietors (n.e.c.)",
+            "share": 0.0351,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": null,
+            "label": "Everything else",
+            "share": 0.1825,
             "same": false,
             "other": true
           }
@@ -5875,17 +5454,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "COPYIST",
-            "records": 186,
-            "firstYear": 1870,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "scrivener",
@@ -5967,23 +5539,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "COPYIST",
-            "records": 186,
-            "firstYear": 1870,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "SCRIVENER",
-            "records": 5,
-            "firstYear": 1860,
-            "lastYear": 1930
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "scullery-maid",
@@ -6010,10 +5569,10 @@
         "category": "Private household workers (n.e.c.)",
         "confidence": "medium",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "sedan-chair-bearer",
@@ -6040,10 +5599,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "seneschal",
@@ -6070,10 +5629,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "slave-catcher",
@@ -6100,10 +5659,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "soda-jerk",
@@ -6185,116 +5744,149 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "SODA DISPENSER",
-            "records": 255,
-            "firstYear": 1900,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "SODA CLERK",
-            "records": 173,
-            "firstYear": 1900,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "CLERK (industry: SODA FOUNTAIN)",
-            "records": 96,
-            "firstYear": 1920,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "FOUNTAIN CLERK",
-            "records": 68,
-            "firstYear": 1920,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "FOUNTAIN GIRL",
-            "records": 34,
-            "firstYear": 1930,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "DISPENSER (industry: SODA FOUNTAIN)",
-            "records": 30,
-            "firstYear": 1920,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "SODA FOUNTAIN",
-            "records": 30,
-            "firstYear": 1900,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "LABORER SODA ASH",
-            "records": 26,
-            "firstYear": 1900,
-            "lastYear": 1900
-          }
-        ]
+        "seriesSource": "title"
       },
       "transitions": {
         "from": 1910,
         "to": 1920,
         "basis": "broader",
+        "code": 760,
         "category": "Counter and fountain workers",
         "linkedPeople": 651,
         "destinations": [
           {
+            "code": 490,
             "label": "Salesmen and sales clerks (n.e.c.)",
             "share": 0.1828,
             "same": false,
             "other": false
           },
           {
+            "code": 290,
             "label": "Managers, officials, and proprietors (n.e.c.)",
             "share": 0.1382,
             "same": false,
             "other": false
           },
           {
+            "code": 999,
             "label": "No occupation listed",
             "share": 0.0691,
             "same": false,
             "other": false
           },
           {
+            "code": 979,
             "label": "Occupation not classified",
             "share": 0.0522,
             "same": false,
             "other": false
           },
           {
+            "code": 390,
             "label": "Clerical and kindred workers (n.e.c.)",
             "share": 0.0445,
             "same": false,
             "other": false
           },
           {
+            "code": 970,
             "label": "Laborers (n.e.c.)",
             "share": 0.0445,
             "same": false,
             "other": false
           },
           {
+            "code": 690,
             "label": "Operative and kindred workers (n.e.c.)",
             "share": 0.043,
             "same": false,
             "other": false
           },
           {
+            "code": 760,
             "label": "Counter and fountain workers",
             "share": 0.0323,
             "same": true,
             "other": false
           },
           {
+            "code": null,
             "label": "Everything else",
             "share": 0.3932,
+            "same": false,
+            "other": true
+          }
+        ]
+      },
+      "arrivals": {
+        "from": 1910,
+        "to": 1920,
+        "basis": "broader",
+        "code": 760,
+        "category": "Counter and fountain workers",
+        "linkedPeople": 702,
+        "origins": [
+          {
+            "code": 290,
+            "label": "Managers, officials, and proprietors (n.e.c.)",
+            "share": 0.1595,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 490,
+            "label": "Salesmen and sales clerks (n.e.c.)",
+            "share": 0.1439,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 750,
+            "label": "Bartenders",
+            "share": 0.1382,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 970,
+            "label": "Laborers (n.e.c.)",
+            "share": 0.1154,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 690,
+            "label": "Operative and kindred workers (n.e.c.)",
+            "share": 0.0997,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 979,
+            "label": "Occupation not classified",
+            "share": 0.0641,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 820,
+            "label": "Farm laborers, wage workers",
+            "share": 0.0613,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 784,
+            "label": "Waiters and waitresses",
+            "share": 0.0484,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": null,
+            "label": "Everything else",
+            "share": 0.1695,
             "same": false,
             "other": true
           }
@@ -6326,10 +5918,10 @@
         "category": "Private household workers (n.e.c.)",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "stocking-weaver",
@@ -6411,59 +6003,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "STOCKING WEAVER",
-            "records": 71,
-            "firstYear": 1850,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "STOCKING MAKER",
-            "records": 65,
-            "firstYear": 1880,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "HOSIERY KNITTER",
-            "records": 60,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "STOCKING KNITTER",
-            "records": 46,
-            "firstYear": 1880,
-            "lastYear": 1920
-          },
-          {
-            "writtenAs": "WORKS IN STOCKING MILL",
-            "records": 46,
-            "firstYear": 1880,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "WORKS IN STOCKING FACTORY",
-            "records": 39,
-            "firstYear": 1880,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "STOCKING MILL",
-            "records": 22,
-            "firstYear": 1880,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "STOCKING",
-            "records": 15,
-            "firstYear": 1910,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "sutler",
@@ -6490,10 +6033,10 @@
         "category": "Managers, officials, and proprietors (n.e.c.)",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "switchboard-operator",
@@ -6557,116 +6100,149 @@
             "reliable": true
           }
         ],
-        "seriesSource": "category",
-        "spellings": [
-          {
-            "writtenAs": "OPERATOR (industry: TELEPHONE)",
-            "records": 3798,
-            "firstYear": 1910,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "TELEPHONE OPERATOR",
-            "records": 3386,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "OPERATOR (industry: TELEPHONE CO)",
-            "records": 2065,
-            "firstYear": 1920,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "OPR (industry: TELEPHONE)",
-            "records": 567,
-            "firstYear": 1910,
-            "lastYear": 1920
-          },
-          {
-            "writtenAs": "OPERATOR (industry: TELEPHONE CO.)",
-            "records": 559,
-            "firstYear": 1910,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "OPERATOR (industry: TELEPHONE OFFICE)",
-            "records": 492,
-            "firstYear": 1920,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "TELEPHONE OPR",
-            "records": 472,
-            "firstYear": 1900,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "SWITCHBOARD OPERATOR",
-            "records": 300,
-            "firstYear": 1900,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "category"
       },
       "transitions": {
         "from": 1910,
         "to": 1920,
         "basis": "exact",
+        "code": 370,
         "category": "Telephone operators",
         "linkedPeople": 33517,
         "destinations": [
           {
+            "code": 999,
             "label": "No occupation listed",
             "share": 0.2576,
             "same": false,
             "other": false
           },
           {
+            "code": 370,
             "label": "Telephone operators",
             "share": 0.2305,
             "same": true,
             "other": false
           },
           {
+            "code": 390,
             "label": "Clerical and kindred workers (n.e.c.)",
             "share": 0.0704,
             "same": false,
             "other": false
           },
           {
+            "code": 365,
             "label": "Telegraph operators",
             "share": 0.0497,
             "same": false,
             "other": false
           },
           {
+            "code": 310,
             "label": "Bookkeepers",
             "share": 0.037,
             "same": false,
             "other": false
           },
           {
+            "code": 290,
             "label": "Managers, officials, and proprietors (n.e.c.)",
             "share": 0.0362,
             "same": false,
             "other": false
           },
           {
+            "code": 490,
             "label": "Salesmen and sales clerks (n.e.c.)",
             "share": 0.0354,
             "same": false,
             "other": false
           },
           {
+            "code": 350,
             "label": "Stenographers, typists, and secretaries",
             "share": 0.0341,
             "same": false,
             "other": false
           },
           {
+            "code": null,
             "label": "Everything else",
             "share": 0.2491,
+            "same": false,
+            "other": true
+          }
+        ]
+      },
+      "arrivals": {
+        "from": 1910,
+        "to": 1920,
+        "basis": "exact",
+        "code": 370,
+        "category": "Telephone operators",
+        "linkedPeople": 21682,
+        "origins": [
+          {
+            "code": 370,
+            "label": "Telephone operators",
+            "share": 0.3564,
+            "same": true,
+            "other": false
+          },
+          {
+            "code": 690,
+            "label": "Operative and kindred workers (n.e.c.)",
+            "share": 0.0955,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 365,
+            "label": "Telegraph operators",
+            "share": 0.0678,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 490,
+            "label": "Salesmen and sales clerks (n.e.c.)",
+            "share": 0.056,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 979,
+            "label": "Occupation not classified",
+            "share": 0.0514,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 390,
+            "label": "Clerical and kindred workers (n.e.c.)",
+            "share": 0.041,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 720,
+            "label": "Private household workers (n.e.c.)",
+            "share": 0.0276,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 970,
+            "label": "Laborers (n.e.c.)",
+            "share": 0.0275,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": null,
+            "label": "Everything else",
+            "share": 0.2768,
             "same": false,
             "other": true
           }
@@ -6753,35 +6329,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "SHIP CHANDLER",
-            "records": 62,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "CANDLE MAKER",
-            "records": 30,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "CHANDLER",
-            "records": 22,
-            "firstYear": 1850,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "TALLOW CHANDLER",
-            "records": 11,
-            "firstYear": 1850,
-            "lastYear": 1880
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "telegraph-operator",
@@ -6863,116 +6414,149 @@
             "reliable": true
           }
         ],
-        "seriesSource": "category",
-        "spellings": [
-          {
-            "writtenAs": "TELEGRAPH OPERATOR",
-            "records": 3730,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "TELEGRAPHER",
-            "records": 1353,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "OPERATOR (industry: TELEGRAPH)",
-            "records": 678,
-            "firstYear": 1910,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "TEL OPERATOR",
-            "records": 476,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "TELEGRAPH OPR",
-            "records": 306,
-            "firstYear": 1860,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "OPR (industry: TELEGRAPH)",
-            "records": 186,
-            "firstYear": 1910,
-            "lastYear": 1920
-          },
-          {
-            "writtenAs": "OPR (industry: TELEG)",
-            "records": 167,
-            "firstYear": 1910,
-            "lastYear": 1910
-          },
-          {
-            "writtenAs": "TELEGRAPH OP",
-            "records": 138,
-            "firstYear": 1880,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "category"
       },
       "transitions": {
         "from": 1910,
         "to": 1920,
         "basis": "exact",
+        "code": 365,
         "category": "Telegraph operators",
         "linkedPeople": 24882,
         "destinations": [
           {
+            "code": 365,
             "label": "Telegraph operators",
             "share": 0.3414,
             "same": true,
             "other": false
           },
           {
+            "code": 290,
             "label": "Managers, officials, and proprietors (n.e.c.)",
             "share": 0.0854,
             "same": false,
             "other": false
           },
           {
+            "code": 380,
             "label": "Ticket, station, and express agents",
             "share": 0.0807,
             "same": false,
             "other": false
           },
           {
+            "code": 370,
             "label": "Telephone operators",
             "share": 0.0591,
             "same": false,
             "other": false
           },
           {
+            "code": 979,
             "label": "Occupation not classified",
             "share": 0.0464,
             "same": false,
             "other": false
           },
           {
+            "code": 690,
             "label": "Operative and kindred workers (n.e.c.)",
             "share": 0.0459,
             "same": false,
             "other": false
           },
           {
+            "code": 390,
             "label": "Clerical and kindred workers (n.e.c.)",
             "share": 0.0416,
             "same": false,
             "other": false
           },
           {
+            "code": 999,
             "label": "No occupation listed",
             "share": 0.0408,
             "same": false,
             "other": false
           },
           {
+            "code": null,
             "label": "Everything else",
             "share": 0.2588,
+            "same": false,
+            "other": true
+          }
+        ]
+      },
+      "arrivals": {
+        "from": 1910,
+        "to": 1920,
+        "basis": "exact",
+        "code": 365,
+        "category": "Telegraph operators",
+        "linkedPeople": 18761,
+        "origins": [
+          {
+            "code": 365,
+            "label": "Telegraph operators",
+            "share": 0.4527,
+            "same": true,
+            "other": false
+          },
+          {
+            "code": 370,
+            "label": "Telephone operators",
+            "share": 0.0889,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 380,
+            "label": "Ticket, station, and express agents",
+            "share": 0.0642,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 690,
+            "label": "Operative and kindred workers (n.e.c.)",
+            "share": 0.0622,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 820,
+            "label": "Farm laborers, wage workers",
+            "share": 0.0432,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 979,
+            "label": "Occupation not classified",
+            "share": 0.0389,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 970,
+            "label": "Laborers (n.e.c.)",
+            "share": 0.0373,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": 290,
+            "label": "Managers, officials, and proprietors (n.e.c.)",
+            "share": 0.0317,
+            "same": false,
+            "other": false
+          },
+          {
+            "code": null,
+            "label": "Everything else",
+            "share": 0.181,
             "same": false,
             "other": true
           }
@@ -7004,10 +6588,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "tondenhei",
@@ -7034,10 +6618,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "tosher",
@@ -7064,10 +6648,10 @@
         "category": "",
         "confidence": "high",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "town-crier",
@@ -7094,10 +6678,10 @@
         "category": "",
         "confidence": "medium",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "water-carrier",
@@ -7179,23 +6763,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "WATER BOY",
-            "records": 98,
-            "firstYear": 1880,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "WATER CARRIER",
-            "records": 91,
-            "firstYear": 1870,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "wheelwright",
@@ -7277,47 +6848,10 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "WHEELWRIGHT",
-            "records": 1694,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "WHEEL WRIGHT",
-            "records": 342,
-            "firstYear": 1850,
-            "lastYear": 1930
-          },
-          {
-            "writtenAs": "WHEEL-WRIGHT",
-            "records": 9,
-            "firstYear": 1880,
-            "lastYear": 1900
-          },
-          {
-            "writtenAs": "APPRENTICE TO WHEELWRIGHT",
-            "records": 7,
-            "firstYear": 1880,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "RETIRED WHEELWRIGHT",
-            "records": 6,
-            "firstYear": 1870,
-            "lastYear": 1880
-          },
-          {
-            "writtenAs": "FARMER & WHEELWRIGHT",
-            "records": 5,
-            "firstYear": 1880,
-            "lastYear": 1880
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "wire-drawer",
@@ -7399,23 +6933,10 @@
             "reliable": true
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "WIRE DRAWER",
-            "records": 775,
-            "firstYear": 1850,
-            "lastYear": 1940
-          },
-          {
-            "writtenAs": "WIREDRAWER",
-            "records": 13,
-            "firstYear": 1880,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "woad-dyer",
@@ -7442,10 +6963,10 @@
         "category": "Dyers",
         "confidence": "low",
         "series": [],
-        "seriesSource": null,
-        "spellings": []
+        "seriesSource": null
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     },
     {
       "id": "wool-comber",
@@ -7527,17 +7048,1520 @@
             "reliable": false
           }
         ],
-        "seriesSource": "title",
-        "spellings": [
-          {
-            "writtenAs": "WOOL COMBER",
-            "records": 26,
-            "firstYear": 1880,
-            "lastYear": 1940
-          }
-        ]
+        "seriesSource": "title"
       },
-      "transitions": null
+      "transitions": null,
+      "arrivals": null
     }
-  ]
+  ],
+  "categories": {
+    "55": {
+      "label": "Lawyers and judges",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 24247,
+          "records": 241,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 34719,
+          "records": 349,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 44575,
+          "records": 445,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 68236,
+          "records": 7898,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 97849,
+          "records": 4977,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 119174,
+          "records": 1198,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 123211,
+          "records": 1218,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 163791,
+          "records": 8110,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 171628,
+          "records": 1729,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "100": {
+      "label": "Farmers (owners and tenants)",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 2417093,
+          "records": 23894,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 2674769,
+          "records": 26751,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 3145040,
+          "records": 31443,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 4552878,
+          "records": 516235,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 5815578,
+          "records": 296283,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 6368967,
+          "records": 63530,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 6601788,
+          "records": 65436,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 5987218,
+          "records": 297007,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 5173439,
+          "records": 53392,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "290": {
+      "label": "Managers, officials, and proprietors (n.e.c.)",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 238839,
+          "records": 2370,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 380083,
+          "records": 3798,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 509111,
+          "records": 5050,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 704590,
+          "records": 77275,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 1378679,
+          "records": 70086,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 1910672,
+          "records": 19174,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 2309440,
+          "records": 22861,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 3104505,
+          "records": 153810,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 3245948,
+          "records": 32753,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "310": {
+      "label": "Bookkeepers",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 2231,
+          "records": 22,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 17329,
+          "records": 172,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 32552,
+          "records": 324,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 61362,
+          "records": 6668,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 222593,
+          "records": 11308,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 398836,
+          "records": 4000,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 530628,
+          "records": 5251,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 623149,
+          "records": 30877,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 920660,
+          "records": 9295,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "350": {
+      "label": "Stenographers, typists, and secretaries",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1860,
+          "people": 100,
+          "records": 1,
+          "reliable": false
+        },
+        {
+          "year": 1870,
+          "people": 417,
+          "records": 4,
+          "reliable": false
+        },
+        {
+          "year": 1880,
+          "people": 2028,
+          "records": 221,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 120986,
+          "records": 6157,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 347652,
+          "records": 3486,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 669000,
+          "records": 6607,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 998797,
+          "records": 49461,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 1173409,
+          "records": 11877,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "365": {
+      "label": "Telegraph operators",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 470,
+          "records": 5,
+          "reliable": false
+        },
+        {
+          "year": 1860,
+          "people": 1388,
+          "records": 14,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 7189,
+          "records": 71,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 19976,
+          "records": 2135,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 55621,
+          "records": 2830,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 68083,
+          "records": 682,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 78956,
+          "records": 779,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 68024,
+          "records": 3370,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 54818,
+          "records": 555,
+          "reliable": true
+        }
+      ],
+      "jobId": "telegraph-operator"
+    },
+    "370": {
+      "label": "Telephone operators",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1880,
+          "people": 610,
+          "records": 67,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 19241,
+          "records": 978,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 100980,
+          "records": 1010,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 190198,
+          "records": 1885,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 243173,
+          "records": 12044,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 202243,
+          "records": 2051,
+          "reliable": true
+        }
+      ],
+      "jobId": "switchboard-operator"
+    },
+    "380": {
+      "label": "Ticket, station, and express agents",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 1213,
+          "records": 12,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 4854,
+          "records": 48,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 10105,
+          "records": 100,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 16209,
+          "records": 1758,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 34839,
+          "records": 1773,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 52262,
+          "records": 526,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 53375,
+          "records": 527,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 56737,
+          "records": 2811,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 43320,
+          "records": 434,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "390": {
+      "label": "Clerical and kindred workers (n.e.c.)",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 3653,
+          "records": 36,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 8920,
+          "records": 90,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 67477,
+          "records": 666,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 106854,
+          "records": 11948,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 290649,
+          "records": 14785,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 682252,
+          "records": 6840,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 1279985,
+          "records": 12630,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 1567716,
+          "records": 77588,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 2054180,
+          "records": 20821,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "490": {
+      "label": "Salesmen and sales clerks (n.e.c.)",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 104179,
+          "records": 1037,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 171806,
+          "records": 1717,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 232539,
+          "records": 2315,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 422485,
+          "records": 45972,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 1030380,
+          "records": 52362,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 1397436,
+          "records": 14010,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 1676883,
+          "records": 16603,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 2595766,
+          "records": 128604,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 2652426,
+          "records": 26900,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "510": {
+      "label": "Carpenters",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 219146,
+          "records": 2171,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 274345,
+          "records": 2736,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 352031,
+          "records": 3499,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 393057,
+          "records": 41884,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 607150,
+          "records": 30858,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 835259,
+          "records": 8356,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 846936,
+          "records": 8375,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 898025,
+          "records": 44486,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 735541,
+          "records": 7513,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "523": {
+      "label": "Foremen (n.e.c.)",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 18999,
+          "records": 185,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 41127,
+          "records": 402,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 21978,
+          "records": 219,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 25791,
+          "records": 2738,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 133929,
+          "records": 6809,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 332245,
+          "records": 3322,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 480176,
+          "records": 4750,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 571542,
+          "records": 28297,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 610728,
+          "records": 6202,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "544": {
+      "label": "Machinists",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 22396,
+          "records": 228,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 38391,
+          "records": 385,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 52240,
+          "records": 515,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 86840,
+          "records": 8979,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 272298,
+          "records": 13828,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 469257,
+          "records": 4697,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 826189,
+          "records": 8178,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 646505,
+          "records": 31985,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 502546,
+          "records": 5104,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "632": {
+      "label": "Deliverymen and routemen",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 897,
+          "records": 9,
+          "reliable": false
+        },
+        {
+          "year": 1860,
+          "people": 1989,
+          "records": 20,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 3708,
+          "records": 37,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 8816,
+          "records": 930,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 43784,
+          "records": 2224,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 160060,
+          "records": 1603,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 163074,
+          "records": 1617,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 199802,
+          "records": 9893,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 408732,
+          "records": 4194,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "650": {
+      "label": "Mine operatives and laborers",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 85175,
+          "records": 862,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 147389,
+          "records": 1479,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 175202,
+          "records": 1751,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 272917,
+          "records": 31099,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 582753,
+          "records": 29729,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 909671,
+          "records": 9082,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 1019175,
+          "records": 10177,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 898611,
+          "records": 44719,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 792045,
+          "records": 8244,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "674": {
+      "label": "Sawyers",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 9420,
+          "records": 93,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 13204,
+          "records": 135,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 13168,
+          "records": 130,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 11613,
+          "records": 1236,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 38810,
+          "records": 1977,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 50961,
+          "records": 508,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 40212,
+          "records": 398,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 38043,
+          "records": 1884,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 46628,
+          "records": 479,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "683": {
+      "label": "Truck and tractor drivers",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 31986,
+          "records": 316,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 62127,
+          "records": 626,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 119012,
+          "records": 1189,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 161096,
+          "records": 18304,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 462215,
+          "records": 23491,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 109617,
+          "records": 1097,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 307228,
+          "records": 3039,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 773397,
+          "records": 38322,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 1309978,
+          "records": 13410,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "690": {
+      "label": "Operative and kindred workers (n.e.c.)",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 167112,
+          "records": 1654,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 328706,
+          "records": 3279,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 800832,
+          "records": 7920,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 1406325,
+          "records": 149395,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 1660822,
+          "records": 84239,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 2440681,
+          "records": 24417,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 3122394,
+          "records": 30904,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 3412298,
+          "records": 168849,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 5001253,
+          "records": 51378,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "720": {
+      "label": "Private household workers (n.e.c.)",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 6230,
+          "records": 61,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 595240,
+          "records": 5983,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 852990,
+          "records": 8487,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 1029778,
+          "records": 133265,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 1041520,
+          "records": 52937,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 1257333,
+          "records": 12581,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 907265,
+          "records": 8972,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 1413428,
+          "records": 69930,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 1762924,
+          "records": 18235,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "750": {
+      "label": "Bartenders",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 5633,
+          "records": 56,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 9596,
+          "records": 95,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 16774,
+          "records": 165,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 25395,
+          "records": 2799,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 91736,
+          "records": 4656,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 103505,
+          "records": 1041,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 23641,
+          "records": 234,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 3045,
+          "records": 150,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 134702,
+          "records": 1368,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "760": {
+      "label": "Counter and fountain workers",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1880,
+          "people": 100,
+          "records": 11,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 298,
+          "records": 15,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 1805,
+          "records": 18,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 8399,
+          "records": 84,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 23380,
+          "records": 1157,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "761": {
+      "label": "Elevator operators",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1880,
+          "people": 252,
+          "records": 28,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 10076,
+          "records": 514,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 22768,
+          "records": 230,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 37272,
+          "records": 368,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 69538,
+          "records": 3437,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 86233,
+          "records": 877,
+          "reliable": true
+        }
+      ],
+      "jobId": "elevator-operator"
+    },
+    "784": {
+      "label": "Waiters and waitresses",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 7503,
+          "records": 73,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 8823,
+          "records": 87,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 24060,
+          "records": 238,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 37701,
+          "records": 5850,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 111742,
+          "records": 5676,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 165890,
+          "records": 1672,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 214731,
+          "records": 2124,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 369214,
+          "records": 18280,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 611552,
+          "records": 6254,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "820": {
+      "label": "Farm laborers, wage workers",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 278878,
+          "records": 2756,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 855160,
+          "records": 8576,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 2965360,
+          "records": 29735,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 3269897,
+          "records": 447665,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 4645341,
+          "records": 236608,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 2451141,
+          "records": 24459,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 2150353,
+          "records": 21389,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 2726315,
+          "records": 135304,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 2206226,
+          "records": 23184,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "960": {
+      "label": "Teamsters",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1900,
+          "people": 1718,
+          "records": 87,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 425884,
+          "records": 4253,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 288599,
+          "records": 2854,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 106160,
+          "records": 5264,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 30052,
+          "records": 311,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "970": {
+      "label": "Laborers (n.e.c.)",
+      "occupational": true,
+      "series": [
+        {
+          "year": 1850,
+          "people": 633699,
+          "records": 6273,
+          "reliable": true
+        },
+        {
+          "year": 1860,
+          "people": 847492,
+          "records": 8472,
+          "reliable": true
+        },
+        {
+          "year": 1870,
+          "people": 1179093,
+          "records": 11738,
+          "reliable": true
+        },
+        {
+          "year": 1880,
+          "people": 2106212,
+          "records": 281240,
+          "reliable": true
+        },
+        {
+          "year": 1900,
+          "people": 3255928,
+          "records": 165581,
+          "reliable": true
+        },
+        {
+          "year": 1910,
+          "people": 4161249,
+          "records": 41613,
+          "reliable": true
+        },
+        {
+          "year": 1920,
+          "people": 4086343,
+          "records": 40470,
+          "reliable": true
+        },
+        {
+          "year": 1930,
+          "people": 4691723,
+          "records": 232370,
+          "reliable": true
+        },
+        {
+          "year": 1940,
+          "people": 4687282,
+          "records": 48624,
+          "reliable": true
+        }
+      ],
+      "jobId": null
+    },
+    "979": {
+      "label": "Occupation not classified",
+      "occupational": true,
+      "series": [],
+      "jobId": null
+    },
+    "999": {
+      "label": "No occupation listed",
+      "occupational": false,
+      "series": [],
+      "jobId": null
+    }
+  }
 }

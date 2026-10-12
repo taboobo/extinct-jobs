@@ -46,3 +46,46 @@ export function peak(series = []) {
     null
   );
 }
+
+/**
+ * Jobs that ended the same way: share at least one reason, ranked by how many
+ * reasons they share, then by how close their end centuries are.
+ */
+export function relatedJobs(job, all, limit = 5) {
+  const reasons = new Set(job.reasonTypes);
+  return all
+    .filter((other) => other.id !== job.id)
+    .map((other) => {
+      const shared = other.reasonTypes.filter((r) => reasons.has(r)).length;
+      const gap = Math.abs((other.endCentury ?? 0) - (job.endCentury ?? 0));
+      return {
+        other,
+        score: shared * 2 + (gap === 0 ? 1.5 : gap === 1 ? 0.5 : 0),
+      };
+    })
+    .filter(
+      ({ other, score }) =>
+        score >= 2 && other.reasonTypes.some((r) => reasons.has(r))
+    )
+    .sort(
+      (a, b) => b.score - a.score || a.other.name.localeCompare(b.other.name)
+    )
+    .slice(0, limit)
+    .map(({ other }) => other);
+}
+
+/** The fields a job preview card needs. */
+export function jobSummary(job) {
+  return {
+    id: job.id,
+    name: job.name,
+    summary: job.summary,
+    endCentury: job.endCentury,
+    reasonTypes: job.reasonTypes,
+    series: job.census.series.map(({ year, people, reliable }) => ({
+      year,
+      people,
+      reliable,
+    })),
+  };
+}

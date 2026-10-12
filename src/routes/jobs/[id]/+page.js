@@ -1,6 +1,7 @@
-// Loads one job for its detail page.
+// Loads one job for its detail page, plus what its preview cards need.
 import { error } from '@sveltejs/kit';
 import data from '$lib/data/jobs.json';
+import { jobSummary, relatedJobs } from '$lib/jobs.js';
 
 // Tell SvelteKit every job id, so it prerenders one static page per job.
 export function entries() {
@@ -10,5 +11,18 @@ export function entries() {
 export function load({ params }) {
   const job = data.jobs.find((j) => j.id === params.id);
   if (!job) error(404, 'Job not found');
-  return { job };
+  const summaries = data.jobs.map(jobSummary);
+  return {
+    job,
+    related: relatedJobs(jobSummary(job), summaries),
+    // Only the census categories this job's flows mention, for hover cards.
+    categories: Object.fromEntries(
+      [
+        ...(job.transitions?.destinations ?? []),
+        ...(job.arrivals?.origins ?? []),
+      ]
+        .filter((d) => d.code != null)
+        .map((d) => [d.code, data.categories[d.code]])
+    ),
+  };
 }

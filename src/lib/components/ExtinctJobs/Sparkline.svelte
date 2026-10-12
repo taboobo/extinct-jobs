@@ -1,7 +1,9 @@
 <!--
 @component
 Sparkline.svelte — A tiny bar trend of how many people held a job in each
-census, 1850–1940. Used in the job list. 1890 is left empty (records lost).
+census, 1850–1940. Used in the job list. The peak year uses the highlight
+color, rough estimates (fewer than 10 records) are paler. 1890 is left empty
+(records lost).
 
 Props:
 - series: [{ year, people, records, reliable }] from jobs.json
@@ -40,6 +42,7 @@ Props:
     {#if point && point.people > 0}
       {@const h = Math.max(1.5, (point.people / max) * (height - 2))}
       <rect
+        class:peak={top && year === top.year}
         class:faint={!point.reliable}
         x={i * slot + 1}
         y={height - 1 - h}
@@ -62,10 +65,14 @@ Props:
   }
 
   rect {
+    fill: var(--color-bar);
+  }
+
+  rect.peak {
     fill: var(--color-accent);
   }
 
   rect.faint {
-    fill: var(--color-faint-bar);
+    opacity: 0.45;
   }
 </style>

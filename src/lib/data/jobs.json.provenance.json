@@ -1,13 +1,13 @@
 {
   "output": "data/processed/site/jobs.json",
-  "sha256": "4403f5efe19ccb244d6d70b6bf17633239658928f8da25b38485c4a783c5c230",
+  "sha256": "13072cd671d7f34899688c6c71bddbdf57660e87597f83d1b1908387014f1dbc",
   "rows": 102,
-  "built_at": "2026-10-12T00:03:12+00:00",
+  "built_at": "2026-10-12T00:20:35+00:00",
   "script": {
     "path": "scripts/export_site_data.py",
-    "sha256": "e969d808c48515d55c2b3080452813a5c93b8d9db109f080e61c3afc397e46d8",
+    "sha256": "85428a6ac9ef06313d0c7925efbd2dd239f1088c94d4982001c5507e8ce60c85",
     "git": {
-      "commit": "a2e67dccee85e51ff1dc76e0648ffb4689790bc7",
+      "commit": "d59bce8bf9ed19188e66964a9005d84220abd8aa",
       "file_committed": true,
       "file_modified_since_commit": true
     }
@@ -26,11 +26,6 @@
     {
       "path": "data/processed/category_counts_1850_1940.csv",
       "sha256": "761bd64636512f74e767f8b3c388d0884413c769bdeb367316ea72c04ab5cab7",
-      "source": null
-    },
-    {
-      "path": "data/processed/title_spellings.csv",
-      "sha256": "4b3ece563bc2c7eb370ab14cb5547d99ad363df4e970d6b632d4fc40ed961c0d",
       "source": null
     },
     {
@@ -59,8 +54,9 @@
     "One record per Wikipedia obsolete occupation, with description and reason text (Wikipedia, CC BY-SA 4.0) and an image hotlinked from Wikimedia Commons with its credit.",
     "census.series: for jobs whose OCC1950 match is exact, IPUMS's weighted category total (seriesSource 'category'); otherwise the title-search estimate, a minimum (seriesSource 'title').",
     "census.series: estimated people per census year; 'reliable' when based on at least 10 sample records. Jobs with fewer than 10 records across all years get no series (likely false matches).",
-    "census.spellings: most common written forms (already thresholded upstream).",
     "transitions: 1910->1920 destinations for the job's OCC1950 category, only when the match is exact, or broader with a specific (non-n.e.c.) category at medium/high confidence, at least 100 linked people, and at least 10 sample records with the job's own title in 1910. Top 8 destinations plus 'Everything else' (which includes suppressed small cells).",
+    "arrivals: the reverse of transitions: 1910 jobs of people in the job's category in 1920 (origins limited to working-age people with an occupation in 1910), with the same eligibility rules but requiring the job's title in the 1920 sample.",
+    "categories: OCC1950 codes referenced by flows, with weighted category totals by year (category_counts) and the Wikipedia job they exactly match, for hover cards.",
     "Non-occupational OCC1950 codes relabelled in plain language (e.g. 999 -> 'No occupation listed')."
   ],
   "overrides_applied": [],

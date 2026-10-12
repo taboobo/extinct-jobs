@@ -1,13 +1,21 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/svelte';
+import { render, screen, fireEvent } from '@testing-library/svelte';
+import { createRawSnippet } from 'svelte';
 import Sparkline from '$lib/components/ExtinctJobs/Sparkline.svelte';
 import CensusChart from '$lib/components/ExtinctJobs/CensusChart.svelte';
 import TransitionBars from '$lib/components/ExtinctJobs/TransitionBars.svelte';
-import SpellingList from '$lib/components/ExtinctJobs/SpellingList.svelte';
-import JobLedger from '$lib/components/ExtinctJobs/JobLedger.svelte';
+import JobList from '$lib/components/ExtinctJobs/JobList.svelte';
 import Masthead from '$lib/components/ExtinctJobs/Masthead.svelte';
 import Colophon from '$lib/components/ExtinctJobs/Colophon.svelte';
-import { centuryLabel, formatShare, peak } from '$lib/jobs.js';
+import HoverCard from '$lib/components/ExtinctJobs/HoverCard.svelte';
+import JobCard from '$lib/components/ExtinctJobs/JobCard.svelte';
+import CategoryCard from '$lib/components/ExtinctJobs/CategoryCard.svelte';
+import Sidenote from '$lib/components/ExtinctJobs/Sidenote.svelte';
+import MarginNotes from '$lib/components/ExtinctJobs/MarginNotes.svelte';
+import RelatedJobs from '$lib/components/ExtinctJobs/RelatedJobs.svelte';
+import { centuryLabel, formatShare, peak, relatedJobs } from '$lib/jobs.js';
+
+const text = (html) => createRawSnippet(() => ({ render: () => html }));
 
 const series = [
   { year: 1850, people: 400, records: 4, reliable: false },
@@ -22,10 +30,54 @@ const transitions = {
   category: 'Telegraph operators',
   linkedPeople: 24882,
   destinations: [
-    { label: 'Telegraph operators', share: 0.34, same: true, other: false },
-    { label: 'Telephone operators', share: 0.06, same: false, other: false },
-    { label: 'Everything else', share: 0.6, same: false, other: true },
+    {
+      code: 365,
+      label: 'Telegraph operators',
+      share: 0.34,
+      same: true,
+      other: false,
+    },
+    {
+      code: 370,
+      label: 'Telephone operators',
+      share: 0.06,
+      same: false,
+      other: false,
+    },
+    {
+      code: null,
+      label: 'Everything else',
+      share: 0.6,
+      same: false,
+      other: true,
+    },
   ],
+};
+
+const categories = {
+  370: {
+    label: 'Telephone operators',
+    occupational: true,
+    series,
+    jobId: 'switchboard-operator',
+  },
+};
+
+const jobA = {
+  id: 'iceman',
+  name: 'Iceman',
+  summary: 'Delivered ice.',
+  endCentury: 20,
+  reasonTypes: ['Technology'],
+  series,
+};
+const jobB = { ...jobA, id: 'lamplighter', name: 'Lamplighter', series: [] };
+const jobC = {
+  ...jobA,
+  id: 'samurai',
+  name: 'Samurai',
+  endCentury: 19,
+  reasonTypes: ['Law or politics'],
 };
 
 describe('job helpers', () => {
@@ -40,6 +92,11 @@ describe('job helpers', () => {
   it('formats shares', () => {
     expect(formatShare(0.341)).toBe('34%');
     expect(formatShare(0.004)).toBe('<1%');
+  });
+
+  it('finds jobs that ended the same way', () => {
+    const related = relatedJobs(jobA, [jobA, jobB, jobC]);
+    expect(related.map((j) => j.id)).toEqual(['lamplighter']);
   });
 
   it('finds the peak', () => {
@@ -67,7 +124,7 @@ describe('CensusChart', () => {
   it('marks 1890 as lost', () => {
     render(CensusChart, { props: { series, name: 'telegraph operators' } });
     expect(screen.getByText('lost')).toBeTruthy();
-    expect(screen.getByText('records lost')).toBeTruthy();
+    expect(screen.getByText('Records lost')).toBeTruthy();
   });
 
   it('calls title-search counts a minimum', () => {
@@ -88,30 +145,46 @@ describe('CensusChart', () => {
     );
   });
 
-  it('includes an accessible table of values', () => {
+  it('includes a table of values', () => {
     render(CensusChart, { props: { series, name: 'telegraph operators' } });
-    expect(screen.getByText('67,000')).toBeTruthy();
+    expect(screen.getByText('Show the numbers')).toBeTruthy();
+    expect(screen.getAllByText('67,000').length).toBeGreaterThan(0);
   });
 
-  it('explains pale bars only when present', () => {
+  it('labels the peak bar', () => {
+    const { container } = render(CensusChart, { props: { series } });
+    expect(container.querySelector('.peak-label').textContent).toBe('67,000');
+  });
+
+  it('explains rough estimates only when present', () => {
     const { container } = render(CensusChart, {
       props: { series: series.filter((s) => s.reliable) },
     });
-    expect(container.querySelector('figcaption').textContent).not.toMatch(
-      /Pale bars/
+    expect(container.querySelector('.legend').textContent).not.toMatch(
+      /Rough estimate/
+    );
+  });
+
+  it('shows a year’s numbers on focus', async () => {
+    const { container } = render(CensusChart, { props: { series } });
+    await fireEvent.focus(container.querySelectorAll('rect.hit')[1]);
+    expect(container.querySelector('.tip').textContent).toMatch(
+      /1900\s*35,000 people\s*900 sample records/
     );
   });
 });
 
 describe('TransitionBars', () => {
   it('lists destinations with shares', () => {
-    render(TransitionBars, { props: { transitions } });
+    render(TransitionBars, { props: { flow: transitions, categories } });
     expect(screen.getByText('Telephone operators')).toBeTruthy();
     expect(screen.getByText('34%')).toBeTruthy();
   });
 
   it('marks staying in the same job and the remainder', () => {
-    const { container } = render(TransitionBars, { props: { transitions } });
+    const { container } = render(TransitionBars, {
+      props: { flow: transitions, categories },
+    });
     expect(screen.getByText('(same job)')).toBeTruthy();
     expect(container.querySelectorAll('li.other').length).toBe(1);
   });
@@ -119,7 +192,7 @@ describe('TransitionBars', () => {
   it('explains a broader census category', () => {
     render(TransitionBars, {
       props: {
-        transitions: {
+        flow: {
           ...transitions,
           basis: 'broader',
           category: 'Deliverymen',
@@ -130,27 +203,115 @@ describe('TransitionBars', () => {
   });
 });
 
-describe('SpellingList', () => {
-  it('splits job and industry', () => {
-    render(SpellingList, {
+describe('TransitionBars previews', () => {
+  it('turns known categories into preview links', () => {
+    render(TransitionBars, { props: { flow: transitions, categories } });
+    expect(
+      screen
+        .getByRole('link', { name: 'Telephone operators' })
+        .getAttribute('href')
+    ).toBe('/jobs/switchboard-operator');
+  });
+
+  it('shows arrivals in the other direction', () => {
+    render(TransitionBars, {
       props: {
-        spellings: [
-          {
-            writtenAs: 'OPR (industry: TELEG)',
-            records: 167,
-            firstYear: 1910,
-            lastYear: 1910,
-          },
-        ],
+        flow: { ...transitions, origins: transitions.destinations },
+        direction: 'from',
       },
     });
-    expect(screen.getByText('OPR')).toBeTruthy();
-    expect(screen.getByText('with industry “TELEG”')).toBeTruthy();
-    expect(screen.getByText(/167 records,\s+1910/)).toBeTruthy();
+    expect(screen.getByText(/had been doing then/)).toBeTruthy();
   });
 });
 
-describe('JobLedger', () => {
+describe('HoverCard', () => {
+  it('opens on keyboard focus and closes on Escape', async () => {
+    render(HoverCard, {
+      props: {
+        label: 'Iceman',
+        href: '/jobs/iceman',
+        card: text('<span>Preview</span>'),
+      },
+    });
+    const link = screen.getByRole('link', { name: 'Iceman' });
+    await fireEvent.focusIn(link);
+    expect(screen.getByRole('dialog', { name: 'Iceman' })).toBeTruthy();
+    await fireEvent.keyDown(window, { key: 'Escape' });
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  it('toggles from a button when there is no link', async () => {
+    render(HoverCard, {
+      props: { label: 'OPR', card: text('<span>operator</span>') },
+    });
+    const button = screen.getByRole('button', { name: 'OPR' });
+    await fireEvent.pointerDown(button, { pointerType: 'mouse' });
+    await fireEvent.click(button);
+    expect(button.getAttribute('aria-expanded')).toBe('true');
+  });
+});
+
+describe('JobCard and CategoryCard', () => {
+  it('links a job card to its page', () => {
+    render(JobCard, { props: { job: jobA } });
+    expect(
+      screen.getByRole('link', { name: 'Open Iceman' }).getAttribute('href')
+    ).toBe('/jobs/iceman');
+  });
+
+  it('describes a category’s peak and links its job', () => {
+    render(CategoryCard, { props: { category: categories[370] } });
+    expect(
+      screen.getByText(/Largest in 1920, with about 67,000 people/)
+    ).toBeTruthy();
+    expect(screen.getByRole('link', { name: 'Open this job' })).toBeTruthy();
+  });
+
+  it('explains non-occupations', () => {
+    render(CategoryCard, {
+      props: {
+        category: {
+          label: 'No occupation listed',
+          occupational: false,
+          series: [],
+          jobId: null,
+        },
+      },
+    });
+    expect(screen.getByText(/recorded no occupation/)).toBeTruthy();
+  });
+});
+
+describe('Sidenote and MarginNotes', () => {
+  it('renders notes beside content', () => {
+    render(MarginNotes, {
+      props: {
+        children: text('<p>Main</p>'),
+        notes: text('<aside>A note</aside>'),
+      },
+    });
+    expect(screen.getByText('Main')).toBeTruthy();
+    expect(screen.getByText('A note')).toBeTruthy();
+  });
+
+  it('renders a sidenote as an aside', () => {
+    const { container } = render(Sidenote, {
+      props: { children: text('<span>Caveat</span>') },
+    });
+    expect(container.querySelector('aside.sidenote').textContent).toBe(
+      'Caveat'
+    );
+  });
+});
+
+describe('RelatedJobs', () => {
+  it('links each related job', () => {
+    render(RelatedJobs, { props: { jobs: [jobA, jobB] } });
+    expect(screen.getByRole('link', { name: 'Lamplighter' })).toBeTruthy();
+  });
+});
+
+describe('JobList', () => {
   const jobs = [
     {
       id: 'telegraph-operator',
@@ -173,7 +334,7 @@ describe('JobLedger', () => {
   ];
 
   it('links each job to its page', () => {
-    render(JobLedger, { props: { jobs } });
+    render(JobList, { props: { jobs } });
     expect(
       screen
         .getByRole('link', { name: 'Telegraph operator' })
@@ -182,13 +343,13 @@ describe('JobLedger', () => {
   });
 
   it('shows the century each job ended', () => {
-    render(JobLedger, { props: { jobs } });
+    render(JobList, { props: { jobs } });
     expect(screen.getAllByText('1900s').length).toBe(1);
     expect(screen.getByText('1800s')).toBeTruthy();
   });
 
   it('notes jobs without census records', () => {
-    render(JobLedger, { props: { jobs } });
+    render(JobList, { props: { jobs } });
     expect(screen.getByText('Not in census records')).toBeTruthy();
   });
 });

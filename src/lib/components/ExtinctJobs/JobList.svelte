@@ -1,9 +1,9 @@
 <!--
 @component
-JobLedger.svelte — The list of extinct jobs as ruled ledger rows: job name,
-when it ended (century; the source has no exact years), why it ended, and a census trend when the job
-appears in U.S. census records. The whole row is clickable; on hover or focus
-it is tinted and the ledger's red margin rule thickens.
+JobList.svelte — The list of extinct jobs: job name and summary, when it ended
+(century; the source has no exact years), why it ended, and a census trend when
+the job appears in U.S. census records. The whole row is clickable; on hover or
+focus the row is tinted and its left rule thickens.
 
 Props:
 - jobs: job summaries [{ id, name, summary, startCentury, endCentury, reasonTypes, series }]
@@ -16,7 +16,7 @@ Props:
   let { jobs = [] } = $props();
 </script>
 
-<div class="ledger">
+<div class="job-list">
   <div class="columns" aria-hidden="true">
     <span>Job</span>
     <span>Ended</span>

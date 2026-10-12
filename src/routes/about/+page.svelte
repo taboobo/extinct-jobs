@@ -97,7 +97,7 @@ About page: where the data comes from, how the numbers are made, and their limit
   h1 {
     font-family: var(--font-display);
     font-weight: var(--font-weight-extrabold);
-    font-size: clamp(3rem, 9vw, 6rem);
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
     line-height: 0.9;
     margin-bottom: var(--spacing-lg);
   }
